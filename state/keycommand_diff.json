@@ -1,0 +1,9 @@
+{
+  "localBytes": 17111,
+  "macBytes": 18538,
+  "identical": false,
+  "notes": "Mac copy contains additional methods or comments; can be synchronized on demand.",
+  "localLineCount": 575,
+  "macLineCount": 600,
+  "lineDelta": 25
+}

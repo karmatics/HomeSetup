@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-10-25T03:30:57.022Z",
+  "isPushedToGithub": false,
+  "gitPushOutput": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push -u origin main 2>&1",
+  "macPullResult": "Pending initial push to GitHub",
+  "summary": {
+    "totalChecked": 23,
+    "identicalMatches": 0,
+    "discrepanciesCount": 23,
+    "discrepancies": [
+      {
+        "file": "Luno/server.js",
+        "linuxHash": "5f7bb09ef838",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/luno.json",
+        "linuxHash": "8b3dbaee27ff",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/package.json",
+        "linuxHash": "02d119ef9b8f",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/ClientApp.js",
+        "linuxHash": "bc6983c4aa86",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/ClientAppPaster.js",
+        "linuxHash": "e870e8155cec",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/ClientAppUI.js",
+        "linuxHash": "7869eebd6a36",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/CodeDiffer.js",
+        "linuxHash": "3047292f95c8",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/DiffApprovalModal.js",
+        "linuxHash": "eee25d95cdfb",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/LunoManifestDecisionEngine.js",
+        "linuxHash": "2978124edee2",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/app/LunoPayloadParser.js",
+        "linuxHash": "a37114602b4e",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Luno/core/LunoClassPatcher.js",
+        "linuxHash": "be3e30988d24",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/DomBasics.js",
+        "linuxHash": "d5dec7dd681f",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/UITools.js",
+        "linuxHash": "00bb50cc1f3f",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/ThreeJSLoader.js",
+        "linuxHash": "f0bc37b1463e",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/DocumentReader.js",
+        "linuxHash": "e42cbf03bf76",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/VideoPlayer.js",
+        "linuxHash": "01bd1e66ca1d",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/DictationWidget.js",
+        "linuxHash": "fc29e5b3dfe8",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/SliderControl.js",
+        "linuxHash": "89e78787827f",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/ColorPicker.js",
+        "linuxHash": "9c09ec999364",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/KeyCommandHandler.js",
+        "linuxHash": "e815a401e3a8",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/SidePanel.js",
+        "linuxHash": "babe977a5bd2",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/CodeMirrorWidget.js",
+        "linuxHash": "25642a8b2661",
+        "macHash": "missing",
+        "inSync": false
+      },
+      {
+        "file": "Library/CommunityOracle.js",
+        "linuxHash": "f2e027e1bb14",
+        "macHash": "missing",
+        "inSync": false
+      }
+    ]
+  },
+  "linuxHashes": {
+    "Luno/server.js": "5f7bb09ef838",
+    "Luno/luno.json": "8b3dbaee27ff",
+    "Luno/package.json": "02d119ef9b8f",
+    "Luno/app/ClientApp.js": "bc6983c4aa86",
+    "Luno/app/ClientAppPaster.js": "e870e8155cec",
+    "Luno/app/ClientAppUI.js": "7869eebd6a36",
+    "Luno/app/CodeDiffer.js": "3047292f95c8",
+    "Luno/app/DiffApprovalModal.js": "eee25d95cdfb",
+    "Luno/app/LunoManifestDecisionEngine.js": "2978124edee2",
+    "Luno/app/LunoPayloadParser.js": "a37114602b4e",
+    "Luno/core/LunoClassPatcher.js": "be3e30988d24",
+    "Library/DomBasics.js": "d5dec7dd681f",
+    "Library/UITools.js": "00bb50cc1f3f",
+    "Library/ThreeJSLoader.js": "f0bc37b1463e",
+    "Library/DocumentReader.js": "e42cbf03bf76",
+    "Library/VideoPlayer.js": "01bd1e66ca1d",
+    "Library/DictationWidget.js": "fc29e5b3dfe8",
+    "Library/SliderControl.js": "89e78787827f",
+    "Library/ColorPicker.js": "9c09ec999364",
+    "Library/KeyCommandHandler.js": "e815a401e3a8",
+    "Library/SidePanel.js": "babe977a5bd2",
+    "Library/CodeMirrorWidget.js": "25642a8b2661",
+    "Library/CommunityOracle.js": "f2e027e1bb14"
+  },
+  "macHashes": {}
+}

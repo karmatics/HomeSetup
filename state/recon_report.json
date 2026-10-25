@@ -1,0 +1,280 @@
+{
+  "timestamp": "2026-10-25T03:37:10.304Z",
+  "keyCmdSyncResult": "Updated Library/KeyCommandHandler.js from Mac (18530 bytes, 600 lines)",
+  "libraryInit": "Git already initialized",
+  "lunoInit": "Git already initialized",
+  "libraryFetch": "fatal: not a git repository (or any of the parent directories): .git\nCommand failed: git fetch origin 2>&1",
+  "lunoFetch": "fatal: not a git repository (or any of the parent directories): .git\nCommand failed: git fetch origin 2>&1",
+  "homeSetupPush": {
+    "isPushedToGithub": false,
+    "output": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push -u origin main 2>&1"
+  },
+  "macCoreCommits": null,
+  "totalProjectsConfigured": 44,
+  "gitSummary": [
+    {
+      "name": "AardvarkExtension",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/AardvarkExtension.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "AardvarkPlaylist",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/AardvarkPlaylist.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "AlphabetGame",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/AlphabetGame.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Basic3D",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Basic3D.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "BasicsWithDialogBox",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/BasicsWithDialogBox.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "BookmarkletWorkshop",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/BookmarkletWorkshop.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "BulbAndButton",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/BulbAndButton.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "CadPlan",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/CadPlan.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Calculator",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Calculator.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Comments",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Comments.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Community",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Community.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "EconomicsOfAutomation",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/EconomicsOfAutomation.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Es6Converter",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Es6Converter.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "FallingWater",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/FallingWater.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "FourDFun",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/FourDFun.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "FunInFourD",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/FunInFourD.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "HomeSetup",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/HomeSetup.git",
+      "branch": "main"
+    },
+    {
+      "name": "Hypercube",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Hypercube.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "JobsAndAI",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/JobsAndAI.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "LegoDetective",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/LegoDetective.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Library",
+      "hasGit": true,
+      "remote": "Command failed: git remote get-url origin 2>/dev/null",
+      "branch": "Command failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Luno",
+      "hasGit": true,
+      "remote": "Command failed: git remote get-url origin 2>/dev/null",
+      "branch": "Command failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "LunoParser",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/LunoParser.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "MathStorm",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/MathStorm.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Penrose",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Penrose.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "PleasureAndPain",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/PleasureAndPain.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "RunOnServerTools",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/RunOnServerTools.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "SvgStudio",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/SvgStudio.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "TaxChart",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/TaxChart.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "TouchController",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/TouchController.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "TriBlob",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/TriBlob.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Trippy",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Trippy.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "ValuationOfAccudraw",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/ValuationOfAccudraw.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "Voting",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/Voting.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "aardvarkBookmarklet",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/aardvarkBookmarklet.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "accuCad",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/accuCad.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "accudraw",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/accudraw.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "guessTheNoteGame",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/guessTheNoteGame.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "junk",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/junk.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "pianorolls",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/pianorolls.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "situation",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/situation.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "squircle",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/squircle.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "teacup",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/teacup.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    },
+    {
+      "name": "vibes",
+      "hasGit": true,
+      "remote": "git@github.com:karmatics/vibes.git",
+      "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null"
+    }
+  ]
+}

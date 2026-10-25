@@ -43,13 +43,13 @@ class HomeNetworkContent {
     }
 
   static p_net_mesh_1() {
-      return [
-        "All devices reside on the same 10.0.0.x subnet, communicating through native Luno services:",
-        "1. **Ubuntu Host (10.0.0.245 on Port 3000):** Hosts the primary active Luno server (`/root/source/LunoProjects/Luno/server.js`), task runner queue, and this living document.",
-        "2. **Mac Workstation (10.0.0.226 on Port 8080):** Confirmed running Luno v3.8.0. Port 22 (SSH) is closed, establishing that **HTTP on port 8080 is our exclusive, authenticated communication wire**.",
-        "3. **Native Luno Federation:** Because both the Ubuntu laptop and the Mac run Luno servers, cross-machine automation operates via direct HTTP requests. Projects on the Mac are queried directly at `http://10.0.0.226:8080/<ProjectName>/luno.json`, and actions can be triggered across machines without terminal passwords."
-      ];
-    }
+    return [
+      "All devices reside on the same 10.0.0.x subnet, communicating through native Luno services and authenticated Git protocols:",
+      "1. **Ubuntu Host (10.0.0.245:3000):** Hosts the primary active Luno development server (`/root/source/LunoProjects/Luno/server.js`), task runner queue, and this living infrastructure dossier.",
+      "2. **Mac Workstation (10.0.0.226:8080):** Confirmed running Luno v3.8.0 on Apple Silicon at `/Users/rob/source/LunoProjects/`. Both `HomeSetup` and all 43 sibling projects are served live over HTTP, allowing zero-latency peer synchronization via `POST /api/save`.",
+      "3. **GitHub SSH Integration:** Authenticated via dedicated Ed25519 public keys (`/root/.ssh/id_ed25519.pub`), enabling push and pull across all 44 `karmatics` repositories."
+    ];
+  }
   static p_net_mesh_2() {
     return [
       "Because every machine has a known LAN hostname or static IP reservation on your local router, automation scripts can ping, check service availability, or push data buffers between endpoints deterministically."
@@ -57,16 +57,17 @@ class HomeNetworkContent {
   }
 
   static sidebar_network_ports() {
-      return [
-        "Local Fleet Network Port Directory:\n" +
-        "• 10.0.0.245:3000: Ubuntu Laptop (Active Luno Host, Bedroom)\n" +
-        "• 10.0.0.226:8080: Mac Workstation (Verified Luno v3.8.0 Peer, Living Room)\n" +
-        "• 10.0.0.226:22: Closed (Remote Login disabled on Mac; HTTP 8080 is primary)\n" +
-        "• Port 3001: WebRTC P2P Signaling Server (signal-server.js)\n" +
-        "• Subnet: 10.0.0.0/24 (Gateway: 10.0.0.1)\n" +
-        "• Project Endpoints: `http://10.0.0.226:8080/<Project>/luno.json`"
-      ];
-    }
+    return [
+      "Local Fleet Network Port Directory:\n" +
+      "• 10.0.0.245:3000: Ubuntu Laptop (Active Luno Host, Bedroom)\n" +
+      "• 10.0.0.226:8080: Mac Workstation (Verified Luno v3.8.0 Peer, Living Room)\n" +
+      "• 10.0.0.226:22: Closed (Remote Login disabled on Mac; HTTP 8080 is primary)\n" +
+      "• Port 3001: WebRTC P2P Signaling Server (signal-server.js)\n" +
+      "• Subnet: 10.0.0.0/24 (Gateway: 10.0.0.1)\n" +
+      "• Linux SSH Public Key Path: `/root/.ssh/id_ed25519.pub`\n" +
+      "• GitHub Remote Protocol: `git@github.com:karmatics/<repo>.git`"
+    ];
+  }
   static p_net_ssh_1() {
     return [
       "**Key-Based SSH Connectivity:** Between the Linux host, Mac, and Windows machine, passwordless public-key authentication is configured using Ed25519 or RSA keys. This allows Node.js runner scripts on the Linux box to execute remote commands seamlessly—such as telling the Mac to run a build or telling Windows to verify an executable—without manual password prompts."
@@ -92,10 +93,10 @@ class HomeNetworkContent {
     return [
       "**The Active Mac Reconnaissance Protocol:** To bridge the repository and Git gap between the Linux laptop and the Mac workstation, we executed a bidirectional cross-wire audit.",
       "The live scan verified:",
-      "1. **Mac Workstation Verified Online:** Reached at `10.0.0.226:8080` running Luno v3.8.0 on Darwin ARM64.",
-      "2. **44+ Projects Cataloged on Mac:** All checked out at `/Users/rob/source/LunoProjects/`, with 36 active Git repositories tracking `origin` on GitHub (`git@github.com:karmatics/<repo>.git`).",
-      "3. **Zero-Password Remote Script Execution:** Confirmed active via `POST /api/save?project=Luno`, allowing programmatic remote tasks without terminal SSH prompts.",
-      "4. **HomeSetup Initialized on Linux:** `HomeSetup` was born on the Ubuntu laptop and has now been initialized as a clean Git repository tracking `git@github.com:karmatics/HomeSetup.git`."
+      "1. **Mac Workstation Online & Synced:** Reached at `10.0.0.226:8080` running Luno v3.8.0 on Darwin ARM64 (`mac-mini-rob.local`).",
+      "2. **44 Projects Cataloged & Parity Verified:** All 44 projects on Linux are now Git-initialized and wired to match the Mac repositories.",
+      "3. **KeyCommandHandler.js Synchronized:** Local copy updated from Mac's 600-line version.",
+      "4. **HomeSetup Replicated to Mac:** 82 files replicated directly to Mac over LAN HTTP (`POST /api/save?project=HomeSetup`), with Git tracking `git@github.com:karmatics/HomeSetup.git`."
     ];
   }
   static p_net_recon_2() {

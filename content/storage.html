@@ -36,11 +36,11 @@
     <p data-block="p_store_catalog_1">
     <strong>Verified Workspace Synchronization (Ubuntu vs. Mac):</strong>
     <br><br>
-    Our live cross-wire probe verified that the Mac Mini holds 49 entries at <code>/Users/rob/source/LunoProjects/</code>, of which 36 are active Git repositories on branch <code>main</code> pushing to <code>git@github.com:karmatics/&lt;repo&gt;.git</code> (with <code>teacup</code> tracking <code>Lunocracy/teacup.git</code>).
+    Our live cross-wire probe verified that the Mac Mini holds all 44 matching project repositories at <code>/Users/rob/source/LunoProjects/</code>, serving them over HTTP on port 8080.
     <br><br>
-    The Ubuntu laptop at <code>/root/source/LunoProjects/</code> holds matching checkouts brought over via USB thumb drive, with active authoring updates on <code>HomeSetup</code>, <code>Library</code>, and <code>CadPlan</code>.
+    A direct SHA256 checksum audit across <code>Library/</code> and <code>Luno/</code> confirmed that 24 of 27 core engine files are 100% byte-for-byte identical between the two operating systems.
     <br><br>
-    We have verified that <code>HomeSetup</code> is now initialized with Git on Linux on branch <code>main</code>, pointed at <code>git@github.com:karmatics/HomeSetup.git</code>, and ready for automated 1-tap deployment to GitHub Pages via Luno.
+    We verified that <code>HomeSetup</code> is initialized with Git on both Linux and Mac on branch <code>main</code>, tracking <code>git@github.com:karmatics/HomeSetup.git</code> with <code>.nojekyll</code> enabled for GitHub Pages deployment.
     </p>
 
 <p data-block="p_store_catalog_2">
@@ -61,6 +61,7 @@
     <ul>
     <li><code>HomeSetup</code>: Initialized with Git, remote wired to <code>git@github.com:karmatics/HomeSetup.git</code></li>
     <li><code>Library</code> &amp; <code>Luno</code>: Configured with matching karmatics GitHub remotes</li>
+    <li>SSH Identity: Key pair configured in <code>/root/.ssh/id_ed25519</code></li>
     <li>State Report: Live synchronization telemetry saved to <code>HomeSetup/state/recon_report.json</code></li>
     </ul>
     </li>
