@@ -1,0 +1,57 @@
+<article data-page="orchestration" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">LLM Orchestration &amp; Remote Automation</span>
+    <h1 class="dossier-title">4. Cross-Wire LLM Orchestration</h1>
+    <p class="dossier-subtitle">Luno-to-Luno Federation: Programmatic tasks across Ubuntu (Port 3000) and Mac (Port 8080).</p>
+  </header>
+
+  <section data-section="orchestration_flow">
+    <h2 class="section-title">Programmatic Cross-Wire Operations via LLM</h2>
+
+    <p data-block="p_orch_flow_1">
+      With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 3000, cross-machine orchestration enters a clean, unified paradigm: <strong>Luno-to-Luno HTTP Federation</strong>.
+      <br><br>
+      Instead of invoking complex terminal shell pipelines, an LLM generating <code>&lt;script data-file="RUN: SERVER" data-action="run-server"&gt;</code> on the Ubuntu host can use Node's <code>http</code> module to send directives straight to <code>http://&lt;mac-ip&gt;:8080/api/...</code>.
+      <br><br>
+      This allows the AI to query files on the Mac, verify Git configurations, and transfer project bundles across the wire with zero manual intervention.
+    </p>
+
+    <p data-block="p_orch_flow_2">
+      This turns the AI into an active system administrator for your home setup: you express your intent in plain English, the AI outputs an executable runner container, and with one click of "Paste from Chatbot", the script executes on the Linux host and returns structured execution telemetry back to the screen.
+    </p>
+
+    <aside data-block="sidebar_server_runner_patterns" data-type="sidebar">
+      <span class="sidebar-kicker">Runner Protocol</span>
+      <strong class="sidebar-title">Luno-to-Luno Federation Recipes (Port 8080 Bridge)</strong>
+      <ul>
+        <li><strong>Query Projects on the Mac:</strong> Fetch Mac project list directly from its Luno server on port 8080.</li>
+        <li><strong>Cross-Node Script Execution:</strong> Dispatch computational jobs to the Mac via Luno's server endpoints.</li>
+        <li><strong>Git Remote Synchronization:</strong> Wire new local projects like <code>HomeSetup</code> to GitHub Pages automatically.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="task_queue">
+    <h2 class="section-title">The Local Task Queue (runner.mjs)</h2>
+
+    <p data-block="p_orch_runner_1">
+      <strong>The File-Based Task Queue (<code>runner.mjs</code>):</strong> In addition to real-time Luno container execution, your workspace includes a dedicated background task runner (<code>HomeSetup/runner.mjs</code>).
+      <br><br>
+      The runner monitors a local file queue (<code>queue/incoming/</code>, <code>queue/running/</code>, <code>queue/done/</code>, <code>queue/failed/</code>). External tools, cron jobs, or LLM-generated scripts can drop a JSON task into the queue, and <code>runner.mjs</code> executes it asynchronously in the background, logging full stdout/stderr and updating <code>state/status.json</code>.
+    </p>
+
+    <p data-block="p_orch_runner_2">
+      This architecture decouples heavy compilation or long-running transfers from the browser UI: jobs run reliably in background daemon mode while you continue editing documents or drafting in Luno.
+    </p>
+
+    <aside data-block="sidebar_runner_architecture" data-type="sidebar">
+      <span class="sidebar-kicker">Queue Anatomy</span>
+      <strong class="sidebar-title">File-Based Task Queue Engine</strong>
+      <ul>
+        <li><strong>Task Types:</strong> <code>write-file</code>, <code>run-script</code>, <code>run-command</code>, <code>return-message</code>.</li>
+        <li><strong>Telemetry:</strong> Live updates to <code>state/status.json</code> with PID and heartbeat.</li>
+        <li><strong>Failure Quarantine:</strong> Failed jobs move cleanly to <code>queue/failed/</code> with full error output.</li>
+      </ul>
+    </aside>
+  </section>
+</article>

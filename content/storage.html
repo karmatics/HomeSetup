@@ -1,0 +1,93 @@
+<article data-page="storage" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Storage &amp; Drive Mobility</span>
+    <h1 class="dossier-title">2. Shared Storage &amp; Portable Drive</h1>
+    <p class="dossier-subtitle">Managing the roving external drive across Linux, Mac, and Windows with consistent paths, file systems, and sync routines.</p>
+  </header>
+
+  <section data-section="drive_architecture">
+    <h2 class="section-title">The Roving Hard Drive &amp; Cross-OS Mount Points</h2>
+
+    <p data-block="p_store_drive_1">
+      A core asset of this workstation setup is the high-capacity external hard drive. It can physically connect over USB-C / USB-A to any of the three main machines: the Linux host, the Mac, or the Windows workstation.
+      <br><br>
+      Because it moves between different operating systems, it is formatted with a universally readable filesystem (typically <strong>exFAT</strong> with consistent cluster sizing, or dual-partitioned with NTFS/ext4). This allows multi-gigabyte files, 3D asset libraries, model weights, and backup archives to move instantly without network bandwidth saturation.
+    </p>
+
+    <p data-block="p_store_drive_2">
+      To prevent scripts from breaking when the drive moves from one machine to another, we document the canonical mount paths for each operating system below.
+    </p>
+
+    <aside data-block="sidebar_mount_table" data-type="sidebar">
+      <span class="sidebar-kicker">Mount Directory</span>
+      <strong class="sidebar-title">Mount Paths by Operating System</strong>
+      <ul>
+        <li><strong>Linux Host:</strong> <code>/media/&lt;user&gt;/&lt;VolumeName&gt;/</code> or static mount <code>/mnt/shared_drive/</code></li>
+        <li><strong>Mac Workstation:</strong> <code>/Volumes/&lt;VolumeName&gt;/</code></li>
+        <li><strong>Windows Workstation:</strong> <code>D:\</code> or <code>E:\</code> (WSL2: <code>/mnt/d/</code> or <code>/mnt/e/</code>)</li>
+        <li><strong>Canonical Directory:</strong> <code>&lt;DriveRoot&gt;/Workspace/</code> and <code>&lt;DriveRoot&gt;/Backups/</code></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="project_catalog">
+    <h2 class="section-title">Workspace Catalog &amp; Git Remote Topology (Mac vs. Linux)</h2>
+
+    <p data-block="p_store_catalog_1">
+    <strong>Verified Workspace Synchronization (Ubuntu vs. Mac):</strong>
+    <br><br>
+    Our live cross-wire probe verified that the Mac Mini holds 49 entries at <code>/Users/rob/source/LunoProjects/</code>, of which 36 are active Git repositories on branch <code>main</code> pushing to <code>git@github.com:karmatics/&lt;repo&gt;.git</code> (with <code>teacup</code> tracking <code>Lunocracy/teacup.git</code>).
+    <br><br>
+    The Ubuntu laptop at <code>/root/source/LunoProjects/</code> holds matching checkouts brought over via USB thumb drive, with active authoring updates on <code>HomeSetup</code>, <code>Library</code>, and <code>CadPlan</code>.
+    <br><br>
+    We have verified that <code>HomeSetup</code> is now initialized with Git on Linux on branch <code>main</code>, pointed at <code>git@github.com:karmatics/HomeSetup.git</code>, and ready for automated 1-tap deployment to GitHub Pages via Luno.
+    </p>
+
+<p data-block="p_store_catalog_2">
+      <strong>Safe Git Re-linking:</strong> Because we can execute scripts directly on both machines, we never have to blind-copy files. When linking <code>HomeSetup</code> to GitHub, we can initialize its Git repository directly on Linux, set its remote to <code>git@github.com:karmatics/HomeSetup.git</code>, and configure Luno's 1-tap deploy button to publish to <code>karmatics.github.io/HomeSetup</code> automatically.
+    </p>
+
+    <aside data-block="sidebar_git_repo_table" data-type="sidebar">
+    <span class="sidebar-kicker">Repository Matrix</span>
+    <strong class="sidebar-title">Verified Multi-Node Repository Matrix</strong>
+    <ul>
+    <li><strong>Mac Mini (<code>/Users/rob/source/LunoProjects</code>):</strong>
+    <ul>
+    <li>36 Repositories on branch <code>main</code> &rarr; <code>git@github.com:karmatics/&lt;repo&gt;.git</code></li>
+    <li>ScreenFlow v10.5.2 video recording suite active</li>
+    </ul>
+    </li>
+    <li><strong>Ubuntu Laptop (<code>/root/source/LunoProjects</code>):</strong>
+    <ul>
+    <li><code>HomeSetup</code>: Initialized with Git, remote wired to <code>git@github.com:karmatics/HomeSetup.git</code></li>
+    <li><code>Library</code> &amp; <code>Luno</code>: Configured with matching karmatics GitHub remotes</li>
+    <li>State Report: Live synchronization telemetry saved to <code>HomeSetup/state/recon_report.json</code></li>
+    </ul>
+    </li>
+    </ul>
+    </aside>
+
+</section>
+
+  <section data-section="sync_strategies">
+    <h2 class="section-title">Transfer Strategies: USB Thumb Migration vs. Live Luno HTTP</h2>
+
+    <p data-block="p_store_sync_1">
+      <strong>Physical Plug vs. Network Pull:</strong> When the drive is plugged into the Linux box, bulk transfers are local and blazing fast. If the drive is currently plugged into the Mac or Windows machine, the Linux host can still reach it across the LAN over an SSH/SMB share: <code>rsync -avz --progress user@mac:/Volumes/&lt;VolumeName&gt;/ /local/target/</code>.
+    </p>
+
+    <p data-block="p_store_sync_2">
+      This provides the best of both worlds: high-throughput physical portability when doing massive dump operations, plus network accessibility when the drive is attached to a remote machine across the room.
+    </p>
+
+    <aside data-block="sidebar_transfer_scripts" data-type="sidebar">
+      <span class="sidebar-kicker">Transfer Recipes</span>
+      <strong class="sidebar-title">rsync &amp; Luno Cross-Wire Sync Recipes</strong>
+      <ul>
+        <li><strong>Pull from Mac to Linux:</strong> <code>rsync -avz user@macbook:/Volumes/External/ ./destination/</code></li>
+        <li><strong>Push from Linux to Windows:</strong> <code>rsync -avz ./projects/ user@winbox:/mnt/d/Workspace/</code></li>
+        <li><strong>Integrity Verification:</strong> Automated SHA256 checksum comparisons to guarantee byte-for-byte transfers.</li>
+      </ul>
+    </aside>
+  </section>
+</article>

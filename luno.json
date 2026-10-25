@@ -1,0 +1,68 @@
+{
+  "name": "HomeSetup",
+  "version": "2.1.0",
+  "description": "Personal Infrastructure Topology: Linux Host, Mac, Windows Workstation, Mobile Nodes, Portable Shared Storage, Luno Cross-Machine Orchestration, and Thread Continuity Ledger",
+  "type": "luno-web-app",
+  "mainClass": "HomeSetup",
+  "entrypoint": {
+    "file": "HomeSetup.js",
+    "class": "HomeSetup",
+    "method": "run"
+  },
+  "main": [
+    "js/HomeFleetVisualizer.js",
+    "js/HomeTopologyContent.js",
+    "js/HomeNetworkContent.js",
+    "js/HomeStorageContent.js",
+    "js/HomeNodesContent.js",
+    "js/HomeOrchestrationContent.js",
+    "js/HomeSecretsContent.js",
+    "js/HomeHandoffContent.js",
+    "js/HomeHandoffComponent.js",
+    "js/CadPlanDocumentEditor.js",
+    "js/CadPlanItemNotes.js",
+    "js/CadPlanNotesManager.js",
+    "js/CadPromptBundlerDialog.js",
+    "js/CadTouchPairingDialog.js",
+    "HomeSetup.js",
+    "js/CadPlanDataRegistry.js",
+    "js/CadPlanAardvark.js",
+    "js/CadPlanContentConverter.js"
+  ],
+  "library": [
+    "DomBasics.js",
+    "UITools.js",
+    "ThreeJSLoader.js",
+    "DocumentReader.js",
+    "VideoPlayer.js",
+    "DictationWidget.js",
+    "SliderControl.js",
+    "ColorPicker.js",
+    "KeyCommandHandler.js",
+    "SidePanel.js",
+    "CodeMirrorWidget.js",
+    "CommunityOracle.js"
+  ],
+  "styles": [
+    "basic3d.css"
+  ],
+  "processedCountSinceCheckpoint": 43,
+  "changedMethods": {
+    "HomeSetup.js": "2026-10-25T02:10:49.211Z",
+    "js/HomeHandoffComponent.js": "2026-10-25T02:50:12.136Z",
+    "js/HomeHandoffContent.js": "2026-10-25T02:50:12.136Z",
+    "content/handoff.html": "2026-10-25T02:10:49.211Z",
+    "js/CadPromptBundlerDialog.js": "2026-10-25T02:10:49.211Z",
+    "luno.json": "2026-10-25T02:10:49.211Z",
+    "js/HomeTopologyContent.js": "2026-10-25T02:33:07.591Z",
+    "js/HomeFleetVisualizer.js": "2026-10-25T02:41:46.187Z",
+    "js/HomeNetworkContent.js": "2026-10-25T02:43:32.571Z",
+    "js/HomeNodesContent.js": "2026-10-25T02:27:42.838Z",
+    "js/HomeOrchestrationContent.js": "2026-10-25T02:33:07.591Z",
+    "content/topology.html": "2026-10-25T02:27:42.838Z",
+    "content/network.html": "2026-10-25T02:43:32.571Z",
+    "content/orchestration.html": "2026-10-25T02:33:07.591Z",
+    "js/HomeStorageContent.js": "2026-10-25T02:50:12.136Z",
+    "content/storage.html": "2026-10-25T02:50:12.136Z"
+  }
+}

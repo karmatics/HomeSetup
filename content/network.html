@@ -1,0 +1,78 @@
+<article data-page="network" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Networking &amp; Protocols</span>
+    <h1 class="dossier-title">1. Local Network &amp; Connection Mesh</h1>
+    <p class="dossier-subtitle">Verified Luno Federation: Ubuntu (10.0.0.245:3000) ↔ Mac (10.0.0.226:8080 with Remote Execution), WebRTC channels, and LAN topology.</p>
+  </header>
+
+  <section data-section="mesh_architecture">
+    <h2 class="section-title">Communication Channels &amp; Wire Topology</h2>
+
+    <p data-block="p_net_mesh_1">
+      All devices reside on the same 10.0.0.x subnet, communicating through native Luno services:
+      <br><br>
+      1. <strong>Ubuntu Host (10.0.0.245 on Port 3000):</strong> Hosts the primary active Luno server (<code>/root/source/LunoProjects/Luno/server.js</code>), task runner queue, and this living document.
+      <br><br>
+      2. <strong>Mac Workstation (10.0.0.226 on Port 8080):</strong> Confirmed running Luno v3.8.0 with 44 verified project repositories. Remote script execution is confirmed via <code>POST /api/save?project=Luno</code>.
+      <br><br>
+      3. <strong>Native Luno Federation:</strong> Because both the Ubuntu laptop and the Mac run Luno servers, cross-machine automation operates via direct HTTP requests. Projects on the Mac are queried directly at <code>http://10.0.0.226:8080/&lt;ProjectName&gt;/luno.json</code>, and actions can be triggered across machines without terminal passwords.
+    </p>
+
+    <p data-block="p_net_mesh_2">
+      Because every machine has a known LAN hostname or static IP reservation on your local router, automation scripts can ping, check service availability, or push data buffers between endpoints deterministically.
+    </p>
+
+    <aside data-block="sidebar_network_ports" data-type="sidebar">
+      <span class="sidebar-kicker">Ports &amp; Protocols</span>
+      <strong class="sidebar-title">Local Network Service Directory</strong>
+      <ul>
+        <li><strong>10.0.0.245:3000:</strong> Ubuntu Laptop (Active Luno Host, Bedroom)</li>
+        <li><strong>10.0.0.226:8080:</strong> Mac Workstation (Verified Luno v3.8.0 Peer with Remote Execution)</li>
+        <li><strong>10.0.0.226:22:</strong> Closed (Remote Login disabled on Mac; HTTP 8080 is primary)</li>
+        <li><strong>Port 3001:</strong> WebRTC P2P Signaling Server (signal-server.js)</li>
+        <li><strong>Subnet:</strong> 10.0.0.0/24 (Gateway: 10.0.0.1)</li>
+        <li><strong>Verified API Endpoint:</strong> <code>POST http://10.0.0.226:8080/api/save?project=Luno</code></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="mac_recon_protocol">
+    <h2 class="section-title">Mac Reconnaissance &amp; Git Repository Discovery</h2>
+
+    <p data-block="p_net_recon_1">
+    <strong>The Active Mac Reconnaissance Protocol:</strong> To bridge the repository and Git gap between the Linux laptop and the Mac workstation, we executed a bidirectional cross-wire audit.
+    <br><br>
+    The live scan verified:
+    <br>
+    1. <strong>Mac Workstation Verified Online:</strong> Reached at <code>10.0.0.226:8080</code> running Luno v3.8.0 on Darwin ARM64.
+    <br>
+    2. <strong>44+ Projects Cataloged on Mac:</strong> All checked out at <code>/Users/rob/source/LunoProjects/</code>, with 36 active Git repositories tracking <code>origin</code> on GitHub (<code>git@github.com:karmatics/&lt;repo&gt;.git</code>).
+    <br>
+    3. <strong>Zero-Password Remote Script Execution:</strong> Confirmed active via <code>POST /api/save?project=Luno</code>, allowing programmatic remote tasks without terminal SSH prompts.
+    <br>
+    4. <strong>HomeSetup Initialized on Linux:</strong> <code>HomeSetup</code> was born on the Ubuntu laptop and has now been initialized as a clean Git repository tracking <code>git@github.com:karmatics/HomeSetup.git</code>.
+    </p>
+
+<p data-block="p_net_recon_2">
+      <strong>Luno-to-Luno Federation Confirmed:</strong> Our cross-wire dispatch confirmed that the Ubuntu laptop communicates directly with the Mac's Luno server at <code>http://10.0.0.226:8080/api/save?project=Luno</code>.
+      <br><br>
+      The server script executed natively inside Node.js on the Mac (<code>darwin</code>, user <code>rob</code>, homedir <code>/Users/rob</code>), verifying that we have zero-password remote execution across the local network.
+      <br><br>
+      This enables automated Git reconciliation, remote file audits, and cross-machine synchronization without touching command-line SSH.
+    </p>
+
+    <aside data-block="sidebar_recon_checklist" data-type="sidebar">
+    <span class="sidebar-kicker">Recon Execution</span>
+    <strong class="sidebar-title">Mac Git &amp; Directory Audit Checklist</strong>
+    <ul>
+    <li><strong>1. Host Address:</strong> 10.0.0.226 on Port 8080 (Luno v3.8.0 Peer verified)</li>
+    <li><strong>2. Remote Script Execution:</strong> Confirmed operational via POST /api/save</li>
+    <li><strong>3. Mac Profile:</strong> User <code>rob</code>, Darwin ARM64, ScreenFlow installed</li>
+    <li><strong>4. Linux Profile:</strong> Ubuntu Host (10.0.0.245:3000), Linux 7.0.0, Node.js</li>
+    <li><strong>5. HomeSetup Git:</strong> Initialized on Linux, remote set to git@github.com:karmatics/HomeSetup.git</li>
+    <li><strong>6. State Persistence:</strong> Full parity matrix saved to HomeSetup/state/recon_report.json</li>
+    </ul>
+    </aside>
+
+</section>
+</article>

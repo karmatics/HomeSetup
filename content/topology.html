@@ -1,0 +1,71 @@
+<article data-page="topology" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Hardware Fleet Architecture</span>
+    <h1 class="dossier-title">0. Hardware Topology &amp; Fleet Matrix</h1>
+    <p class="dossier-subtitle">Real-world inventory: Ubuntu laptop, Mac workstation, Windows deskbound PC, two mobile phones, and shared storage.</p>
+  </header>
+
+  <section data-section="fleet_overview">
+    <h2 class="section-title">Fleet Matrix &amp; Real-World Machine Profiles</h2>
+    <div data-block="comp_fleet_map" data-type="component" data-component="HomeFleetVisualizer"></div>
+
+    <p data-block="p_topo_intro_1">
+      This document records the exact physical and network architecture of my home workstation fleet. The machines are not identical clones—each has distinct physical constraints, battery health, and specialized software dependencies.
+      <br><br>
+      The setup currently centers around four physical compute points plus two mobile phones: the new <strong>Ubuntu Linux laptop</strong> (working in the bedroom, powerful, clean install), the <strong>Mac workstation</strong> (living room, connected to the big dual monitors, long-time primary host with all GitHub remotes), the <strong>Windows laptop</strong> (dead battery, tethered 24/7 to the HP charger hub), and <strong>two smartphones</strong> (where Luno was originally developed, serving as primary dictation and review decks).
+    </p>
+
+    <p data-block="p_topo_intro_2">
+      Because the initial code migration to this Ubuntu machine was done via a USB thumb drive without copying <code>.git</code> folders, the Linux laptop holds newer source code for several projects (including this newly forked HomeSetup repository), while the Mac still holds the authoritative Git remotes wired to GitHub Pages.
+      <br><br>
+      By maintaining this complete document, any LLM assistant pasted into our workflow immediately understands the physical locations, charger constraints, and cross-wire command pathways without asking repetitive setup questions.
+    </p>
+
+    <aside data-block="sidebar_fleet_roles" data-type="sidebar">
+      <span class="sidebar-kicker">Fleet Hardware Reality</span>
+      <strong class="sidebar-title">Machine Roles, Power &amp; Physical Placement</strong>
+      <ul>
+        <li><strong>1. Ubuntu Laptop (The New Workhorse):</strong> Old work laptop, wiped clean of Windows; fresh Ubuntu install 2 days ago. Great battery; currently in bedroom, ideal for traveling and live demos. Candidate to move to living room big monitors.</li>
+        <li><strong>2. Mac Workstation (Living Room):</strong> Primary desktop connected to big monitors for years. Holds all original <code>.git</code> repos. Sole dependency is ScreenFlow for video editing; all other work moving to Linux.</li>
+        <li><strong>3. Windows Laptop (Deskbound):</strong> Dead battery (dies immediately if unplugged). Shares the large HP hub/dock charger from the Linux laptop; permanently tethered.</li>
+        <li><strong>4. Two Phones (Phone 1 &amp; Phone 2):</strong> Luno was conceived and developed first on a phone! Used for couch/bed review, one-handed navigation, and speech-to-text dictation notes.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="workstation_breakdown">
+    <h2 class="section-title">The Workstations: Ubuntu, Mac, Windows &amp; Mobile</h2>
+
+    <p data-block="p_topo_linux_1">
+      <strong>Ubuntu Laptop (Bedroom Workhorse &amp; Demo Rig):</strong> This machine is an old corporate laptop gifted to me. I wiped Windows completely and installed fresh Ubuntu a couple days ago. It is fast, clean, and has a healthy battery. I am currently using it in the bedroom, but it is powerful enough to take over the living room setup with the big monitors.
+      <br><br>
+      Crucially, because it is portable and runs a complete local Luno web server, this is the machine I can unplug and take anywhere to give live, offline demos of Luno and our spatial software tools.
+    </p>
+
+    <p data-block="p_topo_mac_1">
+      <strong>Mac Workstation (Living Room Big Monitors):</strong> The Mac has been my primary development machine for years. It is currently wired to the big desktop monitors out in the living room. It holds all original Git repositories and deployment keys for our GitHub Pages sites.
+      <br><br>
+      My goal is to transition daily coding to Ubuntu. The single major application holding me to the Mac is <strong>ScreenFlow</strong> for screencasting and video production. Aside from ScreenFlow, my entire toolchain (Luno, Three.js, WebGL, Node.js, and documentation) runs cleanly on Linux.
+    </p>
+
+    <p data-block="p_topo_win_1">
+      <strong>Windows Laptop (Tethered Rig):</strong> This machine was my only laptop before getting the Ubuntu machine, but its battery is completely shot—it must remain plugged in 24/7 to avoid immediate shutdown. It relies on the large HP hub/dock charger from the Linux laptop (the only compatible charger I have). It stays parked on the desk for Windows-only tasks and legacy checks.
+    </p>
+
+    <p data-block="p_topo_phones_1">
+      <strong>The Two Phones (Mobile-First Luno Origins):</strong> A critical architectural truth of Luno is that <strong>I built Luno first on a smartphone</strong>. Mobile is not an afterthought or scaled-down viewport—Luno is specifically optimized for phone ergonomics.
+      <br><br>
+      When I am lounging on the couch or in bed, I don't need a bulky keyboard. I pull up Luno on the phone, browse the living document, highlight a section with Aardvark, tap the microphone button, and use voice dictation to leave technical directives. This works over home Wi-Fi and continues to function when I am away from the house.
+    </p>
+
+    <aside data-block="sidebar_mobile_deck" data-type="sidebar">
+      <span class="sidebar-kicker">Mobile-First Heritage</span>
+      <strong class="sidebar-title">Why Phones Are First-Class Luno Nodes</strong>
+      <ul>
+        <li><strong>Couch &amp; Bed Cadence:</strong> Reviewing long-form technical plans without keyboard fatigue.</li>
+        <li><strong>Touch + Voice Synergy:</strong> Tap block -> tap mic -> dictate thoughts in natural speech -> auto-saved to IndexedDB.</li>
+        <li><strong>Away-from-Desk Continuity:</strong> Reading living documents on the go with zero laptop bulk.</li>
+      </ul>
+    </aside>
+  </section>
+</article>

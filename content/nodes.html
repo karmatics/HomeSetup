@@ -1,0 +1,52 @@
+<article data-page="nodes" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Luno Workspace Nodes</span>
+    <h1 class="dossier-title">3. Machine Workspaces &amp; Luno Nodes</h1>
+    <p class="dossier-subtitle">Where Luno runs on each machine, filesystem layouts, and directory conventions.</p>
+  </header>
+
+  <section data-section="workspace_locations">
+    <h2 class="section-title">Luno Installations &amp; Directory Structures</h2>
+
+    <p data-block="p_nodes_layout_1">
+      Luno Workspace is designed to run locally on each machine. A Luno instance consists of the Node.js server (<code>LunoServer.js</code>) and client web interface. On the Linux box where you are currently running, the server serves the project files and provides API endpoints for disk writes (<code>/api/save</code>), server runners (<code>&lt;script data-file="RUN: SERVER"&gt;</code>), and git checkpoints.
+    </p>
+
+    <p data-block="p_nodes_layout_2">
+      On the Mac and Windows machines, clone copies of the Luno repository or individual project checkouts can either run independent local Luno server instances (on port 3000) or open the web interface hosted by the Linux box across the LAN.
+    </p>
+
+    <aside data-block="sidebar_path_directory" data-type="sidebar">
+      <span class="sidebar-kicker">Directory Map</span>
+      <strong class="sidebar-title">Luno Root Paths per Machine</strong>
+      <ul>
+        <li><strong>Linux Host:</strong> <code>~/Luno/</code> or <code>~/projects/</code> (subprojects: <code>HomeSetup/</code>, <code>Library/</code>)</li>
+        <li><strong>Mac Machine:</strong> <code>/Users/&lt;user&gt;/projects/</code></li>
+        <li><strong>Windows Machine:</strong> <code>C:\Users\&lt;user&gt;\projects\</code> or WSL <code>/home/&lt;user&gt;/projects/</code></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="node_capabilities">
+    <h2 class="section-title">Machine-Specific Workloads &amp; Strengths</h2>
+
+    <p data-block="p_nodes_roles_1">
+      <strong>Linux Workstation Role:</strong> Best suited for high-concurrency Node.js tasks, continuous background runners, database experiments, and server-side compilation.
+    </p>
+
+    <p data-block="p_nodes_roles_2">
+      <strong>Mac Role:</strong> Best for Safari web testing, iOS/macOS compilation, and design-heavy workflows. <strong>Windows Role:</strong> Best for gaming, DirectX graphics pipelines, Windows-only engineering tools, and secondary display monitors.
+    </p>
+
+    <aside data-block="sidebar_workload_matrix" data-type="sidebar">
+      <span class="sidebar-kicker">Task Distribution</span>
+      <strong class="sidebar-title">Optimal Task Distribution</strong>
+      <ul>
+        <li><strong>Linux Host:</strong> Server hub, code generation testbench, continuous development.</li>
+        <li><strong>Mac:</strong> Cross-browser verification, mobile device syncing, portable work.</li>
+        <li><strong>Windows:</strong> CAD/BIM desktop tools, GPU render passes, PC hardware testing.</li>
+        <li><strong>Phones:</strong> Mobile testing, two-handed gesture controller, instant QR scan testbeds.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
