@@ -16,7 +16,6 @@ class HomeHandoffComponent {
         }
       });
 
-      // 1. Header Toolbar with Quick Handoff Action
       const header = makeElement('div', {
         style: {
           padding: '12px 16px',
@@ -32,8 +31,8 @@ class HomeHandoffComponent {
         makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
           makeElement('span', { style: { fontSize: '18px' } }, '🏛️'),
           makeElement('div', {}, [
-            makeElement('strong', { style: { fontSize: '13px', color: '#00f2fe', display: 'block' } }, 'Master Opus Router & Living Portfolio Portal'),
-            makeElement('span', { style: { fontSize: '10px', color: '#94a3b8' } }, 'The 4 Quadrants of Rob Brown • Universal Port 8080 Mesh')
+            makeElement('strong', { style: { fontSize: '13px', color: '#00f2fe', display: 'block' } }, 'Master Opus Router & Fleet Git Synchronizer'),
+            makeElement('span', { style: { fontSize: '10px', color: '#94a3b8' } }, 'The 4 Quadrants of Rob Brown • Universal Port 8080 Git Mesh')
           ])
         ]),
         makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' } }, [
@@ -41,7 +40,7 @@ class HomeHandoffComponent {
             className: 'dr-nav-btn primary',
             style: { padding: '5px 12px', fontSize: '11px', fontWeight: 'bold' },
             onclick: () => HomeHandoffComponent.copyHandoffPrompt()
-          }, '📋 Copy Master Handoff Prompt'),
+          }, '📋 Copy Handoff Prompt'),
           makeElement('button', {
             className: 'dr-nav-btn',
             style: { padding: '5px 10px', fontSize: '11px', color: '#d2a8ff', borderColor: '#8257e5' },
@@ -51,7 +50,42 @@ class HomeHandoffComponent {
       ]);
       wrap.appendChild(header);
 
-      // 2. Search & Quadrant Filter Bar
+      const fleetGitBanner = makeElement('div', {
+        style: {
+          padding: '10px 16px',
+          background: 'linear-gradient(135deg, #0d2818 0%, #0d1117 100%)',
+          borderBottom: '1px solid #238636',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '10px'
+        }
+      }, [
+        makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
+          makeElement('strong', { style: { color: '#3fb950', fontSize: '12px' } }, '⚡ 1-Tap Fleet Git Sync:'),
+          makeElement('span', { id: 'fleet-mini-status', style: { color: '#8b949e', fontSize: '11px' } }, 'Keep Mac & Linux 100% synchronized across all 44 repositories')
+        ]),
+        makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap' } }, [
+          makeElement('button', {
+            className: 'dr-nav-btn',
+            style: { padding: '3px 8px', fontSize: '10.5px', background: '#238636', color: '#fff', border: 'none', fontWeight: 'bold' },
+            onclick: () => HomeHandoffComponent.syncFleetGit('push')
+          }, '⬆️ Push All (Local)'),
+          makeElement('button', {
+            className: 'dr-nav-btn',
+            style: { padding: '3px 8px', fontSize: '10.5px', color: '#00f2fe', borderColor: '#00f2fe66' },
+            onclick: () => HomeHandoffComponent.syncFleetGit('pull')
+          }, '⬇️ Pull All (Local)'),
+          makeElement('button', {
+            className: 'dr-nav-btn',
+            style: { padding: '3px 8px', fontSize: '10.5px', background: '#271052', color: '#d2a8ff', border: '1px solid #8257e5', fontWeight: 'bold' },
+            onclick: () => HomeHandoffComponent.syncFleetGit('cross_node')
+          }, '🌐 Sync Mac ➔ Linux (1-Tap)')
+        ])
+      ]);
+      wrap.appendChild(fleetGitBanner);
+
       const filterBar = makeElement('div', {
         style: {
           padding: '10px 16px',
@@ -111,7 +145,6 @@ class HomeHandoffComponent {
       filterBar.appendChild(quadrantChips);
       wrap.appendChild(filterBar);
 
-      // 3. Project Matrix Grid
       const cardsContainer = makeElement('div', {
         id: 'opus-cards-container',
         style: {
@@ -126,7 +159,6 @@ class HomeHandoffComponent {
       });
       wrap.appendChild(cardsContainer);
 
-      // Master Project Registry Database
       const projects = [
         {
           quadrant: 'I',
@@ -262,7 +294,6 @@ class HomeHandoffComponent {
             }
           });
 
-          // Top Row
           const topRow = makeElement('div', {
             style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }
           }, [
@@ -286,13 +317,11 @@ class HomeHandoffComponent {
           ]);
           card.appendChild(topRow);
 
-          // Description
           const descEl = makeElement('p', {
             style: { margin: 0, fontSize: '11px', color: '#cbd5e1', lineHeight: '1.45' }
           }, p.desc);
           card.appendChild(descEl);
 
-          // Tags
           const tagsRow = makeElement('div', {
             style: { display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '2px' }
           }, p.keyFacts.map(k => makeElement('span', {
@@ -300,7 +329,6 @@ class HomeHandoffComponent {
           }, k)));
           card.appendChild(tagsRow);
 
-          // Action Buttons Row
           const actionRow = makeElement('div', {
             style: {
               display: 'flex',
@@ -359,7 +387,6 @@ class HomeHandoffComponent {
       searchInput.oninput = () => renderCards();
       renderCards();
 
-      // 4. Footer Status & Live Probes
       const footerBar = makeElement('div', {
         style: {
           padding: '10px 16px',
@@ -384,7 +411,7 @@ class HomeHandoffComponent {
             onclick: () => HomeHandoffComponent.probeLinuxLink()
           }, '⚡ Probe Remote Node')
         ]),
-        makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants Active in Storage')
+        makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants Active in Git')
       ]);
       wrap.appendChild(footerBar);
 
@@ -537,6 +564,46 @@ class HomeHandoffComponent {
       } catch(err) {
         if (btn) btn.textContent = '❌ Probe Error';
         if (statusText) statusText.textContent = `Error: ${err.message}`;
+      }
+    }
+
+  static async syncFleetGit(action = 'push', targetHost = '') {
+      const statusText = document.getElementById('linux-probe-status-text') || document.getElementById('mac-linux-sync-badge');
+      if (typeof LunoDeployEngine === 'undefined') {
+        alert('LunoDeployEngine module not loaded.');
+        return;
+      }
+
+      const hostLabel = targetHost ? `Linux (${targetHost}:8080)` : 'Local';
+      const actionLabel = action === 'push' ? 'Push All' : (action === 'pull' ? 'Pull All' : 'Cross-Node Sync');
+
+      if (statusText) {
+        statusText.textContent = `⏳ Executing ${actionLabel} on ${hostLabel}...`;
+      }
+
+      if (action === 'cross_node') {
+        const pushRes = await LunoDeployEngine.fleetSync('push', { commitMsg: `[Fleet Sync] ${new Date().toLocaleString()}` });
+        if (!pushRes || !pushRes.success) {
+          alert('❌ Local push failed:\n' + (pushRes?.error || 'Unknown error'));
+          return;
+        }
+
+        const pullRes = await LunoDeployEngine.fleetSync('pull', { host: '10.0.0.245' });
+        if (pullRes && pullRes.success) {
+          alert(`✅ Cross-Node Fleet Sync Complete!\nPushed from local machine to GitHub and pulled onto Linux node (10.0.0.245:8080) across all ${pullRes.totalRepos || 44} repositories.`);
+          if (statusText) statusText.textContent = '✓ Mac & Linux 100% In Sync';
+        } else {
+          alert(`⚠️ Local push succeeded, but Linux pull failed:\n${pullRes?.error || 'Could not reach Linux node on 10.0.0.245:8080'}`);
+        }
+        return;
+      }
+
+      const res = await LunoDeployEngine.fleetSync(action, { host: targetHost });
+      if (res && res.success) {
+        alert(`✅ ${actionLabel} Complete for ${res.totalRepos || 0} repositories on ${hostLabel}!`);
+        if (statusText) statusText.textContent = `✓ ${actionLabel} Succeeded (${new Date().toLocaleTimeString()})`;
+      } else {
+        alert(`❌ ${actionLabel} Error:\n${res?.error || 'Failed'}`);
       }
     }
 }

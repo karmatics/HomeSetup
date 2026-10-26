@@ -46,7 +46,7 @@
   "styles": [
     "basic3d.css"
   ],
-  "processedCountSinceCheckpoint": 48,
+  "processedCountSinceCheckpoint": 0,
   "changedMethods": {
     "HomeSetup.js": "2026-10-25T02:10:49.211Z",
     "js/HomeHandoffComponent.js": "2026-10-25T19:33:45.521Z",
@@ -82,7 +82,7 @@
     "Luno/app/LunoManifestDecisionEngine.js": "2026-10-25T23:49:24.631Z",
     "Luno/app/LunoApiClient.js": "2026-10-25T23:49:24.631Z"
   },
-  "lastCheckpointTime": "2026-10-25T03:39:25.469Z",
+  "lastCheckpointTime": "2026-10-26T06:27:31.290Z",
   "pendingCheckpointDescription": "Clean working tree",
   "visibilitySets": {
     "handoff-lean": [

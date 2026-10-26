@@ -43,21 +43,20 @@
     <h2 class="section-title">Immediate Next Engineering Priorities</h2>
 
     <p data-block="p_handoff_tasks_1">
-      The task checklist below represents the active queue of items to implement across upcoming sessions. As items are completed, the AI will mark them resolved and append newly discovered infrastructure requirements to the list.
+    The task checklist below represents the active queue of items to implement across upcoming sessions. With the new <strong>Fleet Git Synchronizer (<code>/api/git/fleet-sync</code>)</strong>, checking in all 44 repositories and pulling them on the Linux laptop is now a single-click operation or executable CLI command (<code>./fleet-git.sh pull</code>).
     </p>
 
-    <aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
-      <span class="sidebar-kicker">Handoff Checklist</span>
-      <strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
-      <ul>
-        <li><strong>[Done]</strong> CAD content completely forked and replaced with HomeSetup infrastructure chapters.</li>
-        <li><strong>[Done]</strong> Interactive HomeFleetVisualizer active in Chapter 0.</li>
-        <li><strong>[Done]</strong> Zero-leak credential paths formalized in Chapter 5.</li>
-        <li><strong>[Done]</strong> CadPromptBundlerDialog re-architected for HomeSetup fleet presets.</li>
-        <li><strong>[Active]</strong> Record concrete LAN hostnames/IP aliases and SSH configs.</li>
-        <li><strong>[Pending]</strong> Build server runner scripts to ping and query remote machine states.</li>
-        <li><strong>[Pending]</strong> Test automated portable hard drive detection across OS mount points.</li>
-      </ul>
-    </aside>
-  </section>
+<aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
+<span class="sidebar-kicker">Handoff Checklist</span>
+<strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
+<ul>
+<li><strong>[Done]</strong> Fleet-wide multi-repo Git synchronizer built into <code>LunoServer.js</code> (<code>/api/git/fleet-sync</code>).</li>
+<li><strong>[Done]</strong> 1-Tap UI buttons added to <code>LunoDeployEngine.js</code> and <code>HomeHandoffComponent.js</code> (Push All, Pull All, Cross-Node Sync).</li>
+<li><strong>[Done]</strong> Executable <code>fleet-git.sh</code> installed in workspace root for terminal use on Mac and Linux.</li>
+<li><strong>[Done]</strong> Linux remote trigger wired: Mac pushes and immediately instructs Linux (10.0.0.245:8080) to pull over HTTP.</li>
+<li><strong>[Active]</strong> Verify initial pull on Linux box.</li>
+</ul>
+</aside>
+
+</section>
 </article>
