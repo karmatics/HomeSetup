@@ -2,7 +2,7 @@
   <header data-section="page_header">
     <span class="dossier-kicker">Networking &amp; Protocols</span>
     <h1 class="dossier-title">1. Local Network &amp; Connection Mesh</h1>
-    <p class="dossier-subtitle">Verified Luno Federation: Ubuntu (10.0.0.245:3000) ↔ Mac (10.0.0.226:8080 with Remote Execution), WebRTC channels, and LAN topology.</p>
+    <p class="dossier-subtitle">Verified Luno Federation: Ubuntu (10.0.0.245:8080) ↔ Mac (10.0.0.226:8080 with Remote Execution), WebRTC channels, and LAN topology.</p>
   </header>
 
   <section data-section="mesh_architecture">
@@ -11,11 +11,11 @@
     <p data-block="p_net_mesh_1">
     All devices reside on the same 10.0.0.x subnet, communicating through native Luno services and authenticated Git protocols:
     <br><br>
-    1. <strong>Ubuntu Host (10.0.0.245:3000):</strong> Hosts the primary active Luno development server (<code>/root/source/LunoProjects/Luno/server.js</code>), task runner queue, and this living infrastructure dossier.
+    1. <strong>Mac Workstation (10.0.0.226:8080):</strong> Confirmed running Luno on Apple Silicon at <code>/Users/rob/source/LunoProjects/</code>. Both <code>HomeSetup</code> and all 43 sibling projects are served live over HTTP, allowing zero-latency peer synchronization via <code>POST /api/save</code>.
     <br><br>
-    2. <strong>Mac Workstation (10.0.0.226:8080):</strong> Confirmed running Luno v3.8.0 on Apple Silicon at <code>/Users/rob/source/LunoProjects/</code>. Both <code>HomeSetup</code> and all 43 sibling projects are served live over HTTP, allowing zero-latency peer synchronization via <code>POST /api/save</code>.
+    2. <strong>Ubuntu Host (10.0.0.245:8080):</strong> Hosts the primary portable Luno development server (<code>/root/source/LunoProjects/Luno/server.js</code>), background task runner queue, and matching workspace files.
     <br><br>
-    3. <strong>GitHub SSH Integration:</strong> Authenticated via dedicated Ed25519 public keys (<code>/root/.ssh/id_ed25519.pub</code>), enabling push and pull across all 44 <code>karmatics</code> repositories.
+    3. <strong>Bidirectional Peer Sync:</strong> Either machine can query, audit, or patch the other over native HTTP endpoints (<code>/api/ping</code>, <code>/api/fs/read</code>, <code>/api/save</code>), creating a true zero-password mesh across your local Wi-Fi.
     </p>
 
 <p data-block="p_net_mesh_2">
@@ -26,7 +26,7 @@
     <span class="sidebar-kicker">Ports &amp; Protocols</span>
     <strong class="sidebar-title">Local Network Service Directory</strong>
     <ul>
-    <li><strong>10.0.0.245:3000:</strong> Ubuntu Laptop (Active Luno Host, Bedroom)</li>
+    <li><strong>10.0.0.245:8080:</strong> Ubuntu Laptop (Active Luno Host, Bedroom)</li>
     <li><strong>10.0.0.226:8080:</strong> Mac Workstation (Verified Luno v3.8.0 Peer, Living Room)</li>
     <li><strong>10.0.0.226:22:</strong> Closed (Remote Login disabled on Mac; HTTP 8080 is primary)</li>
     <li><strong>Port 3001:</strong> WebRTC P2P Signaling Server (signal-server.js)</li>
@@ -70,7 +70,7 @@
     <li><strong>1. Host Address:</strong> 10.0.0.226 on Port 8080 (Luno v3.8.0 Peer verified)</li>
     <li><strong>2. Remote Script Execution:</strong> Confirmed operational via POST /api/save</li>
     <li><strong>3. Mac Profile:</strong> User <code>rob</code>, Darwin ARM64, ScreenFlow installed</li>
-    <li><strong>4. Linux Profile:</strong> Ubuntu Host (10.0.0.245:3000), Linux 7.0.0, Node.js</li>
+    <li><strong>4. Linux Profile:</strong> Ubuntu Host (10.0.0.245:8080), Linux 7.0.0, Node.js</li>
     <li><strong>5. HomeSetup Git:</strong> Initialized on Linux, remote set to git@github.com:karmatics/HomeSetup.git</li>
     <li><strong>6. State Persistence:</strong> Full parity matrix saved to HomeSetup/state/recon_report.json</li>
     </ul>

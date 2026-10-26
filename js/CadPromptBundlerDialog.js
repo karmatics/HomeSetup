@@ -174,7 +174,7 @@ class CadPromptBundlerDialog {
 
   static _generateMarkdownBundle() {
       let out = '# HOMESETUP: MULTI-NODE INFRASTRUCTURE SPECIFICATION & FRESH-THREAD HANDOFF\n';
-      out += `Generated: ${new Date().toISOString()} • Host: Linux Workstation (Node.js Port 3000)\n`;
+      out += `Generated: ${new Date().toISOString()} • Host: Linux Workstation (Node.js port 8080)\n`;
       out += 'Nodes: Linux Host • Mac Workstation • Windows Rig • 2 Mobile Phones • Portable External Drive\n\n';
       out += '---\n\n';
 

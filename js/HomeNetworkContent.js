@@ -44,10 +44,10 @@ class HomeNetworkContent {
 
   static p_net_mesh_1() {
     return [
-      "All devices reside on the same 10.0.0.x subnet, communicating through native Luno services and authenticated Git protocols:",
-      "1. **Ubuntu Host (10.0.0.245:3000):** Hosts the primary active Luno development server (`/root/source/LunoProjects/Luno/server.js`), task runner queue, and this living infrastructure dossier.",
-      "2. **Mac Workstation (10.0.0.226:8080):** Confirmed running Luno v3.8.0 on Apple Silicon at `/Users/rob/source/LunoProjects/`. Both `HomeSetup` and all 43 sibling projects are served live over HTTP, allowing zero-latency peer synchronization via `POST /api/save`.",
-      "3. **GitHub SSH Integration:** Authenticated via dedicated Ed25519 public keys (`/root/.ssh/id_ed25519.pub`), enabling push and pull across all 44 `karmatics` repositories."
+      "All devices communicate through native Luno services standardized exclusively on **Port 8080** over local LAN and authenticated Git protocols:",
+      "1. **Mac Workstation (Port 8080):** Confirmed running Luno on Apple Silicon at `/Users/rob/source/LunoProjects/`. Both `HomeSetup` and all sibling projects are served live over HTTP, allowing zero-latency peer synchronization via `POST /api/save`.",
+      "2. **Ubuntu Host (Port 8080):** Hosts the portable Luno development server (`/root/source/LunoProjects/Luno/server.js`), background task runner queue, and matching workspace files.",
+      "3. **Dynamic LAN Subnet Discovery:** Machines do not assume static IP addresses. If a machine's IP rotates under router DHCP, Luno's subnet discovery scans the local `/24` subnet on Port 8080 to locate active peer nodes automatically."
     ];
   }
   static p_net_mesh_2() {
@@ -59,11 +59,9 @@ class HomeNetworkContent {
   static sidebar_network_ports() {
     return [
       "Local Fleet Network Port Directory:\n" +
-      "• 10.0.0.245:3000: Ubuntu Laptop (Active Luno Host, Bedroom)\n" +
-      "• 10.0.0.226:8080: Mac Workstation (Verified Luno v3.8.0 Peer, Living Room)\n" +
-      "• 10.0.0.226:22: Closed (Remote Login disabled on Mac; HTTP 8080 is primary)\n" +
+      "• Port 8080: Universal Luno Workspace Standard (Ubuntu Laptop & Mac Workstation)\n" +
+      "• Dynamic IP Discovery: Scans active local subnet (e.g. 10.0.0.1-254) on Port 8080\n" +
       "• Port 3001: WebRTC P2P Signaling Server (signal-server.js)\n" +
-      "• Subnet: 10.0.0.0/24 (Gateway: 10.0.0.1)\n" +
       "• Linux SSH Public Key Path: `/root/.ssh/id_ed25519.pub`\n" +
       "• GitHub Remote Protocol: `git@github.com:karmatics/<repo>.git`"
     ];
@@ -113,7 +111,7 @@ class HomeNetworkContent {
       "• 1. Host Address: 10.0.0.226 on Port 8080 (Luno v3.8.0 Peer verified)\n" +
       "• 2. Remote Script Execution: Confirmed operational via POST /api/save\n" +
       "• 3. Mac Profile: User `rob`, Darwin ARM64, ScreenFlow installed\n" +
-      "• 4. Linux Profile: Ubuntu Host (10.0.0.245:3000), Linux 7.0.0, Node.js\n" +
+      "• 4. Linux Profile: Ubuntu Host (10.0.0.245:8080), Linux 7.0.0, Node.js\n" +
       "• 5. HomeSetup Git: Initialized on Linux, remote set to git@github.com:karmatics/HomeSetup.git\n" +
       "• 6. State Persistence: Full parity matrix saved to HomeSetup/state/recon_report.json"
     ];

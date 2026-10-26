@@ -2,14 +2,14 @@
   <header data-section="page_header">
     <span class="dossier-kicker">LLM Orchestration &amp; Remote Automation</span>
     <h1 class="dossier-title">4. Cross-Wire LLM Orchestration</h1>
-    <p class="dossier-subtitle">Luno-to-Luno Federation: Programmatic tasks across Ubuntu (Port 3000) and Mac (Port 8080).</p>
+    <p class="dossier-subtitle">Luno-to-Luno Federation: Programmatic tasks across Ubuntu (port 8080) and Mac (Port 8080).</p>
   </header>
 
   <section data-section="orchestration_flow">
     <h2 class="section-title">Programmatic Cross-Wire Operations via LLM</h2>
 
     <p data-block="p_orch_flow_1">
-      With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 3000, cross-machine orchestration enters a clean, unified paradigm: <strong>Luno-to-Luno HTTP Federation</strong>.
+      With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 8080, cross-machine orchestration enters a clean, unified paradigm: <strong>Luno-to-Luno HTTP Federation</strong>.
       <br><br>
       Instead of invoking complex terminal shell pipelines, an LLM generating <code>&lt;script data-file="RUN: SERVER" data-action="run-server"&gt;</code> on the Ubuntu host can use Node's <code>http</code> module to send directives straight to <code>http://&lt;mac-ip&gt;:8080/api/...</code>.
       <br><br>

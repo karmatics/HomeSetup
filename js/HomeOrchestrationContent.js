@@ -34,7 +34,7 @@ class HomeOrchestrationContent {
 
   static p_orch_flow_1() {
       return [
-        "With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 3000, cross-machine orchestration enters a clean, unified paradigm: **Luno-to-Luno HTTP Federation**.",
+        "With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 8080, cross-machine orchestration enters a clean, unified paradigm: **Luno-to-Luno HTTP Federation**.",
         "Instead of invoking complex terminal shell pipelines, an LLM generating `<script data-file=\"RUN: SERVER\" data-action=\"run-server\">` on the Ubuntu host can use Node's `http` module to send directives straight to `http://<mac-ip>:8080/api/...`.",
         "This allows the AI to query files on the Mac, verify Git configurations, and transfer project bundles across the wire with zero manual intervention."
       ];

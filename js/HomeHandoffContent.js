@@ -33,12 +33,15 @@ class HomeHandoffContent {
   }
 
   static p_handoff_intro_1() {
-    return [
-      "In standard software development, AI chat conversations hit usage limits or context fatigue, stranding unfinished thoughts inside closed browser tabs. In our architecture, **the document itself preserves the active session state, recent accomplishments, and exact next steps.**",
-      "Whenever a conversation thread approaches its token limit, you do not need to summarize the project from scratch. You simply export or copy this chapter's prompt bundle. The incoming AI receives 100% of the fleet topology, directory conventions, zero-leak secret guidelines, and the exact task backlog."
-    ];
-  }
-
+      return [
+        "In standard software development, AI chat conversations hit usage limits or context fatigue, stranding unfinished thoughts inside closed browser tabs. In our architecture, **the document itself preserves the active session state, recent accomplishments, and exact next steps.**",
+        "This dossier acts as the **Master Opus Router** across all four quadrants of Rob Brown's life's work:",
+        "• **Quadrant I: Inventions & Technical Moat (`CadPlan`, `accudraw`, `accuCad`):** 30-year proven spatial CAD constraint engine, SmartLine chaining, on-curve splines, and expired US Patent #5,754,182.",
+        "• **Quadrant II: Personal Narrative & Economic Reality (`situation`, `ValuationOfAccudraw`):** The documented contrast between creating an estimated $5.0B–$6.5B in corporate value versus living on family assistance, food stamps, and custody separation from his daughter.",
+        "• **Quadrant III: Post-Labor Macro-Economics (`EconomicsOfAutomation`, `JobsAndAI`):** A first-principles economic framework for surviving automation through the Robot Dividend, capital saturation, and labor phase-out.",
+        "• **Quadrant IV: Fleet & Operational Cockpit (`HomeSetup`, `Luno`, `Library`):** The live multi-node computational environment on Port 8080 connecting Mac (10.0.0.226) and Linux (10.0.0.245) with zero-token clipboard container execution."
+      ];
+    }
   static p_handoff_intro_2() {
     return [
       "**The Universal Ground-Truth Mandate for the AI:** The incoming AI assistant must treat this document as the living single source of truth. When the AI solves a task or architects a new cross-machine workflow, it must write the solution directly into the HomeSetup files (`HomeSetup/js/*.js` and `HomeSetup/content/*.html`) using surgical HTML containers, keeping the specification perpetually up to date."
@@ -50,7 +53,7 @@ class HomeHandoffContent {
       "Thread Continuity Mandates for Incoming AI:\n" +
       "• 1. Always Update the Document: Never just output answers in chat. Reflect all new paths, runner scripts, and setup details into HomeSetup files.\n" +
       "• 2. Maintain Zero-Leak Security: Never place plaintext passwords or tokens into the document or prompts.\n" +
-      "• 3. Respect the Host Environment: The current host is the Linux box running Node.js on port 3000 with Luno Workspace.\n" +
+      "• 3. Respect the Host Environment: The current host is the Linux box running Node.js on port 8080 with Luno Workspace.\n" +
       "• 4. Use Surgical Containers: Default to `<script data-file=\"...\" data-method=\"...\" data-action=\"patch\">` for class edits."
     ];
   }

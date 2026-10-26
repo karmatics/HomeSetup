@@ -1,0 +1,1001 @@
+{
+  "timestamp": "2026-10-25T03:51:50.827Z",
+  "target": "vibes",
+  "linux": {
+    "exists": true,
+    "branch": "HEAD\nCommand failed: git rev-parse --abbrev-ref HEAD 2>/dev/null",
+    "status": "?? VisibilitySetsCapsule.js\n?? appRunner.html\n?? clone-metadata.json\n?? docs/\n?? index.html\n?? luno.json\n?? project_metadata.json\n?? src/",
+    "log": "Command failed: git log -3 --oneline 2>/dev/null",
+    "remote": "git@github.com:karmatics/vibes.git",
+    "filesCount": 136,
+    "entrypoint": {
+      "file": "src/editor/ProjectEditorApp.js",
+      "class": "ProjectEditorApp",
+      "method": "run"
+    }
+  },
+  "mac": {
+    "online": true,
+    "exists": true,
+    "branch": "main",
+    "status": "M luno.json\n M src/core/KeystrokeHandler.js\n M src/core/Path.js\n M src/core/PromptInjector.js\n M src/core/_folder.js\n M src/editor/ActionRegistry.js\n M src/editor/AppStyles.js\n M src/editor/AppearanceAnimator.js\n M src/editor/AppearanceManager.js\n M src/editor/DocumentationManager.js\n M src/editor/FileOperationLogger.js\n M src/editor/ProjectAnalysisManager.js\n M src/editor/ProjectEditorApp.js\n M src/editor/TaskRunner.js\n M src/editor/UIVisibilityManager.js\n M src/editor/_folder.js\n M src/editor/comms/ClientStateManager.js\n M src/editor/comms/LocalDirSessionManager.js\n M src/editor/comms/LocalDirectoryStore.js\n M src/editor/comms/PatchManager.js\n M src/editor/comms/VibesPatchStore.js\n M src/editor/comms/VirtualFileSystem.js\n M src/editor/comms/_folder.js\n M src/editor/dialogs/FileLogDialog.js\n M src/editor/dialogs/_folder.js\n M src/editor/handlers/AppActionHandler.js\n M src/editor/handlers/AppCommands.js\n M src/editor/handlers/AppUIManager.js\n M src/editor/handlers/VibesEnv.js\n M src/editor/handlers/_folder.js\n M src/editor/managers/ActionInitializer.js\n M src/editor/managers/FeatureManager.js\n M src/editor/managers/HistoryManager.js\n M src/editor/managers/LlmQueueManager.js\n M src/editor/managers/ProjectLoader.js\n M src/editor/managers/TabOrchestrator.js\n M src/editor/managers/_folder.js\n M src/editor/ui/debug/PendingTaskManager.js\n M src/editor/ui/debug/ReportManager.js\n M src/editor/ui/debug/_folder.js\n M src/editor/ui/dialogs/DiffHelper.js\n M src/editor/ui/dialogs/InteractivePasteDiagnosticDialog.js\n M src/editor/ui/dialogs/LibraryManagerDialog.js\n M src/editor/ui/dialogs/PasteReviewDialog.js\n M src/editor/ui/dialogs/PatchDashboard.js\n M src/editor/ui/dialogs/UndoTimelineDialog.js\n M src/editor/ui/dialogs/_folder.js\n M src/editor/ui/editor/EditorDataHandler.js\n M src/editor/ui/editor/EditorTabController.js\n M src/editor/ui/editor/EditorViewManager.js\n M src/editor/ui/editor/FloatingEditorWindow.js\n M src/editor/ui/editor/_folder.js\n M src/editor/ui/fileTree/FileTreeActivityRegistry.js\n M src/editor/ui/fileTree/FileTreeView.js\n M src/editor/ui/fileTree/ProjectFileTreeDataBuilder.js\n M src/editor/ui/fileTree/ProjectFileTreeRegistry.js\n M src/editor/ui/fileTree/ProjectFilesDialogActions.js\n M src/editor/ui/fileTree/ProjectFilesEditorBridge.js\n M src/editor/ui/fileTree/ProjectFilesManager.js\n M src/editor/ui/fileTree/ProjectFilesManagerBreakdownHelperFactory.js\n M src/editor/ui/fileTree/ProjectFilesMetadataAnalyzer.js\n M src/editor/ui/fileTree/ProjectFilesPromptBundleBuilder.js\n M src/editor/ui/fileTree/ProjectFilesPromptSizeEstimator.js\n M src/editor/ui/fileTree/ProjectFilesSearchController.js\n M src/editor/ui/fileTree/ProjectFilesTreeOperations.js\n M src/editor/ui/fileTree/ProjectFilesVisibilityCoordinator.js\n M src/editor/ui/fileTree/ProjectFloatingExternalEditor.js\n M src/editor/ui/fileTree/ProjectFloatingTreeLauncher.js\n M src/editor/ui/fileTree/ProjectFloatingTreeStoreBuilder.js\n M src/editor/ui/fileTree/ProjectFloatingTreeStoreDialogController.js\n M src/editor/ui/fileTree/ProjectFolderMetaCapsuleAttacher.js\n M src/editor/ui/fileTree/ProjectSidecarWorkspaceTools.js\n M src/editor/ui/fileTree/ProjectVibesProjectFloatingStore.js\n M src/editor/ui/fileTree/ProjectVisibilitySetCapsuleReader.js\n M src/editor/ui/fileTree/ProjectVisibilitySetFilterController.js\n M src/editor/ui/fileTree/ProjectVisibilityToolbarTools.js\n M src/editor/ui/fileTree/ProjectVisibleNodeRunnerTools.js\n M src/editor/ui/fileTree/ProjectWorkspaceRootOperations.js\n M src/editor/ui/fileTree/TreeNode.js\n M src/editor/ui/fileTree/_folder.js\n M src/editor/ui/floating/FloatingPanelHost.js\n M src/editor/ui/floating/_folder.js\n M src/editor/ui/promptBuilder/BuildPromptTab.js\n M src/editor/ui/promptBuilder/OutputTab.js\n M src/editor/ui/promptBuilder/_folder.js\n M src/editor/ui/tabs/TabManager.js\n M src/editor/ui/tabs/_folder.js\n M src/editor/ui/tools/ClipboardCatcherWidget.js\n M src/editor/ui/tools/ClipboardPathScanner.js\n M src/editor/ui/tools/FileSearchWidget.js\n M src/editor/ui/tools/GlowDrawer.js\n M src/editor/ui/tools/ProjectWalkerTool.js\n M src/editor/ui/tools/_folder.js\n M src/editor/ui/widgets/PaintSelectionPanel.js\n M src/editor/ui/widgets/VisibilityWidget.js\n M src/editor/ui/widgets/_folder.js\n M src/playground/Hiliter.js\n M src/playground/PlaygroundController.js\n M src/playground/RepoAstAuditWalkSkill.js\n M src/playground/RepoMethodSearchWalkSkill.js\n M src/playground/RepoWalkerSkillsCapsule.js\n M src/playground/ScreenCapTool.js\n M src/playground/SystemMonitorWidget.js\n M src/playground/TreeWalkerPlaygroundScripts.js\n M src/playground/VibesPlaygroundDirector.js\n M src/playground/VisibilityStripperDemo.js\n M src/playground/_folder.js\n M src/protocol/BlockableWriteGate.js\n M src/protocol/CodeFormatter.js\n M src/protocol/CodeParser.js\n M src/protocol/DirectApiWriteAuditor.js\n M src/protocol/DocumentToCapsuleWalker.js\n M src/protocol/FailureLogger.js\n M src/protocol/HTMLDependencyScanner.js\n M src/protocol/ManagedClassValidator.js\n M src/protocol/ManagedManifestLoader.js\n M src/protocol/ManagedMetadata.js\n M src/protocol/ManagedMetadataWriter.js\n M src/protocol/ManagedRegistry.js\n M src/protocol/ManagedSeedAgentMigrationNotes.js\n M src/protocol/ManagedWritePipeline.js\n M src/protocol/ProjectPacker.js\n M src/protocol/ProjectUnpacker.js\n M src/protocol/UnifiedWriteCoordinator.js\n M src/protocol/WriteAuditLogger.js\n M src/protocol/_folder.js\n M src/protocol/parsers/AstUtils.js\n M src/protocol/parsers/JsModuleParser.js\n M src/protocol/parsers/_folder.js\n M src/tools/TreeWalker/TreeWalkerDialog.js\n M src/tools/TreeWalker/WalkerQueue.js\n M src/tools/TreeWalker/_folder.js\n M src/tools/TreeWalker/scripts/BasicLogWalker.js\n M src/tools/audit/WriteAuditViewerApp.js\n M src/tools/audit/_folder.js\n M src/tools/browser/_folder.js\n M src/tools/runner/InWindowScriptInjector.js\n M src/tools/runner/RunInPageRunner.js\n M src/tools/runner/_folder.js\n M src/tools/testing/ReceiveCodeTester.js\n M src/tools/testing/_folder.js\n?? files.json\n?? recon.json",
+    "log": "cf25dc1 [vibes] Checkpoint 10/20/2026, 2:57:27 PM\n58c5afb [vibes] Checkpoint 9/27/2026, 11:46:21 AM\nf4f5a60 [vibes] Checkpoint 9/26/2026, 11:09:30 PM",
+    "diffSummary": "luno.json                                          | 137 ++++++++++++++++++++-\n src/core/KeystrokeHandler.js                       |  10 ++\n src/core/Path.js                                   |   5 +\n src/core/PromptInjector.js                         |  15 +++\n src/core/_folder.js                                |   6 +-\n src/editor/ActionRegistry.js                       |   5 +\n src/editor/AppStyles.js                            |  10 ++\n src/editor/AppearanceAnimator.js                   |   5 +\n src/editor/AppearanceManager.js                    |   5 +\n src/editor/DocumentationManager.js                 |  10 ++\n src/editor/FileOperationLogger.js                  |   5 +\n src/editor/ProjectAnalysisManager.js               |   5 +\n src/editor/ProjectEditorApp.js                     |  32 +++++\n src/editor/TaskRunner.js                           |   5 +\n src/editor/UIVisibilityManager.js                  |  10 ++\n src/editor/_folder.js                              |   6 +-\n src/editor/comms/ClientStateManager.js             |   6 +-\n src/editor/comms/LocalDirSessionManager.js         |   5 +\n src/editor/comms/LocalDirectoryStore.js            |   6 +-\n src/editor/comms/PatchManager.js                   |   6 +-\n src/editor/comms/VibesPatchStore.js                |   5 +\n src/editor/comms/VirtualFileSystem.js              |  36 +++++-\n src/editor/comms/_folder.js                        |   6 +-\n src/editor/dialogs/FileLogDialog.js                |   5 +\n src/editor/dialogs/_folder.js                      |   6 +-\n src/editor/handlers/AppActionHandler.js            |  11 +-\n src/editor/handlers/AppCommands.js                 |  35 ++++++\n src/editor/handlers/AppUIManager.js                |   5 +\n src/editor/handlers/VibesEnv.js                    |  66 +++++++++-\n src/editor/handlers/_folder.js                     |   6 +-\n src/editor/managers/ActionInitializer.js           |   6 +-\n src/editor/managers/FeatureManager.js              |   5 +\n src/editor/managers/HistoryManager.js              |  11 +-\n src/editor/managers/LlmQueueManager.js             |   6 +-\n src/editor/managers/ProjectLoader.js               |   6 +-\n src/editor/managers/TabOrchestrator.js             |   5 +\n src/editor/managers/_folder.js                     |   6 +-\n src/editor/ui/debug/PendingTaskManager.js          |   5 +\n src/editor/ui/debug/ReportManager.js               |   5 +\n src/editor/ui/debug/_folder.js                     |   6 +-\n src/editor/ui/dialogs/DiffHelper.js                |   6 +-\n .../ui/dialogs/InteractivePasteDiagnosticDialog.js |   6 +-\n src/editor/ui/dialogs/LibraryManagerDialog.js      |   5 +\n src/editor/ui/dialogs/PasteReviewDialog.js         |   5 +\n src/editor/ui/dialogs/PatchDashboard.js            |   6 +-\n src/editor/ui/dialogs/UndoTimelineDialog.js        |  11 +-\n src/editor/ui/dialogs/_folder.js                   |   6 +-\n src/editor/ui/editor/EditorDataHandler.js          |  20 +++\n src/editor/ui/editor/EditorTabController.js        |   6 +-\n src/editor/ui/editor/EditorViewManager.js          |  10 ++\n src/editor/ui/editor/FloatingEditorWindow.js       |   6 +-\n src/editor/ui/editor/_folder.js                    |   6 +-\n src/editor/ui/fileTree/FileTreeActivityRegistry.js |   6 +-\n src/editor/ui/fileTree/FileTreeView.js             |   5 +\n .../ui/fileTree/ProjectFileTreeDataBuilder.js      |   6 +-\n src/editor/ui/fileTree/ProjectFileTreeRegistry.js  |   6 +-\n .../ui/fileTree/ProjectFilesDialogActions.js       |   6 +-\n src/editor/ui/fileTree/ProjectFilesEditorBridge.js |   6 +-\n src/editor/ui/fileTree/ProjectFilesManager.js      |  24 +++-\n .../ProjectFilesManagerBreakdownHelperFactory.js   |   6 +-\n .../ui/fileTree/ProjectFilesMetadataAnalyzer.js    |   6 +-\n .../ui/fileTree/ProjectFilesPromptBundleBuilder.js |   6 +-\n .../ui/fileTree/ProjectFilesPromptSizeEstimator.js |   6 +-\n .../ui/fileTree/ProjectFilesSearchController.js    |   6 +-\n .../ui/fileTree/ProjectFilesTreeOperations.js      |   6 +-\n .../fileTree/ProjectFilesVisibilityCoordinator.js  |   6 +-\n .../ui/fileTree/ProjectFloatingExternalEditor.js   |   6 +-\n .../ui/fileTree/ProjectFloatingTreeLauncher.js     |   6 +-\n .../ui/fileTree/ProjectFloatingTreeStoreBuilder.js |   6 +-\n .../ProjectFloatingTreeStoreDialogController.js    |   6 +-\n .../fileTree/ProjectFolderMetaCapsuleAttacher.js   |  11 +-\n .../ui/fileTree/ProjectSidecarWorkspaceTools.js    |   6 +-\n .../fileTree/ProjectVibesProjectFloatingStore.js   |   6 +-\n .../fileTree/ProjectVisibilitySetCapsuleReader.js  |  16 ++-\n .../ProjectVisibilitySetFilterController.js        |   6 +-\n .../ui/fileTree/ProjectVisibilityToolbarTools.js   |   6 +-\n .../ui/fileTree/ProjectVisibleNodeRunnerTools.js   |  36 +++++-\n .../ui/fileTree/ProjectWorkspaceRootOperations.js  |   6 +-\n src/editor/ui/fileTree/TreeNode.js                 |  11 +-\n src/editor/ui/fileTree/_folder.js                  |   6 +-\n src/editor/ui/floating/FloatingPanelHost.js        |   6 +-\n src/editor/ui/floating/_folder.js                  |   6 +-\n src/editor/ui/promptBuilder/BuildPromptTab.js      |  16 ++-\n src/editor/ui/promptBuilder/OutputTab.js           |  21 +++-\n src/editor/ui/promptBuilder/_folder.js             |   6 +-\n src/editor/ui/tabs/TabManager.js                   |   5 +\n src/editor/ui/tabs/_folder.js                      |   6 +-\n src/editor/ui/tools/ClipboardCatcherWidget.js      |   5 +\n src/editor/ui/tools/ClipboardPathScanner.js        |   6 +-\n src/editor/ui/tools/FileSearchWidget.js            |   5 +\n src/editor/ui/tools/GlowDrawer.js                  |  16 ++-\n src/editor/ui/tools/ProjectWalkerTool.js           |  16 ++-\n src/editor/ui/tools/_folder.js                     |   6 +-\n src/editor/ui/widgets/PaintSelectionPanel.js       |   6 +-\n src/editor/ui/widgets/VisibilityWidget.js          |  10 ++\n src/editor/ui/widgets/_folder.js                   |   6 +-\n src/playground/Hiliter.js                          |   5 +\n src/playground/PlaygroundController.js             |  20 +++\n src/playground/RepoAstAuditWalkSkill.js            |  10 ++\n src/playground/RepoMethodSearchWalkSkill.js        |   5 +\n src/playground/RepoWalkerSkillsCapsule.js          |  10 ++\n src/playground/ScreenCapTool.js                    |  15 +++\n src/playground/SystemMonitorWidget.js              |   5 +\n src/playground/TreeWalkerPlaygroundScripts.js      |   5 +\n src/playground/VibesPlaygroundDirector.js          |  25 ++++\n src/playground/VisibilityStripperDemo.js           |  10 ++\n src/playground/_folder.js                          |   6 +-\n src/protocol/BlockableWriteGate.js                 |   5 +\n src/protocol/CodeFormatter.js                      |  36 +++++-\n src/protocol/CodeParser.js                         |  25 ++++\n src/protocol/DirectApiWriteAuditor.js              |   5 +\n src/protocol/DocumentToCapsuleWalker.js            |   6 +-\n src/protocol/FailureLogger.js                      |   5 +\n src/protocol/HTMLDependencyScanner.js              |   6 +-\n src/protocol/ManagedClassValidator.js              |  15 +++\n src/protocol/ManagedManifestLoader.js              |   5 +\n src/protocol/ManagedMetadata.js                    |   5 +\n src/protocol/ManagedMetadataWriter.js              |  10 ++\n src/protocol/ManagedRegistry.js                    |   5 +\n src/protocol/ManagedSeedAgentMigrationNotes.js     |   5 +\n src/protocol/ManagedWritePipeline.js               |   5 +\n src/protocol/ProjectPacker.js                      |  10 ++\n src/protocol/ProjectUnpacker.js                    |  15 +++\n src/protocol/UnifiedWriteCoordinator.js            |  11 +-\n src/protocol/WriteAuditLogger.js                   |   5 +\n src/protocol/_folder.js                            |   6 +-\n src/protocol/parsers/AstUtils.js                   |  15 +++\n src/protocol/parsers/JsModuleParser.js             |  18 +++\n src/protocol/parsers/_folder.js                    |   6 +-\n src/tools/TreeWalker/TreeWalkerDialog.js           |  31 ++++-\n src/tools/TreeWalker/WalkerQueue.js                |   6 +-\n src/tools/TreeWalker/_folder.js                    |   6 +-\n src/tools/TreeWalker/scripts/BasicLogWalker.js     |   6 +-\n src/tools/audit/WriteAuditViewerApp.js             |   5 +\n src/tools/audit/_folder.js                         |   6 +-\n src/tools/browser/_folder.js                       |   6 +-\n src/tools/runner/InWindowScriptInjector.js         |  26 +++-\n src/tools/runner/RunInPageRunner.js                |   6 +-\n src/tools/runner/_folder.js                        |   6 +-\n src/tools/testing/ReceiveCodeTester.js             |  11 +-\n src/tools/testing/_folder.js                       |   6 +-\n 141 files changed, 1381 insertions(+), 86 deletions(-)",
+    "remote": "git@github.com:karmatics/vibes.git",
+    "filesCount": 165,
+    "entrypoint": {
+      "file": "src/editor/ProjectEditorApp.js",
+      "class": "ProjectEditorApp",
+      "method": "run"
+    },
+    "lunoJson": {
+      "name": "vibes",
+      "version": "3.8.0",
+      "description": "Vibes Desktop IDE and AST Development Environment",
+      "type": "luno-web-app",
+      "entrypoint": {
+        "file": "src/editor/ProjectEditorApp.js",
+        "class": "ProjectEditorApp",
+        "method": "run"
+      },
+      "main": [
+        "src/core/KeystrokeHandler.js",
+        "src/core/Path.js",
+        "src/core/PromptInjector.js",
+        "src/editor/managers/ActionInitializer.js",
+        "src/editor/managers/FeatureManager.js",
+        "src/editor/managers/HistoryManager.js",
+        "src/editor/managers/LlmQueueManager.js",
+        "src/editor/managers/ProjectLoader.js",
+        "src/editor/managers/TabOrchestrator.js",
+        "src/editor/ui/debug/PendingTaskManager.js",
+        "src/editor/ui/debug/ReportManager.js",
+        "src/editor/ui/dialogs/DiffHelper.js",
+        "src/editor/ui/dialogs/InteractivePasteDiagnosticDialog.js",
+        "src/editor/ui/dialogs/LibraryManagerDialog.js",
+        "src/editor/ui/dialogs/PasteReviewDialog.js",
+        "src/editor/ui/dialogs/PatchDashboard.js",
+        "src/editor/ui/dialogs/UndoTimelineDialog.js",
+        "src/editor/ui/editor/EditorDataHandler.js",
+        "src/editor/ui/editor/EditorTabController.js",
+        "src/editor/ui/editor/EditorViewManager.js",
+        "src/editor/ui/editor/FloatingEditorWindow.js",
+        "src/editor/ui/fileTree/FileTreeActivityRegistry.js",
+        "src/editor/ui/fileTree/FileTreeView.js",
+        "src/editor/ui/fileTree/ProjectBrowserWebRootOpener.js",
+        "src/editor/ui/fileTree/ProjectFileTreeDataBuilder.js",
+        "src/editor/ui/fileTree/ProjectFileTreeRegistry.js",
+        "src/editor/ui/fileTree/ProjectFilesDialogActions.js",
+        "src/editor/ui/fileTree/ProjectFilesEditorBridge.js",
+        "src/editor/ui/fileTree/ProjectFilesManager.js",
+        "src/editor/ui/fileTree/ProjectFilesManagerBreakdownHelperFactory.js",
+        "src/editor/ui/fileTree/ProjectFilesMetadataAnalyzer.js",
+        "src/editor/ui/fileTree/ProjectFilesPromptBundleBuilder.js",
+        "src/editor/ui/fileTree/ProjectFilesPromptSizeEstimator.js",
+        "src/editor/ui/fileTree/ProjectFilesSearchController.js",
+        "src/editor/ui/fileTree/ProjectFilesTreeOperations.js",
+        "src/editor/ui/fileTree/ProjectFilesVisibilityCoordinator.js",
+        "src/editor/ui/fileTree/ProjectFloatingExternalEditor.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeLauncher.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeStoreBuilder.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeStoreDialogController.js",
+        "src/editor/ui/fileTree/ProjectFolderMetaCapsuleAttacher.js",
+        "src/editor/ui/fileTree/ProjectSidecarWorkspaceTools.js",
+        "src/editor/ui/fileTree/ProjectVibesProjectFloatingStore.js",
+        "src/editor/ui/fileTree/ProjectVisibilitySetCapsuleReader.js",
+        "src/editor/ui/fileTree/ProjectVisibilitySetFilterController.js",
+        "src/editor/ui/fileTree/ProjectVisibilityToolbarTools.js",
+        "src/editor/ui/fileTree/ProjectVisibleNodeRunnerTools.js",
+        "src/editor/ui/fileTree/ProjectWorkspaceRootOperations.js",
+        "src/editor/ui/fileTree/TreeNode.js",
+        "src/editor/ui/floating/FloatingPanelHost.js",
+        "src/editor/ui/promptBuilder/BuildPromptTab.js",
+        "src/editor/ui/promptBuilder/OutputTab.js",
+        "src/editor/ui/tabs/TabManager.js",
+        "src/editor/ui/tools/ClipboardCatcherWidget.js",
+        "src/editor/ui/tools/ClipboardPathScanner.js",
+        "src/editor/ui/tools/FileSearchWidget.js",
+        "src/editor/ui/tools/GlowDrawer.js",
+        "src/editor/ui/tools/ProjectWalkerTool.js",
+        "src/editor/ui/widgets/PaintSelectionPanel.js",
+        "src/editor/ui/widgets/VisibilityWidget.js",
+        "src/editor/ActionRegistry.js",
+        "src/editor/AppStyles.js",
+        "src/editor/AppearanceAnimator.js",
+        "src/editor/AppearanceManager.js",
+        "src/editor/DocumentationManager.js",
+        "src/editor/FileOperationLogger.js",
+        "src/editor/ProjectAnalysisManager.js",
+        "src/editor/TaskRunner.js",
+        "src/editor/UIVisibilityManager.js",
+        "src/editor/comms/ClientStateManager.js",
+        "src/editor/comms/LocalDirSessionManager.js",
+        "src/editor/comms/LocalDirectoryStore.js",
+        "src/editor/comms/PatchManager.js",
+        "src/editor/comms/VibesPatchStore.js",
+        "src/editor/comms/VirtualFileSystem.js",
+        "src/editor/dialogs/FileLogDialog.js",
+        "src/editor/handlers/AppActionHandler.js",
+        "src/editor/handlers/AppCommands.js",
+        "src/editor/handlers/AppProtocolHandler.js",
+        "src/editor/handlers/AppUIManager.js",
+        "src/editor/handlers/LunoProtocolExecutor.js",
+        "src/editor/handlers/RecursiProtocolExecutor.js",
+        "src/editor/handlers/UnifiedProtocolExecutor.js",
+        "src/editor/handlers/VibesEnv.js",
+        "src/tools/runner/RunInPageRunner.js",
+        "src/protocol/CodeParser.js",
+        "src/protocol/ProjectUnpacker.js",
+        "src/tools/runner/InWindowScriptInjector.js",
+        "src/playground/Hiliter.js",
+        "src/playground/PlaygroundController.js",
+        "src/playground/RepoAstAuditWalkSkill.js",
+        "src/playground/RepoMethodSearchWalkSkill.js",
+        "src/playground/RepoWalkerSkillsCapsule.js",
+        "src/playground/ScreenCapTool.js",
+        "src/playground/SystemMonitorWidget.js",
+        "src/playground/TreeWalkerPlaygroundScripts.js",
+        "src/playground/VibesPlaygroundDirector.js",
+        "src/playground/VisibilityStripperDemo.js",
+        "src/protocol/BlockableWriteGate.js",
+        "src/protocol/ClientJSClassPatcher.js",
+        "src/protocol/CodeFormatter.js",
+        "src/protocol/DirectApiWriteAuditor.js",
+        "src/protocol/DocumentToCapsuleWalker.js",
+        "src/protocol/FailureLogger.js",
+        "src/protocol/HTMLDependencyScanner.js",
+        "src/protocol/LunoClassPatcher.js",
+        "src/protocol/LunoPayloadParser.js",
+        "src/protocol/ManagedClassValidator.js",
+        "src/protocol/ManagedManifestLoader.js",
+        "src/protocol/ManagedMetadata.js",
+        "src/protocol/ManagedMetadataWriter.js",
+        "src/protocol/ManagedRegistry.js",
+        "src/protocol/ManagedSeedAgentMigrationNotes.js",
+        "src/protocol/ManagedWritePipeline.js",
+        "src/protocol/ProjectPacker.js",
+        "src/protocol/UnifiedWriteCoordinator.js",
+        "src/protocol/WriteAuditLogger.js",
+        "src/protocol/parsers/AstUtils.js",
+        "src/protocol/parsers/JsModuleParser.js",
+        "src/tools/TreeWalker/TreeWalkerDialog.js",
+        "src/tools/TreeWalker/WalkerQueue.js",
+        "src/tools/TreeWalker/scripts/BasicLogWalker.js",
+        "src/tools/audit/WriteAuditViewerApp.js",
+        "src/tools/browser/NativeProjectBrowser.js",
+        "src/tools/browser/ProjectCatalogCapsule.js",
+        "src/tools/testing/ReceiveCodeTester.js",
+        "src/editor/ProjectEditorApp.js"
+      ],
+      "local": [
+        "VisibilitySetsCapsule.js",
+        "docs/LunoIntegrationHandoffCapsule.js",
+        "docs/OrganicIdeManifestoCapsule.js",
+        "docs/VibesProtocolCapsule.js",
+        "src/core/KeystrokeHandler.js",
+        "src/core/Path.js",
+        "src/core/PromptInjector.js",
+        "src/editor/ActionRegistry.js",
+        "src/editor/AppStyles.js",
+        "src/editor/AppearanceAnimator.js",
+        "src/editor/AppearanceManager.js",
+        "src/editor/DocumentationManager.js",
+        "src/editor/FileOperationLogger.js",
+        "src/editor/ProjectAnalysisManager.js",
+        "src/editor/TaskRunner.js",
+        "src/editor/UIVisibilityManager.js",
+        "src/editor/comms/ClientStateManager.js",
+        "src/editor/comms/LocalDirSessionManager.js",
+        "src/editor/comms/LocalDirectoryStore.js",
+        "src/editor/comms/PatchManager.js",
+        "src/editor/comms/VibesPatchStore.js",
+        "src/editor/comms/VirtualFileSystem.js",
+        "src/editor/dialogs/FileLogDialog.js",
+        "src/editor/handlers/AppActionHandler.js",
+        "src/editor/handlers/AppCommands.js",
+        "src/editor/handlers/AppProtocolHandler.js",
+        "src/editor/handlers/AppUIManager.js",
+        "src/editor/handlers/LunoProtocolExecutor.js",
+        "src/editor/handlers/UnifiedProtocolExecutor.js",
+        "src/editor/handlers/VibesEnv.js",
+        "src/editor/managers/ActionInitializer.js",
+        "src/editor/managers/FeatureManager.js",
+        "src/editor/managers/HistoryManager.js",
+        "src/editor/managers/LlmQueueManager.js",
+        "src/editor/managers/ProjectLoader.js",
+        "src/editor/managers/TabOrchestrator.js",
+        "src/editor/ui/debug/PendingTaskManager.js",
+        "src/editor/ui/debug/ReportManager.js",
+        "src/editor/ui/dialogs/DiffHelper.js",
+        "src/editor/ui/dialogs/InteractivePasteDiagnosticDialog.js",
+        "src/editor/ui/dialogs/LibraryManagerDialog.js",
+        "src/editor/ui/dialogs/PasteReviewDialog.js",
+        "src/editor/ui/dialogs/PatchDashboard.js",
+        "src/editor/ui/dialogs/UndoTimelineDialog.js",
+        "src/editor/ui/editor/EditorDataHandler.js",
+        "src/editor/ui/editor/EditorTabController.js",
+        "src/editor/ui/editor/EditorViewManager.js",
+        "src/editor/ui/editor/FloatingEditorWindow.js",
+        "src/editor/ui/fileTree/FileTreeActivityRegistry.js",
+        "src/editor/ui/fileTree/FileTreeView.js",
+        "src/editor/ui/fileTree/ProjectFileTreeDataBuilder.js",
+        "src/editor/ui/fileTree/ProjectFileTreeRegistry.js",
+        "src/editor/ui/fileTree/ProjectFilesDialogActions.js",
+        "src/editor/ui/fileTree/ProjectFilesEditorBridge.js",
+        "src/editor/ui/fileTree/ProjectFilesManager.js",
+        "src/editor/ui/fileTree/ProjectFilesManagerBreakdownHelperFactory.js",
+        "src/editor/ui/fileTree/ProjectFilesMetadataAnalyzer.js",
+        "src/editor/ui/fileTree/ProjectFilesPromptBundleBuilder.js",
+        "src/editor/ui/fileTree/ProjectFilesPromptSizeEstimator.js",
+        "src/editor/ui/fileTree/ProjectFilesSearchController.js",
+        "src/editor/ui/fileTree/ProjectFilesTreeOperations.js",
+        "src/editor/ui/fileTree/ProjectFilesVisibilityCoordinator.js",
+        "src/editor/ui/fileTree/ProjectFloatingExternalEditor.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeLauncher.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeStoreBuilder.js",
+        "src/editor/ui/fileTree/ProjectFloatingTreeStoreDialogController.js",
+        "src/editor/ui/fileTree/ProjectFolderMetaCapsuleAttacher.js",
+        "src/editor/ui/fileTree/ProjectSidecarWorkspaceTools.js",
+        "src/editor/ui/fileTree/ProjectVibesProjectFloatingStore.js",
+        "src/editor/ui/fileTree/ProjectVisibilitySetCapsuleReader.js",
+        "src/editor/ui/fileTree/ProjectVisibilitySetFilterController.js",
+        "src/editor/ui/fileTree/ProjectVisibilityToolbarTools.js",
+        "src/editor/ui/fileTree/ProjectVisibleNodeRunnerTools.js",
+        "src/editor/ui/fileTree/ProjectWorkspaceRootOperations.js",
+        "src/editor/ui/fileTree/TreeNode.js",
+        "src/editor/ui/floating/FloatingPanelHost.js",
+        "src/editor/ui/promptBuilder/BuildPromptTab.js",
+        "src/editor/ui/promptBuilder/OutputTab.js",
+        "src/editor/ui/tabs/TabManager.js",
+        "src/editor/ui/tools/ClipboardCatcherWidget.js",
+        "src/editor/ui/tools/ClipboardPathScanner.js",
+        "src/editor/ui/tools/FileSearchWidget.js",
+        "src/editor/ui/tools/GlowDrawer.js",
+        "src/editor/ui/tools/ProjectWalkerTool.js",
+        "src/editor/ui/widgets/PaintSelectionPanel.js",
+        "src/editor/ui/widgets/VisibilityWidget.js",
+        "src/playground/Hiliter.js",
+        "src/playground/PlaygroundController.js",
+        "src/playground/RepoAstAuditWalkSkill.js",
+        "src/playground/RepoMethodSearchWalkSkill.js",
+        "src/playground/RepoWalkerSkillsCapsule.js",
+        "src/playground/ScreenCapTool.js",
+        "src/playground/SystemMonitorWidget.js",
+        "src/playground/TreeWalkerPlaygroundScripts.js",
+        "src/playground/VibesPlaygroundDirector.js",
+        "src/playground/VisibilityStripperDemo.js",
+        "src/protocol/BlockableWriteGate.js",
+        "src/protocol/CodeFormatter.js",
+        "src/protocol/DirectApiWriteAuditor.js",
+        "src/protocol/DocumentToCapsuleWalker.js",
+        "src/protocol/FailureLogger.js",
+        "src/protocol/HTMLDependencyScanner.js",
+        "src/protocol/ManagedClassValidator.js",
+        "src/protocol/ManagedManifestLoader.js",
+        "src/protocol/ManagedMetadata.js",
+        "src/protocol/ManagedMetadataWriter.js",
+        "src/protocol/ManagedRegistry.js",
+        "src/protocol/ManagedSeedAgentMigrationNotes.js",
+        "src/protocol/ManagedWritePipeline.js",
+        "src/protocol/ProjectPacker.js",
+        "src/protocol/ProjectUnpacker.js",
+        "src/protocol/UnifiedWriteCoordinator.js",
+        "src/protocol/WriteAuditLogger.js",
+        "src/protocol/parsers/AstUtils.js",
+        "src/protocol/parsers/JsModuleParser.js",
+        "src/tools/TreeWalker/TreeWalkerDialog.js",
+        "src/tools/TreeWalker/WalkerQueue.js",
+        "src/tools/audit/WriteAuditViewerApp.js",
+        "src/tools/runner/InWindowScriptInjector.js",
+        "src/tools/runner/RunInPageRunner.js",
+        "src/tools/testing/ReceiveCodeTester.js",
+        "src/tools/browser/NativeProjectBrowser.js",
+        "src/editor/ui/fileTree/ProjectBrowserWebRootOpener.js",
+        "src/protocol/CodeParser.js"
+      ],
+      "library": [
+        "DomBasics.js",
+        "DropdownMenu.js",
+        "UITools.js",
+        "DictationWidget.js",
+        "GlowingTooltip.js",
+        "CompactMenu.js",
+        "ThreeJSLoader.js",
+        "WindowMessenger.js",
+        "SplitButton.js",
+        "CodeMirrorWidget.js"
+      ],
+      "thirdParty": [
+        "https://cdn.jsdelivr.net/npm/acorn@8.11.3/dist/acorn.min.js"
+      ],
+      "bundle": "dist/vibes-bundle.js",
+      "processedCountSinceCheckpoint": 4,
+      "changedMethods": {
+        "Luno/core/LunoServer.js": "2026-10-20T21:33:06.682Z",
+        "Luno/app/LunoThemeEngine.js": "2026-10-20T21:14:03.846Z",
+        "Luno/app/OutboxPromptBox.js": "2026-09-27T04:14:55.766Z",
+        "src/editor/ui/fileTree/ProjectBrowserWebRootOpener.js": "2026-09-27T04:52:01.492Z",
+        "src/editor/handlers/AppUIManager.js": "2026-09-27T04:14:55.766Z",
+        "src/editor/ui/fileTree/ProjectFloatingTreeLauncher.js": "2026-09-27T04:52:01.492Z",
+        "Luno/app/LunoSettings.js": "2026-10-19T04:09:03.723Z",
+        "LunoParser/LunoTestRunner.js": "2026-10-19T04:22:12.677Z",
+        "src/editor/handlers/LunoProtocolExecutor.js": "2026-09-27T18:45:43.066Z",
+        "Luno/app/CodeDiffer.js": "2026-10-19T04:09:03.723Z",
+        "Luno/app/DiffApprovalModal.js": "2026-10-20T21:16:38.850Z",
+        "Luno/app/ClientApp.js": "2026-10-20T21:39:35.674Z",
+        "Luno/app/ClientAppPaster.js": "2026-10-20T21:39:35.674Z",
+        "Luno/browser/DiskBrowser.js": "2026-10-20T21:35:32.681Z",
+        "Luno/app/LunoHistoryManager.js": "2026-10-19T04:22:12.677Z",
+        "Luno/app/LunoTimelineDialog.js": "2026-10-20T21:33:06.682Z",
+        "Luno/app/InboxActionTimer.js": "2026-10-20T21:35:32.681Z",
+        "Luno/app/ClientAppUI.js": "2026-10-20T21:39:35.674Z",
+        "Luno/luno.json": "2026-10-19T04:22:12.677Z",
+        "VisibilitySetsCapsule.js": "2026-10-20T21:14:03.846Z",
+        "LunoParser/luno.json": "2026-10-20T21:14:03.846Z",
+        "Luno/app/LunoApiClient.js": "2026-10-20T21:33:06.682Z",
+        "Luno/app/MicroApprovalBadge.js": "2026-10-20T21:35:32.681Z",
+        "recon.json": "2026-10-24T21:39:57.851Z"
+      },
+      "lastCheckpointTime": "2026-10-20T21:57:27.848Z",
+      "pendingCheckpointDescription": "Clean working tree",
+      "visibilitySets": {
+        "vibes-core": [
+          "src/editor/ProjectEditorApp.js",
+          "src/editor/handlers/AppActionHandler.js",
+          "src/editor/handlers/AppProtocolHandler.js",
+          "src/editor/handlers/LunoProtocolExecutor.js",
+          "src/editor/handlers/UnifiedProtocolExecutor.js",
+          "src/editor/handlers/AppUIManager.js",
+          "src/editor/managers/ActionInitializer.js",
+          "src/editor/managers/TabOrchestrator.js",
+          "src/editor/ui/fileTree/ProjectFilesManager.js",
+          "src/editor/ui/fileTree/ProjectFilesPromptBundleBuilder.js",
+          "src/editor/ui/fileTree/ProjectVisibilityToolbarTools.js",
+          "VisibilitySetsCapsule.js"
+        ],
+        "vibes-protocol": [
+          "src/editor/handlers/AppProtocolHandler.js",
+          "src/editor/handlers/LunoProtocolExecutor.js",
+          "src/editor/handlers/UnifiedProtocolExecutor.js",
+          "src/protocol/CodeParser.js",
+          "src/protocol/ProjectUnpacker.js",
+          "src/editor/comms/VibesPatchStore.js"
+        ]
+      },
+      "mainClass": "ProjectEditorApp"
+    },
+    "indexHtmlHead": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Vibes</title>\n\n  <!-- Essential third party dependencies required by Vibes -->\n  <script src=\"https://cdn.jsdelivr.net/npm/acorn@8.11.3/dist/acorn.min.js\"></script>\n  <script src=\"https://unpkg.com/prettier@2.8.8/standalone.js\"></script>\n  <script src=\"https://unpkg.com/prettier@2.8.8/parser-babel.js\"></script>\n\n  <style>\n    html, body {\n      margin: 0;\n      padding: 0;\n      width: 100%;\n      height: 100%;\n      background: #0c0e12;\n      color: #c9d1d9;\n      font-family: monospace;\n      overflow: hidden;\n    }\n    #app-container {\n      width: 100%;\n      height: 100%;\n    }\n    #startup-overlay {\n      position: fixed;\n      inset: ",
+    "appRunnerHead": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>App Runner</title>\n  <style>\n    body, html {\n      margin: 0;\n      padding: 0;\n      width: 100%;\n      height: 100%;\n      background-color: #1e1e1e;\n      color: #d4d4d4;\n      font-family: sans-serif;\n    }\n    .loading-message {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        height: 100%;\n        font-size: 1.5em;\n        opacity: 0.5;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"loading-message\">Waiting for project data from editor...</div>\n\n  <!-- This is the only script the runner page needs. It does all the work. -->\n  <script src=\"./src/tools/runner/runner-client.js\"></script>\n  <script>\n    new RunnerClient();\n  </script>\n</body>\n</html>\n\n<!-- recursi-meta\n{\n"
+  },
+  "comparison": {
+    "totalFiles": 165,
+    "matchingCount": 18,
+    "discrepancyCount": 118,
+    "macOnlyCount": 29,
+    "linuxOnlyCount": 0,
+    "macOnlyFiles": [
+      ".gitignore",
+      ".nojekyll",
+      "_folder.js",
+      "docs/_folder.js",
+      "files.json",
+      "recon.json",
+      "src/core/_folder.js",
+      "src/editor/_folder.js",
+      "src/editor/comms/_folder.js",
+      "src/editor/dialogs/_folder.js",
+      "src/editor/handlers/_folder.js",
+      "src/editor/managers/_folder.js",
+      "src/editor/ui/debug/_folder.js",
+      "src/editor/ui/dialogs/_folder.js",
+      "src/editor/ui/editor/_folder.js",
+      "src/editor/ui/fileTree/_folder.js",
+      "src/editor/ui/floating/_folder.js",
+      "src/editor/ui/promptBuilder/_folder.js",
+      "src/editor/ui/tabs/_folder.js",
+      "src/editor/ui/tools/_folder.js",
+      "src/editor/ui/widgets/_folder.js",
+      "src/playground/_folder.js",
+      "src/protocol/_folder.js",
+      "src/protocol/parsers/_folder.js",
+      "src/tools/TreeWalker/_folder.js",
+      "src/tools/audit/_folder.js",
+      "src/tools/browser/_folder.js",
+      "src/tools/runner/_folder.js",
+      "src/tools/testing/_folder.js"
+    ],
+    "linuxOnlyFiles": [],
+    "modifiedFiles": [
+      {
+        "file": "luno.json",
+        "linuxBytes": 9339,
+        "macBytes": 15578
+      },
+      {
+        "file": "src/core/KeystrokeHandler.js",
+        "linuxBytes": 8539,
+        "macBytes": 8928
+      },
+      {
+        "file": "src/core/Path.js",
+        "linuxBytes": 7367,
+        "macBytes": 7524
+      },
+      {
+        "file": "src/core/PromptInjector.js",
+        "linuxBytes": 2957,
+        "macBytes": 3508
+      },
+      {
+        "file": "src/editor/ActionRegistry.js",
+        "linuxBytes": 4436,
+        "macBytes": 4643
+      },
+      {
+        "file": "src/editor/AppStyles.js",
+        "linuxBytes": 35754,
+        "macBytes": 36083
+      },
+      {
+        "file": "src/editor/AppearanceAnimator.js",
+        "linuxBytes": 6862,
+        "macBytes": 7089
+      },
+      {
+        "file": "src/editor/AppearanceManager.js",
+        "linuxBytes": 13992,
+        "macBytes": 14214
+      },
+      {
+        "file": "src/editor/DocumentationManager.js",
+        "linuxBytes": 16939,
+        "macBytes": 17348
+      },
+      {
+        "file": "src/editor/FileOperationLogger.js",
+        "linuxBytes": 3131,
+        "macBytes": 3363
+      },
+      {
+        "file": "src/editor/ProjectAnalysisManager.js",
+        "linuxBytes": 12536,
+        "macBytes": 12783
+      },
+      {
+        "file": "src/editor/ProjectEditorApp.js",
+        "linuxBytes": 55549,
+        "macBytes": 56744
+      },
+      {
+        "file": "src/editor/TaskRunner.js",
+        "linuxBytes": 2884,
+        "macBytes": 3071
+      },
+      {
+        "file": "src/editor/UIVisibilityManager.js",
+        "linuxBytes": 5665,
+        "macBytes": 6084
+      },
+      {
+        "file": "src/editor/comms/ClientStateManager.js",
+        "linuxBytes": 5977,
+        "macBytes": 6204
+      },
+      {
+        "file": "src/editor/comms/LocalDirSessionManager.js",
+        "linuxBytes": 8253,
+        "macBytes": 8500
+      },
+      {
+        "file": "src/editor/comms/LocalDirectoryStore.js",
+        "linuxBytes": 15020,
+        "macBytes": 15252
+      },
+      {
+        "file": "src/editor/comms/PatchManager.js",
+        "linuxBytes": 10507,
+        "macBytes": 10704
+      },
+      {
+        "file": "src/editor/comms/VibesPatchStore.js",
+        "linuxBytes": 8345,
+        "macBytes": 8557
+      },
+      {
+        "file": "src/editor/comms/VirtualFileSystem.js",
+        "linuxBytes": 36019,
+        "macBytes": 37313
+      },
+      {
+        "file": "src/editor/dialogs/FileLogDialog.js",
+        "linuxBytes": 6177,
+        "macBytes": 6379
+      },
+      {
+        "file": "src/editor/handlers/AppActionHandler.js",
+        "linuxBytes": 72074,
+        "macBytes": 72438
+      },
+      {
+        "file": "src/editor/handlers/AppCommands.js",
+        "linuxBytes": 79226,
+        "macBytes": 80470
+      },
+      {
+        "file": "src/editor/handlers/AppUIManager.js",
+        "linuxBytes": 35112,
+        "macBytes": 35309
+      },
+      {
+        "file": "src/editor/handlers/VibesEnv.js",
+        "linuxBytes": 73326,
+        "macBytes": 75587
+      },
+      {
+        "file": "src/editor/managers/ActionInitializer.js",
+        "linuxBytes": 11466,
+        "macBytes": 11688
+      },
+      {
+        "file": "src/editor/managers/FeatureManager.js",
+        "linuxBytes": 2749,
+        "macBytes": 2956
+      },
+      {
+        "file": "src/editor/managers/HistoryManager.js",
+        "linuxBytes": 16765,
+        "macBytes": 17134
+      },
+      {
+        "file": "src/editor/managers/LlmQueueManager.js",
+        "linuxBytes": 11734,
+        "macBytes": 11946
+      },
+      {
+        "file": "src/editor/managers/ProjectLoader.js",
+        "linuxBytes": 43027,
+        "macBytes": 43229
+      },
+      {
+        "file": "src/editor/managers/TabOrchestrator.js",
+        "linuxBytes": 11399,
+        "macBytes": 11611
+      },
+      {
+        "file": "src/editor/ui/debug/PendingTaskManager.js",
+        "linuxBytes": 1198,
+        "macBytes": 1425
+      },
+      {
+        "file": "src/editor/ui/debug/ReportManager.js",
+        "linuxBytes": 7969,
+        "macBytes": 8171
+      },
+      {
+        "file": "src/editor/ui/dialogs/DiffHelper.js",
+        "linuxBytes": 8702,
+        "macBytes": 8889
+      },
+      {
+        "file": "src/editor/ui/dialogs/InteractivePasteDiagnosticDialog.js",
+        "linuxBytes": 6999,
+        "macBytes": 7296
+      },
+      {
+        "file": "src/editor/ui/dialogs/LibraryManagerDialog.js",
+        "linuxBytes": 8085,
+        "macBytes": 8322
+      },
+      {
+        "file": "src/editor/ui/dialogs/PasteReviewDialog.js",
+        "linuxBytes": 37408,
+        "macBytes": 37630
+      },
+      {
+        "file": "src/editor/ui/dialogs/PatchDashboard.js",
+        "linuxBytes": 13645,
+        "macBytes": 13852
+      },
+      {
+        "file": "src/editor/ui/dialogs/UndoTimelineDialog.js",
+        "linuxBytes": 25551,
+        "macBytes": 25940
+      },
+      {
+        "file": "src/editor/ui/editor/EditorDataHandler.js",
+        "linuxBytes": 16393,
+        "macBytes": 17076
+      },
+      {
+        "file": "src/editor/ui/editor/EditorTabController.js",
+        "linuxBytes": 24307,
+        "macBytes": 24539
+      },
+      {
+        "file": "src/editor/ui/editor/EditorViewManager.js",
+        "linuxBytes": 62521,
+        "macBytes": 62915
+      },
+      {
+        "file": "src/editor/ui/editor/FloatingEditorWindow.js",
+        "linuxBytes": 28240,
+        "macBytes": 28477
+      },
+      {
+        "file": "src/editor/ui/fileTree/FileTreeActivityRegistry.js",
+        "linuxBytes": 5972,
+        "macBytes": 6229
+      },
+      {
+        "file": "src/editor/ui/fileTree/FileTreeView.js",
+        "linuxBytes": 110572,
+        "macBytes": 110769
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFileTreeDataBuilder.js",
+        "linuxBytes": 11305,
+        "macBytes": 11572
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFileTreeRegistry.js",
+        "linuxBytes": 2720,
+        "macBytes": 2972
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesDialogActions.js",
+        "linuxBytes": 2946,
+        "macBytes": 3208
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesEditorBridge.js",
+        "linuxBytes": 5080,
+        "macBytes": 5337
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesManager.js",
+        "linuxBytes": 214150,
+        "macBytes": 215033
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesManagerBreakdownHelperFactory.js",
+        "linuxBytes": 11603,
+        "macBytes": 11945
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesMetadataAnalyzer.js",
+        "linuxBytes": 5133,
+        "macBytes": 5410
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesPromptBundleBuilder.js",
+        "linuxBytes": 12686,
+        "macBytes": 12978
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesPromptSizeEstimator.js",
+        "linuxBytes": 5083,
+        "macBytes": 5375
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesSearchController.js",
+        "linuxBytes": 10312,
+        "macBytes": 10589
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesTreeOperations.js",
+        "linuxBytes": 8058,
+        "macBytes": 8325
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFilesVisibilityCoordinator.js",
+        "linuxBytes": 11586,
+        "macBytes": 11888
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFloatingExternalEditor.js",
+        "linuxBytes": 8972,
+        "macBytes": 9254
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFloatingTreeLauncher.js",
+        "linuxBytes": 31245,
+        "macBytes": 31517
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFloatingTreeStoreBuilder.js",
+        "linuxBytes": 10756,
+        "macBytes": 11048
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFloatingTreeStoreDialogController.js",
+        "linuxBytes": 8503,
+        "macBytes": 8840
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectFolderMetaCapsuleAttacher.js",
+        "linuxBytes": 6850,
+        "macBytes": 7304
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectSidecarWorkspaceTools.js",
+        "linuxBytes": 9452,
+        "macBytes": 9729
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectVibesProjectFloatingStore.js",
+        "linuxBytes": 5406,
+        "macBytes": 5703
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectVisibilitySetCapsuleReader.js",
+        "linuxBytes": 15083,
+        "macBytes": 15794
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectVisibilitySetFilterController.js",
+        "linuxBytes": 20120,
+        "macBytes": 20437
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectVisibilityToolbarTools.js",
+        "linuxBytes": 14530,
+        "macBytes": 14812
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectVisibleNodeRunnerTools.js",
+        "linuxBytes": 13497,
+        "macBytes": 14951
+      },
+      {
+        "file": "src/editor/ui/fileTree/ProjectWorkspaceRootOperations.js",
+        "linuxBytes": 8156,
+        "macBytes": 8443
+      },
+      {
+        "file": "src/editor/ui/fileTree/TreeNode.js",
+        "linuxBytes": 17242,
+        "macBytes": 17581
+      },
+      {
+        "file": "src/editor/ui/floating/FloatingPanelHost.js",
+        "linuxBytes": 48646,
+        "macBytes": 48868
+      },
+      {
+        "file": "src/editor/ui/promptBuilder/BuildPromptTab.js",
+        "linuxBytes": 75973,
+        "macBytes": 76479
+      },
+      {
+        "file": "src/editor/ui/promptBuilder/OutputTab.js",
+        "linuxBytes": 36498,
+        "macBytes": 37166
+      },
+      {
+        "file": "src/editor/ui/tabs/TabManager.js",
+        "linuxBytes": 20682,
+        "macBytes": 20869
+      },
+      {
+        "file": "src/editor/ui/tools/ClipboardCatcherWidget.js",
+        "linuxBytes": 3603,
+        "macBytes": 3850
+      },
+      {
+        "file": "src/editor/ui/tools/ClipboardPathScanner.js",
+        "linuxBytes": 13602,
+        "macBytes": 13839
+      },
+      {
+        "file": "src/editor/ui/tools/FileSearchWidget.js",
+        "linuxBytes": 7036,
+        "macBytes": 7253
+      },
+      {
+        "file": "src/editor/ui/tools/GlowDrawer.js",
+        "linuxBytes": 20929,
+        "macBytes": 21440
+      },
+      {
+        "file": "src/editor/ui/tools/ProjectWalkerTool.js",
+        "linuxBytes": 18431,
+        "macBytes": 18967
+      },
+      {
+        "file": "src/editor/ui/widgets/PaintSelectionPanel.js",
+        "linuxBytes": 20592,
+        "macBytes": 20824
+      },
+      {
+        "file": "src/editor/ui/widgets/VisibilityWidget.js",
+        "linuxBytes": 25495,
+        "macBytes": 25884
+      },
+      {
+        "file": "src/playground/Hiliter.js",
+        "linuxBytes": 37286,
+        "macBytes": 37458
+      },
+      {
+        "file": "src/playground/PlaygroundController.js",
+        "linuxBytes": 14190,
+        "macBytes": 15073
+      },
+      {
+        "file": "src/playground/RepoAstAuditWalkSkill.js",
+        "linuxBytes": 19732,
+        "macBytes": 20166
+      },
+      {
+        "file": "src/playground/RepoMethodSearchWalkSkill.js",
+        "linuxBytes": 8379,
+        "macBytes": 8641
+      },
+      {
+        "file": "src/playground/RepoWalkerSkillsCapsule.js",
+        "linuxBytes": 1398,
+        "macBytes": 1842
+      },
+      {
+        "file": "src/playground/ScreenCapTool.js",
+        "linuxBytes": 38189,
+        "macBytes": 38780
+      },
+      {
+        "file": "src/playground/SystemMonitorWidget.js",
+        "linuxBytes": 1069,
+        "macBytes": 1301
+      },
+      {
+        "file": "src/playground/TreeWalkerPlaygroundScripts.js",
+        "linuxBytes": 3785,
+        "macBytes": 4057
+      },
+      {
+        "file": "src/playground/VibesPlaygroundDirector.js",
+        "linuxBytes": 35665,
+        "macBytes": 36680
+      },
+      {
+        "file": "src/playground/VisibilityStripperDemo.js",
+        "linuxBytes": 4706,
+        "macBytes": 5135
+      },
+      {
+        "file": "src/protocol/BlockableWriteGate.js",
+        "linuxBytes": 6052,
+        "macBytes": 6279
+      },
+      {
+        "file": "src/protocol/CodeFormatter.js",
+        "linuxBytes": 5824,
+        "macBytes": 7043
+      },
+      {
+        "file": "src/protocol/CodeParser.js",
+        "linuxBytes": 20777,
+        "macBytes": 21652
+      },
+      {
+        "file": "src/protocol/DirectApiWriteAuditor.js",
+        "linuxBytes": 1213,
+        "macBytes": 1455
+      },
+      {
+        "file": "src/protocol/DocumentToCapsuleWalker.js",
+        "linuxBytes": 29876,
+        "macBytes": 30128
+      },
+      {
+        "file": "src/protocol/FailureLogger.js",
+        "linuxBytes": 669,
+        "macBytes": 871
+      },
+      {
+        "file": "src/protocol/HTMLDependencyScanner.js",
+        "linuxBytes": 3518,
+        "macBytes": 3760
+      },
+      {
+        "file": "src/protocol/ManagedClassValidator.js",
+        "linuxBytes": 14407,
+        "macBytes": 14978
+      },
+      {
+        "file": "src/protocol/ManagedManifestLoader.js",
+        "linuxBytes": 3458,
+        "macBytes": 3700
+      },
+      {
+        "file": "src/protocol/ManagedMetadata.js",
+        "linuxBytes": 1070,
+        "macBytes": 1282
+      },
+      {
+        "file": "src/protocol/ManagedMetadataWriter.js",
+        "linuxBytes": 6077,
+        "macBytes": 6476
+      },
+      {
+        "file": "src/protocol/ManagedRegistry.js",
+        "linuxBytes": 1157,
+        "macBytes": 1369
+      },
+      {
+        "file": "src/protocol/ManagedSeedAgentMigrationNotes.js",
+        "linuxBytes": 424,
+        "macBytes": 711
+      },
+      {
+        "file": "src/protocol/ManagedWritePipeline.js",
+        "linuxBytes": 5002,
+        "macBytes": 5239
+      },
+      {
+        "file": "src/protocol/ProjectPacker.js",
+        "linuxBytes": 17328,
+        "macBytes": 17677
+      },
+      {
+        "file": "src/protocol/ProjectUnpacker.js",
+        "linuxBytes": 7337,
+        "macBytes": 7893
+      },
+      {
+        "file": "src/protocol/UnifiedWriteCoordinator.js",
+        "linuxBytes": 10852,
+        "macBytes": 11261
+      },
+      {
+        "file": "src/protocol/WriteAuditLogger.js",
+        "linuxBytes": 3478,
+        "macBytes": 3695
+      },
+      {
+        "file": "src/protocol/parsers/AstUtils.js",
+        "linuxBytes": 16836,
+        "macBytes": 17302
+      },
+      {
+        "file": "src/protocol/parsers/JsModuleParser.js",
+        "linuxBytes": 15715,
+        "macBytes": 16406
+      },
+      {
+        "file": "src/tools/TreeWalker/TreeWalkerDialog.js",
+        "linuxBytes": 76632,
+        "macBytes": 77664
+      },
+      {
+        "file": "src/tools/TreeWalker/WalkerQueue.js",
+        "linuxBytes": 1478,
+        "macBytes": 1670
+      },
+      {
+        "file": "src/tools/TreeWalker/scripts/BasicLogWalker.js",
+        "linuxBytes": 734,
+        "macBytes": 941
+      },
+      {
+        "file": "src/tools/audit/WriteAuditViewerApp.js",
+        "linuxBytes": 18422,
+        "macBytes": 18654
+      },
+      {
+        "file": "src/tools/runner/InWindowScriptInjector.js",
+        "linuxBytes": 66491,
+        "macBytes": 67436
+      },
+      {
+        "file": "src/tools/runner/RunInPageRunner.js",
+        "linuxBytes": 3269,
+        "macBytes": 3481
+      },
+      {
+        "file": "src/tools/testing/ReceiveCodeTester.js",
+        "linuxBytes": 54585,
+        "macBytes": 55069
+      }
+    ]
+  }
+}

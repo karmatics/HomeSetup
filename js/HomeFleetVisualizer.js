@@ -86,7 +86,7 @@ class HomeFleetVisualizer {
       };
 
       // 1. Ubuntu Laptop (Current Host in Bedroom)
-      const ubuntuNode = makeNode(260, 110, 220, 72, '🐧', 'Ubuntu Laptop (Host)', '10.0.0.245:3000', 'Bedroom • /root/source/LunoProjects', '#00f2fe', true);
+      const ubuntuNode = makeNode(260, 110, 220, 72, '🐧', 'Ubuntu Laptop (Host)', '10.0.0.245:8080', 'Bedroom • /root/source/LunoProjects', '#00f2fe', true);
 
       // 2. Mac Workstation (Living Room Big Monitors - 44 Projects Verified)
       const macNode = makeNode(25, 20, 215, 72, '🍎', 'Mac Workstation', '10.0.0.226:8080 (Luno v3.8.0)', 'Living Room • 44 Projects • Git Repos', '#10b981');
@@ -128,7 +128,7 @@ class HomeFleetVisualizer {
         'The Mac is confirmed online at ',
         makeElement('strong', { style: { color: '#10b981' } }, '10.0.0.226:8080'),
         ' hosting 44 project repositories. The Ubuntu host at ',
-        makeElement('strong', { style: { color: '#00f2fe' } }, '10.0.0.245:3000'),
+        makeElement('strong', { style: { color: '#00f2fe' } }, '10.0.0.245:8080'),
         ' holds the brand-new HomeSetup project. All communication proceeds over native HTTP.'
       ]);
       stage.appendChild(desc);

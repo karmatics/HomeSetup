@@ -46,25 +46,73 @@
   "styles": [
     "basic3d.css"
   ],
-  "processedCountSinceCheckpoint": 0,
+  "processedCountSinceCheckpoint": 48,
   "changedMethods": {
     "HomeSetup.js": "2026-10-25T02:10:49.211Z",
-    "js/HomeHandoffComponent.js": "2026-10-25T02:50:12.136Z",
-    "js/HomeHandoffContent.js": "2026-10-25T02:50:12.136Z",
-    "content/handoff.html": "2026-10-25T02:10:49.211Z",
+    "js/HomeHandoffComponent.js": "2026-10-25T19:33:45.521Z",
+    "js/HomeHandoffContent.js": "2026-10-25T19:33:45.521Z",
+    "content/handoff.html": "2026-10-25T19:33:45.521Z",
     "js/CadPromptBundlerDialog.js": "2026-10-25T02:10:49.211Z",
     "luno.json": "2026-10-25T02:10:49.211Z",
     "js/HomeTopologyContent.js": "2026-10-25T02:33:07.591Z",
     "js/HomeFleetVisualizer.js": "2026-10-25T02:41:46.187Z",
-    "js/HomeNetworkContent.js": "2026-10-25T02:43:32.571Z",
+    "js/HomeNetworkContent.js": "2026-10-25T18:19:28.504Z",
     "js/HomeNodesContent.js": "2026-10-25T02:27:42.838Z",
     "js/HomeOrchestrationContent.js": "2026-10-25T02:33:07.591Z",
     "content/topology.html": "2026-10-25T02:27:42.838Z",
     "content/network.html": "2026-10-25T02:43:32.571Z",
     "content/orchestration.html": "2026-10-25T02:33:07.591Z",
     "js/HomeStorageContent.js": "2026-10-25T02:50:12.136Z",
-    "content/storage.html": "2026-10-25T02:50:12.136Z"
+    "content/storage.html": "2026-10-25T02:50:12.136Z",
+    "Luno/app/OutboxPromptBox.js": "2026-10-25T19:00:38.118Z",
+    "Luno/app/OutboxQueue.js": "2026-10-25T19:00:38.118Z",
+    "Luno/app/OutboxWidgetRenderer.js": "2026-10-25T19:00:38.118Z",
+    "Opus/luno.json": "2026-10-25T23:49:24.631Z",
+    "Opus/index.html": "2026-10-25T23:49:24.631Z",
+    "Opus/opus.css": "2026-10-25T23:49:24.631Z",
+    "Opus/Opus.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusRouterComponent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusOverviewContent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusQ1CadContent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusQ2NarrativeContent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusQ3EconomicsContent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/js/OpusQ4CockpitContent.js": "2026-10-25T23:49:24.631Z",
+    "Opus/content/overview.html": "2026-10-25T23:49:24.631Z",
+    "Opus/content/q1_cad.html": "2026-10-25T23:49:24.631Z",
+    "Luno/app/LunoManifestDecisionEngine.js": "2026-10-25T23:49:24.631Z",
+    "Luno/app/LunoApiClient.js": "2026-10-25T23:49:24.631Z"
   },
   "lastCheckpointTime": "2026-10-25T03:39:25.469Z",
-  "pendingCheckpointDescription": "Clean working tree"
+  "pendingCheckpointDescription": "Clean working tree",
+  "visibilitySets": {
+    "handoff-lean": [
+      "js/HomeHandoffComponent.js",
+      "js/HomeHandoffContent.js",
+      "content/handoff.html",
+      "luno.json"
+    ],
+    "fleet-infrastructure": [
+      "js/HomeTopologyContent.js",
+      "js/HomeNetworkContent.js",
+      "js/HomeStorageContent.js",
+      "js/HomeNodesContent.js",
+      "js/HomeOrchestrationContent.js",
+      "js/HomeSecretsContent.js",
+      "luno.json"
+    ],
+    "full-dossier": [
+      "HomeSetup.js",
+      "js/HomeFleetVisualizer.js",
+      "js/HomeTopologyContent.js",
+      "js/HomeNetworkContent.js",
+      "js/HomeStorageContent.js",
+      "js/HomeNodesContent.js",
+      "js/HomeOrchestrationContent.js",
+      "js/HomeSecretsContent.js",
+      "js/HomeHandoffContent.js",
+      "js/HomeHandoffComponent.js",
+      "content/handoff.html",
+      "luno.json"
+    ]
+  }
 }

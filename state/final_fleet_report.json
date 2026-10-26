@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-25T03:56:05.860Z",
+  "vibes": {
+    "directory": "/root/source/LunoProjects/vibes",
+    "totalFiles": 14,
+    "missingLibraries": [],
+    "httpProbes": {
+      "appRunner": 0,
+      "indexHtml": 0,
+      "lunoJson": 0
+    },
+    "git": {
+      "remote": "git@github.com:karmatics/vibes.git",
+      "fetchResult": "From github.com:karmatics/vibes\n * [new branch]      main       -> origin/main"
+    }
+  },
+  "homeSetup": {
+    "linuxCommit": "f505420 [HomeSetup] Checkpoint 10/24/2026, 8:44:05 PM",
+    "macCommit": "f505420 [HomeSetup] Checkpoint 10/24/2026, 8:44:05 PM",
+    "githubPagesUrl": "https://karmatics.github.io/HomeSetup/"
+  }
+}

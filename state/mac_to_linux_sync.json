@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-25T05:29:41.364Z",
+  "linuxNode": "http://10.0.0.245:8080",
+  "pulledToMac": [
+    "messages/vibes_audit.md",
+    "messages/vibes_sync.md",
+    "state/final_fleet_report.json",
+    "state/vibes_recon.json",
+    "state/vibes_sync_result.json"
+  ],
+  "pushedToLinux": [
+    "js/HomeHandoffComponent.js",
+    "js/HomeNetworkContent.js",
+    "content/network.html",
+    "content/handoff.html",
+    "state/mac_to_linux_sync.json"
+  ],
+  "finalParity": {
+    "macFileCount": 131,
+    "linuxFileCount": 131,
+    "inSync": true
+  },
+  "log": [
+    "Push to Linux status: 200"
+  ]
+}
