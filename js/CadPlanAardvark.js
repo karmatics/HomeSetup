@@ -47,9 +47,8 @@ class CadPlanAardvark {
       document.addEventListener('click', this._onClick, true);
 
       this._highlightAnnotatedElements();
-      this._showHudMessage("🔍 Aardvark Active: Click or press 'C' to add note | 'W' wider | 'N' narrower | 'Esc' to exit");
+      this._showHudMessage("🔍 Aardvark Active: Click to lock & note | 'W' wider | 'N' narrower | 'Esc' to exit");
     }
-
   deactivate() {
       if (!this.isActive) return;
       this.isActive = false;
@@ -375,6 +374,7 @@ class CadPlanAardvark {
       if (!this.currentElement) return;
       const el = this.currentElement;
 
+      // Freeze hover tracking and lock on selected element
       this.isElementLocked = true;
       this.lockedElement = el;
       this._highlightElement(el);
@@ -415,6 +415,7 @@ class CadPlanAardvark {
             this.isElementLocked = false;
             this.lockedElement = null;
             el.classList.remove('comments-active-note-target');
+            this._highlightAnnotatedElements();
             if (this.isActive && this.currentElement) {
               this._highlightElement(this.currentElement);
             }
@@ -494,23 +495,38 @@ class CadPlanAardvark {
     }
 
   _highlightAnnotatedElements() {
-      // Clear legacy highlights
-      document.querySelectorAll('.cadplan-has-note-marker').forEach(el => {
-        el.classList.remove('cadplan-has-note-marker', 'proposal-mode');
-      });
-
       if (typeof CadPlanItemNotes === 'undefined') return;
-
       const localMap = CadPlanItemNotes.getLocalMap();
 
+      // Scan for blocks or universal elements with active unresolved notes
+      const activeKeys = new Set();
       Object.keys(localMap).forEach(key => {
-        const notes = (localMap[key] || []).filter(n => n.status !== 'resolved');
-        if (notes.length === 0) return;
+        const activeNotes = (localMap[key] || []).filter(n => n.status !== 'resolved');
+        if (activeNotes.length > 0) {
+          activeKeys.add(key);
+        }
+      });
 
+      document.querySelectorAll('.cadplan-has-note-marker').forEach(el => {
+        const blockId = el.getAttribute('data-block-id') || el.getAttribute('data-block') || el.id;
+        let hasActive = false;
+        for (const k of activeKeys) {
+          if (k.endsWith(`:${blockId}`)) {
+            hasActive = true;
+            break;
+          }
+        }
+        if (!hasActive) {
+          el.classList.remove('cadplan-has-note-marker', 'proposal-mode');
+        }
+      });
+
+      activeKeys.forEach(k => {
+        const notes = localMap[k] || [];
         const firstNote = notes[0];
-        const hasAiProposal = notes.some(n => n.isLLM);
-        let targetEl = null;
+        if (!firstNote) return;
 
+        let targetEl = null;
         if (firstNote.blockId) {
           targetEl = document.querySelector(`[data-block-id="${firstNote.blockId}"]`) ||
                      document.querySelector(`[data-block="${firstNote.blockId}"]`) ||
@@ -526,15 +542,13 @@ class CadPlanAardvark {
         }
 
         if (targetEl instanceof Element) {
-          // Apply the crawling ants animation border to the annotated element
           targetEl.classList.add('cadplan-has-note-marker');
-          if (hasAiProposal) {
+          if (notes.some(n => n.isLLM)) {
             targetEl.classList.add('proposal-mode');
           }
         }
       });
     }
-
   _drawOuterCornerConnectors(element, dialogElement) {
       let svg = document.getElementById('cadplan-outer-corners-svg');
       if (!svg) {
@@ -543,21 +557,21 @@ class CadPlanAardvark {
         svg.className = 'comments-corner-rays-canvas';
         svg.setAttribute('style', 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;overflow:visible;');
 
-        // 4 corner rays: TL->TL, TR->TR, BR->BR, BL->BL
+        // 4 corner rays: Top-Left, Top-Right, Bottom-Right, Bottom-Left
         for (let i = 0; i < 4; i++) {
           const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line.id = `cadplan-corner-line-${i}`;
           line.setAttribute('stroke', '#00f2fe');
-          line.setAttribute('stroke-width', '1.3');
+          line.setAttribute('stroke-width', '1.4');
           line.setAttribute('stroke-dasharray', '4,3');
-          line.setAttribute('opacity', '0.65');
+          line.setAttribute('opacity', '0.75');
           svg.appendChild(line);
         }
 
         document.body.appendChild(svg);
       }
 
-      // Force SVG z-index lower than dialog box so rays are underneath
+      // Force SVG z-index strictly underneath the active dialog window
       const dlgZ = parseInt(window.getComputedStyle(dialogElement).zIndex) || 100000;
       svg.style.zIndex = String(Math.max(1, dlgZ - 1));
 
@@ -565,7 +579,7 @@ class CadPlanAardvark {
 
       const updateFrame = () => {
         if (!element || !element.isConnected || !dialogElement || !dialogElement.isConnected) {
-          if (svg) svg.remove();
+          if (svg && svg.parentNode) svg.parentNode.removeChild(svg);
           return;
         }
 
@@ -610,7 +624,7 @@ class CadPlanAardvark {
       return () => {
         if (rafId) cancelAnimationFrame(rafId);
         const s = document.getElementById('cadplan-outer-corners-svg');
-        if (s) s.remove();
+        if (s && s.parentNode) s.parentNode.removeChild(s);
       };
     }
   _handleClick(e) {

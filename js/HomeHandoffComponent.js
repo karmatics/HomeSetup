@@ -16,6 +16,7 @@ class HomeHandoffComponent {
         }
       });
 
+      // 1. Header Toolbar with Quick Handoff Action
       const header = makeElement('div', {
         style: {
           padding: '12px 16px',
@@ -50,6 +51,7 @@ class HomeHandoffComponent {
       ]);
       wrap.appendChild(header);
 
+      // Fleet Git Control Banner
       const fleetGitBanner = makeElement('div', {
         style: {
           padding: '10px 16px',
@@ -64,7 +66,7 @@ class HomeHandoffComponent {
       }, [
         makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
           makeElement('strong', { style: { color: '#3fb950', fontSize: '12px' } }, '⚡ 1-Tap Fleet Git Sync:'),
-          makeElement('span', { id: 'fleet-mini-status', style: { color: '#8b949e', fontSize: '11px' } }, 'Keep Mac & Linux 100% synchronized across all 44 repositories')
+          makeElement('span', { id: 'fleet-mini-status', style: { color: '#8b949e', fontSize: '11px' } }, 'Mac & Linux 100% synchronized across all repositories')
         ]),
         makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap' } }, [
           makeElement('button', {
@@ -86,6 +88,7 @@ class HomeHandoffComponent {
       ]);
       wrap.appendChild(fleetGitBanner);
 
+      // 2. Search & Quadrant Filter Bar
       const filterBar = makeElement('div', {
         style: {
           padding: '10px 16px',
@@ -102,7 +105,7 @@ class HomeHandoffComponent {
       const searchInput = makeElement('input', {
         id: 'opus-search-input',
         type: 'text',
-        placeholder: '🔍 Search projects, patents, models, or topics (e.g. AccuDraw, Robot Dividend, 5.0B)...',
+        placeholder: '🔍 Search projects, patents, models, or topics (e.g. Opus, AccuDraw, Robot Dividend)...',
         style: {
           flex: '1 1 280px',
           background: '#070a13',
@@ -118,7 +121,8 @@ class HomeHandoffComponent {
 
       const quadrantChips = makeElement('div', { style: { display: 'flex', gap: '4px', flexWrap: 'wrap' } });
       const filters = [
-        { id: 'all', label: 'All Quadrants' },
+        { id: 'all', label: 'All Projects' },
+        { id: 'OPUS', label: '👑 Opus Master', col: '#00f2fe' },
         { id: 'I', label: 'Q-I: CAD Inventions', col: '#00f2fe' },
         { id: 'II', label: 'Q-II: Narrative & Valuation', col: '#ef4444' },
         { id: 'III', label: 'Q-III: Post-Labor Economics', col: '#f59e0b' },
@@ -145,6 +149,7 @@ class HomeHandoffComponent {
       filterBar.appendChild(quadrantChips);
       wrap.appendChild(filterBar);
 
+      // 3. Project Matrix Grid
       const cardsContainer = makeElement('div', {
         id: 'opus-cards-container',
         style: {
@@ -159,7 +164,18 @@ class HomeHandoffComponent {
       });
       wrap.appendChild(cardsContainer);
 
+      // The Master Projects Directory
       const projects = [
+        {
+          quadrant: 'OPUS',
+          name: 'Opus',
+          title: 'The Master Opus Router & Living Portfolio',
+          color: '#00f2fe',
+          icon: '👑',
+          desc: 'The master orchestrator uniting all four quadrants of Rob Brown: CAD inventions, personal narrative & legal valuation, post-labor economics, and the multi-node cockpit.',
+          keyFacts: ['All 4 Quadrants', 'Master Gateway', 'DocumentReader Portal', 'Top-Level Project'],
+          url: '../Opus/index.html'
+        },
         {
           quadrant: 'I',
           name: 'CadPlan',
@@ -274,22 +290,24 @@ class HomeHandoffComponent {
         });
 
         if (filtered.length === 0) {
-          cardsContainer.innerHTML = '<div style="grid-column: 1/-1; padding: 28px; text-align: center; color: #64748b; font-style: italic;">No projects matched your search query. Clear search or select "All Quadrants".</div>';
+          cardsContainer.innerHTML = '<div style="grid-column: 1/-1; padding: 28px; text-align: center; color: #64748b; font-style: italic;">No projects matched your search query. Clear search or select "All Projects".</div>';
           return;
         }
 
         filtered.forEach(p => {
+          const isOpus = p.name === 'Opus';
           const card = makeElement('div', {
             style: {
-              background: 'rgba(255, 255, 255, 0.02)',
-              border: `1px solid ${p.color}33`,
-              borderLeft: `4px solid ${p.color}`,
+              background: isOpus ? 'rgba(0, 242, 254, 0.08)' : 'rgba(255, 255, 255, 0.02)',
+              border: `1.5px solid ${isOpus ? '#00f2fe' : p.color + '33'}`,
+              borderLeft: `5px solid ${p.color}`,
               borderRadius: '8px',
               padding: '12px 14px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
               gap: '8px',
+              boxShadow: isOpus ? '0 0 16px rgba(0, 242, 254, 0.25)' : 'none',
               transition: 'transform 0.15s ease, border-color 0.15s ease'
             }
           });
@@ -298,8 +316,8 @@ class HomeHandoffComponent {
             style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }
           }, [
             makeElement('div', {}, [
-              makeElement('span', { style: { fontSize: '10px', color: p.color, fontWeight: 'bold' } }, `QUADRANT ${p.quadrant} • `),
-              makeElement('strong', { style: { color: '#f8fafc', fontSize: '13px' } }, `${p.icon} ${p.name}`),
+              makeElement('span', { style: { fontSize: '10px', color: p.color, fontWeight: 'bold' } }, isOpus ? 'MASTER GATEWAY • ' : `QUADRANT ${p.quadrant} • `),
+              makeElement('strong', { style: { color: isOpus ? '#00f2fe' : '#f8fafc', fontSize: '13.5px' } }, `${p.icon} ${p.name}`),
               makeElement('div', { style: { color: p.color, fontSize: '10.5px', marginTop: '1px' } }, p.title)
             ]),
             makeElement('span', {
@@ -313,7 +331,7 @@ class HomeHandoffComponent {
                 fontWeight: 'bold',
                 flexShrink: 0
               }
-            }, `Q-${p.quadrant}`)
+            }, isOpus ? 'MASTER' : `Q-${p.quadrant}`)
           ]);
           card.appendChild(topRow);
 
@@ -357,7 +375,7 @@ class HomeHandoffComponent {
             makeElement('div', { style: { display: 'flex', gap: '4px' } }, [
               makeElement('button', {
                 className: 'dr-nav-btn',
-                style: { padding: '2px 7px', fontSize: '9.5px' },
+                style: { padding: '2px 7px', fontSize: '9.5px', color: isOpus ? '#00f2fe' : '#c9d1d9', borderColor: isOpus ? '#00f2fe' : '#334155' },
                 title: 'Switch Luno target to this project',
                 onclick: () => {
                   if (typeof ClientApp !== 'undefined' && typeof ClientApp.switchExclusiveTargetProject === 'function') {
@@ -372,7 +390,7 @@ class HomeHandoffComponent {
                 style: { padding: '2px 7px', fontSize: '9.5px', color: '#d2a8ff', borderColor: '#8257e566' },
                 title: 'Copy brief context prompt for this project',
                 onclick: () => {
-                  const prompt = `# PROJECT FOCUS: [${p.name}] - ${p.title}\nDomain: Quadrant ${p.quadrant}\nAuthor: Rob Brown (Inventor of AccuDraw)\nDescription: ${p.desc}\nKey Technical Aspects:\n- ${p.keyFacts.join('\n- ')}\n`;
+                  const prompt = `# PROJECT FOCUS: [${p.name}] - ${p.title}\nDomain: ${p.quadrant}\nAuthor: Rob Brown (Inventor of AccuDraw)\nDescription: ${p.desc}\nKey Technical Aspects:\n- ${p.keyFacts.join('\n- ')}\n`;
                   navigator.clipboard.writeText(prompt).then(() => alert(`✓ Copied context for [${p.name}] to clipboard!`));
                 }
               }, '📋 Context')
@@ -387,6 +405,7 @@ class HomeHandoffComponent {
       searchInput.oninput = () => renderCards();
       renderCards();
 
+      // 4. Footer Status & Live Probes
       const footerBar = makeElement('div', {
         style: {
           padding: '10px 16px',
@@ -411,7 +430,7 @@ class HomeHandoffComponent {
             onclick: () => HomeHandoffComponent.probeLinuxLink()
           }, '⚡ Probe Remote Node')
         ]),
-        makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants Active in Git')
+        makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants + Opus Active')
       ]);
       wrap.appendChild(footerBar);
 

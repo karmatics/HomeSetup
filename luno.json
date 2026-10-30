@@ -46,7 +46,7 @@
   "styles": [
     "basic3d.css"
   ],
-  "processedCountSinceCheckpoint": 0,
+  "processedCountSinceCheckpoint": 2,
   "changedMethods": {
     "HomeSetup.js": "2026-10-25T02:10:49.211Z",
     "js/HomeHandoffComponent.js": "2026-10-25T19:33:45.521Z",
@@ -80,7 +80,9 @@
     "Opus/content/overview.html": "2026-10-25T23:49:24.631Z",
     "Opus/content/q1_cad.html": "2026-10-25T23:49:24.631Z",
     "Luno/app/LunoManifestDecisionEngine.js": "2026-10-25T23:49:24.631Z",
-    "Luno/app/LunoApiClient.js": "2026-10-25T23:49:24.631Z"
+    "Luno/app/LunoApiClient.js": "2026-10-25T23:49:24.631Z",
+    "Opus/content/strategy.html": "2026-10-28T00:12:32.446Z",
+    "Opus/js/OpusGrandStrategyContent.js": "2026-10-28T00:12:34.773Z"
   },
   "lastCheckpointTime": "2026-10-26T06:27:31.290Z",
   "pendingCheckpointDescription": "Clean working tree",
