@@ -1,0 +1,260 @@
+<article data-page="dictation" data-dossier="HomeSetup">
+  <header data-section="page_header">
+    <span class="dossier-kicker">Audio Intelligence &amp; Speech Ergonomics</span>
+    <h1 class="dossier-title">7. Dictation Architecture &amp; Universal Speech Engine</h1>
+    <p class="dossier-subtitle">Complete architectural survey of speech modules across Library and sibling repos: comparing legacy SuperDictate vs DictationWidget, and blueprinting the Universal Drop-In &amp; Chrome Extension engine.</p>
+  </header>
+
+  <section data-section="dictation_studio">
+    <h2 class="section-title">Live Dictation Studio, Spec Browser &amp; Sub-Apps</h2>
+    <div data-block="comp_dictation_studio" data-type="component" data-component="HomeDictationStudioComponent"></div>
+  </section>
+
+  <section data-section="dictation_overview">
+    <h2 class="section-title">Universal Dictation: Drop-In Web Module &amp; Ambient Chrome Extension</h2>
+
+    <p data-block="p_dictation_vision_1">
+      Voice dictation is one of the most powerful and distinctive aspects of Rob Brown's workflow. Luno itself was conceived and built largely from bed and couch on a smartphone using speech-to-text to dictate technical plans and software directives without typing fatigue.
+      <br><br>
+      However, dictation should not be trapped exclusively inside Luno Workspace. Our architectural vision is to establish a <strong>Universal 2-in-1 Speech Engine</strong> that serves two distinct deployment modalities without duplicating code:
+    </p>
+
+    <p data-block="p_dictation_vision_2">
+      1. <strong>The 1-Line Drop-In Library</strong>: Any web app across our ecosystem (or any external website) can include <code>/Library/DictationWidget.js</code> and attach speech capabilities to any input or container with a single line of code (<code>DictationWidget.attach(inputElement)</code>), with zero browser extension requirement.
+      <br><br>
+      2. <strong>The Universal Chrome Extension (<code>AardvarkExtension</code>)</strong>: Packages the exact same core speech engine into our Chrome extension so that pressing a hotkey (or clicking an ambient floating microphone) allows you to dictate directly into any active input on <em>any</em> web page (ChatGPT, Claude, Google Docs, GitHub, forums) with shared custom phonetic replacements and caret tracking.
+    </p>
+
+    <aside data-block="sidebar_dual_modality" data-type="sidebar">
+      <span class="sidebar-kicker">Architecture</span>
+      <strong class="sidebar-title">The 2-in-1 Speech Engine Specification</strong>
+      <ul>
+        <li><strong>1. Headless Dictation Core (DictationCore.js / DictationLattice.js):</strong>
+          <ul>
+            <li>Web Speech API (webkitSpeechRecognition) continuous listening.</li>
+            <li>Phonetic replacement dictionary ('literal' escape protocol, learned word mappings).</li>
+            <li>Punctuation parsing: period, comma, question mark, newline, colon, dash.</li>
+            <li>Caret-aware text insertion with auto-capitalization.</li>
+          </ul>
+        </li>
+        <li><strong>2. Drop-In Web Component (DictationWidget.js):</strong>
+          <ul>
+            <li>Full floating or embedded editor widget with permanent Clear button.</li>
+            <li><code>DictationWidget.attach(input)</code> decorator for any standard HTML input/textarea.</li>
+          </ul>
+        </li>
+        <li><strong>3. Ambient Chrome Extension Mode (AardvarkExtension):</strong>
+          <ul>
+            <li>Injected content script targeting <code>document.activeElement</code> across any website.</li>
+            <li>Shared phonetic replacement rules synced via <code>chrome.storage.sync</code>.</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <section data-section="two_cursors_problem">
+    <h2 class="section-title">The Two Cursors Problem &amp; The Dictation Lattice</h2>
+
+    <p data-block="p_two_cursors_1">
+      In traditional speech recognition widgets, moving your text cursor while speaking creates a disastrous conflict: the ASR engine continues streaming interim text into the old position, overwriting your edits or creating duplicate words. Rob Brown formalized this in <code>Library/DictationDocs.js</code> as <strong>The Two Cursors Problem</strong>.
+      <br><br>
+      The user has a physical text caret where they want to read and edit. The speech recognition engine has a streaming transcript pointer where words are arriving. If you couple them into a single pointer, text jumps violently whenever interim speech hypotheses are revised.
+    </p>
+
+    <aside data-block="sidebar_two_cursors_math" data-type="sidebar">
+      <span class="sidebar-kicker">Lattice Graph Math</span>
+      <strong class="sidebar-title">DictationLattice &amp; The Two Cursors Solution</strong>
+      <ul>
+        <li><strong>Decoupled Pointers:</strong> The Human Caret (navigation/selection) is decoupled from the ASR Stream Head.</li>
+        <li><strong>Word Lattice Graph:</strong> In <code>Library/DictationLattice.js</code>, tokens form a directed acyclic graph. When Web Speech API emits revised interim transcripts, the lattice computes <code>diff(a, b)</code> to splice words smoothly without cursor rubber-banding.</li>
+        <li><strong>Policy Engine:</strong> In <code>Library/DictationPolicy.js</code>, punctuation rules and custom replacements execute as decoupled middleware before words reach the DOM.</li>
+      </ul>
+    </aside>
+
+    <p data-block="p_two_cursors_2">
+      By solving The Two Cursors Problem mathematically via <code>DictationLattice</code>, speech recognition stops feeling like an aggressive automated typist and begins operating like an attentive, quiet partner: you can click back, edit a typo, and continue dictating without the stream stomping on your work.
+    </p>
+  </section>
+
+  <section data-section="discovered_roster">
+    <h2 class="section-title">Audit of Existing Dictation Code, Labs &amp; Precursors</h2>
+
+    <p data-block="p_dictation_audit_1">
+      Our system audit across the local workstation identified the following speech-related source files and integrations:
+      <br><br>
+      • <strong><code>Library/DictationWidget.js</code> (Active Engine • ~1,300 lines)</strong>: The primary working implementation. Handles speech recognition events, tentative popup rendering, SVG cubic Bézier connector curve, phonetic replacement dictionary, and spanified 'Quick Edit' mode.
+      <br><br>
+      • <strong><code>Library/DictationDocs.js</code> (New Blueprint • 68.3 KB)</strong>: Rob Brown's detailed architectural thesis covering 26 distinct sections on the 'Two Cursors' principle, lattice graph alignment, and design decisions.
+      <br><br>
+      • <strong><code>Library/DictationLattice.js</code> (New Engine • 18.9 KB)</strong>: Word graph alignment that eliminates interim speech jumping.
+      <br><br>
+      • <strong><code>Library/DictationPolicy.js</code> (Rule Engine • 5.4 KB)</strong>: Decoupled phonetic replacement and punctuation policy.
+      <br><br>
+      • <strong><code>Library/DictationEngineAdapter.js</code> (Headless Adapter • 4.2 KB)</strong>: Pluggable Web Speech API adapter.
+      <br><br>
+      • <strong><code>DictationLab/</code> &amp; <code>DictationExperiment/</code> (Sub-Apps)</strong>: Active standalone testbed applications in LunoProjects.
+      <br><br>
+      • <strong><code>Luno/app/OutboxPromptBox.js</code> (Consumer)</strong>: Draggable floating prompt dialog in Luno Workspace that embeds <code>DictationWidget</code>.
+      <br><br>
+      • <strong><code>AardvarkExtension/</code> (The Extension Target)</strong>: Found <code>features/AardvarkDictation.js</code>, <code>dictation.js</code>, and <code>dictation.html</code>.
+    </p>
+
+    <aside data-block="sidebar_dictation_comparison" data-type="sidebar">
+      <span class="sidebar-kicker">Codebase Comparison</span>
+      <strong class="sidebar-title">Generation 1 (DictationWidget) vs. Generation 2 (Lattice)</strong>
+      <ul>
+        <li><strong>1. Unbreakable Clear State:</strong> Guarantee the Clear button never hides or vanishes when speech recognition is active (Completed).</li>
+        <li><strong>2. 1-Line Input Attachment:</strong> Provide <code>DictationWidget.attach(input)</code> to turn any plain input into a speech-enabled field (Completed).</li>
+        <li><strong>3. The Two Cursors &amp; Lattice:</strong> Evolving the text insertion pipeline so human cursor navigation and streaming speech recognition never fight or jump.</li>
+        <li><strong>4. Shared Phonetic Vocabulary:</strong> Synchronize custom spoken word replacements so learned names ('AccuDraw', 'Luno', 'MicroStation') are recognized identically everywhere.</li>
+      </ul>
+    </aside>
+
+    <p data-block="p_dictation_audit_2">
+      Crucially, we do not want to break or dismantle the working <code>Library/DictationWidget.js</code> while designing the next-generation engine. The current implementation is fully functional and powers Luno's prompt notes. We are refining it progressively—first adding the lightweight <code>.attach()</code> helper, then connecting the Lattice, and finally packaging the content script into <code>AardvarkExtension</code>.
+    </p>
+  </section>
+
+  <section data-section="extension_integration">
+    <h2 class="section-title">Universal Extension (AardvarkExtension) &amp; 1-Line App Drop-In</h2>
+
+    <p data-block="p_extension_recipe_1">
+      Below is the concrete implementation blueprint for both the 1-line app drop-in and the Chrome extension content script:
+    </p>
+
+    <aside data-block="sidebar_drop_in_recipe" data-type="sidebar">
+      <span class="sidebar-kicker">Developer API</span>
+      <strong class="sidebar-title">1-Line Drop-In &amp; Extension Content Script</strong>
+      <pre><code>&lt;!-- Mode A: Standalone Drop-In (Any App) --&gt;
+&lt;script src="/Library/DictationWidget.js"&gt;&lt;/script&gt;
+&lt;textarea id="notes"&gt;&lt;/textarea&gt;
+&lt;script&gt;
+  // 1-line attachment:
+  DictationWidget.attach(document.getElementById('notes'));
+&lt;/script&gt;
+
+&lt;!-- Mode B: Chrome Extension (Any Page) --&gt;
+// In AardvarkExtension/content.js:
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) &amp;&amp; e.shiftKey &amp;&amp; e.key === 'D') {
+    const target = document.activeElement;
+    if (target) DictationWidget.attach(target).startListening();
+  }
+});</code></pre>
+    </aside>
+  </section>
+
+  <section data-section="extension_integration">
+    <h2 class="section-title">Universal Extension (AardvarkExtension) &amp; 1-Line App Drop-In</h2>
+
+    <p data-block="p_extension_recipe_1">
+      Below is the concrete implementation blueprint for both the 1-line app drop-in and the Chrome extension content script:
+    </p>
+
+    <aside data-block="sidebar_drop_in_recipe" data-type="sidebar">
+      <span class="sidebar-kicker">Developer API</span>
+      <strong class="sidebar-title">1-Line Drop-In &amp; Extension Content Script</strong>
+      <pre><code>&lt;!-- Mode A: Standalone Drop-In (Any App) --&gt;
+&lt;script src="/Library/DictationWidget.js"&gt;&lt;/script&gt;
+&lt;textarea id="notes"&gt;&lt;/textarea&gt;
+&lt;script&gt;
+  // 1-line attachment:
+  DictationWidget.attach(document.getElementById('notes'));
+&lt;/script&gt;
+
+&lt;!-- Mode B: Chrome Extension (Any Page) --&gt;
+// In AardvarkExtension/features/AardvarkDictation.js:
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) &amp;&amp; e.shiftKey &amp;&amp; e.key === 'D') {
+    const target = document.activeElement;
+    if (target &amp;&amp; (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+      DictationWidget.attach(target).startListening();
+    }
+  }
+});</code></pre>
+    </aside>
+  </section>
+
+  <section data-section="extension_integration">
+    <h2 class="section-title">Universal Extension (AardvarkExtension) &amp; 1-Line App Drop-In</h2>
+
+    <p data-block="p_extension_recipe_1">
+      Below is the concrete implementation blueprint for both the 1-line app drop-in and the Chrome extension content script:
+    </p>
+
+    <aside data-block="sidebar_drop_in_recipe" data-type="sidebar">
+      <span class="sidebar-kicker">Developer API</span>
+      <strong class="sidebar-title">1-Line Drop-In &amp; Extension Content Script</strong>
+      <pre><code>&lt;!-- Mode A: Standalone Drop-In (Any App) --&gt;
+&lt;script src="/Library/DictationWidget.js"&gt;&lt;/script&gt;
+&lt;textarea id="notes"&gt;&lt;/textarea&gt;
+&lt;script&gt;
+  // 1-line attachment:
+  DictationWidget.attach(document.getElementById('notes'));
+&lt;/script&gt;
+
+&lt;!-- Mode B: Chrome Extension (Any Page) --&gt;
+// In AardvarkExtension/features/AardvarkDictation.js:
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) &amp;&amp; e.shiftKey &amp;&amp; e.key === 'D') {
+    const target = document.activeElement;
+    if (target &amp;&amp; (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+      DictationWidget.attach(target).startListening();
+    }
+  }
+});</code></pre>
+    </aside>
+  </section>
+
+  <section data-section="discovered_roster">
+    <h2 class="section-title">Audit: Production Engine vs. Incomplete Lattice Experiment</h2>
+
+    <p data-block="p_dictation_audit_1">
+      A thorough server inspection of all 117 speech-related files across the workspace clarified the landscape:
+      <br><br>
+      • <strong><code>Library/DictationWidget.js</code> (Active Production Engine • ~1,300 lines)</strong>: The real, working engine that powers Luno's prompt notes and HomeSetup. It features continuous listening, caret tracking, phonetic replacements, and the 1-line <code>DictationWidget.attach(element)</code> drop-in method.
+      <br><br>
+      • <strong><code>DictationLab/</code> &amp; <code>DictationExperiment/</code> (Unfinished Prototypes)</strong>: Standalone experimental sandboxes exploring an alternative "word lattice" concept. Both sub-apps depend on an unwritten component (<code>LatticeSurface</code>) and are completely disconnected from production. They remain quarantined in their sandboxes and do not affect active workflows.
+      <br><br>
+      • <strong><code>AardvarkExtension/</code> (Chrome Extension Target)</strong>: The existing extension currently scopes scripts to YouTube and localhost. Its older dictation feature relied on an iframe dialog; it is ready to be upgraded to inject the unified <code>DictationWidget</code> engine across all web pages.
+    </p>
+
+    <aside data-block="sidebar_dictation_comparison" data-type="sidebar">
+      <span class="sidebar-kicker">Architecture Ground Truth</span>
+      <strong class="sidebar-title">Production Reality: Protect the Working Engine</strong>
+      <ul>
+        <li><strong>Active Engine:</strong> <code>Library/DictationWidget.js</code> is the sole production speech module. We do not break or destabilize it.</li>
+        <li><strong>Experimental Sandbox:</strong> <code>DictationLab</code>, <code>DictationExperiment</code>, and <code>DictationLattice.js</code> remain isolated research prototypes.</li>
+        <li><strong>Universal Drop-In:</strong> <code>DictationWidget.attach(input)</code> provides 1-line voice input for any app today.</li>
+        <li><strong>Chrome Extension Roadmap:</strong> Package the proven <code>DictationWidget</code> into <code>AardvarkExtension</code> with <code>&lt;all_urls&gt;</code> and an <code>Alt+D</code> trigger.</li>
+      </ul>
+    </aside>
+
+    <p data-block="p_dictation_audit_2">
+      This distinction protects our working tools: we will not attempt to prematurely merge the incomplete lattice experiment into Luno. Instead, we expand the proven <code>DictationWidget</code> into both standalone apps and the universal Chrome extension.
+    </p>
+  </section>
+
+  <section data-section="old_vs_new_audit">
+    <h2 class="section-title">Old vs. New: Recovering the 470 Missing Lines from Scratchy</h2>
+
+    <p data-block="p_old_vs_new_1">
+      A deep line-by-line comparison between our current <code>Library/DictationWidget.js</code> (1,324 lines) and Rob Brown's earlier production implementation in <code>Scratchy</code> (<code>recursi/web/Scratchy/js/DictationWidget.js</code>, 1,792 lines) revealed that <strong>nearly 500 lines of specialized logic were omitted or simplified during migration</strong>.
+      <br><br>
+      The earlier version was significantly more sophisticated in several key domains: it had dedicated popup positioning geometry in a separate <code>DictationPopup.js</code> class, finer caret-tracking heuristics, audio feedback queues, and richer mobile/touch viewport accommodation. In this section, we catalog every dropped method and architectural difference so we can systematically restore those superpowers into our unified engine.
+    </p>
+
+    <aside data-block="sidebar_missing_features" data-type="sidebar">
+      <span class="sidebar-kicker">Feature Inventory</span>
+      <strong class="sidebar-title">Dropped Methods &amp; Capabilities in Current Version</strong>
+      <ul>
+        <li><strong>Line Delta:</strong> 1,792 lines (Scratchy) vs. 1,324 lines (Current) = ~470 missing lines.</li>
+        <li><strong>Decoupled DictationPopup.js (205 lines):</strong> In Scratchy, popup positioning, SVG connector tension, and anchor side calculation were encapsulated in an independent class.</li>
+        <li><strong>Audio Feedback &amp; Sound Cues:</strong> Audio tone generation for start/stop and speech events was active in the precursor.</li>
+        <li><strong>Caret &amp; Selection Replacement:</strong> Finer handling of range deletion and replacement when text is actively highlighted during speech.</li>
+        <li><strong>Mobile Viewport Resilience:</strong> Enhanced handling of mobile virtual keyboard resizing and zoom scaling.</li>
+      </ul>
+    </aside>
+  </section>
+</article>
