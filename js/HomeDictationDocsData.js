@@ -325,7 +325,7 @@ class HomeDictationDocsData {
       "Persistence. Rules are the user’s personal vocabulary and must survive reloads. Page version: localStorage under a single versioned key (suggestion “dictation.rules.v1”), loaded at startup and saved on every change. Extension version: chrome.storage.sync. Provide export and import as JSON so the vocabulary can be backed up and shared. Wrap storage in try/catch; it can be unavailable.",
       "Hints to the engine. Some engines accept phrase hints or contextual biasing for names. Where available, feed the rule write-values to the engine as hints. Treat as an optional later improvement and feature-detect it; Chrome’s support varies by version.",
       "Replay. Rule changes are log events, so replaying a log reproduces the displayed text of the session as it was. Rules loaded from storage at startup are logged as an initial ruleAdd batch so a replay is self-contained.",
-      "Case. If a rule’s write contains any capital, caseMode is exact, so “iPhone” stays “iPhone” and “Kubernetes” keeps its capital K even mid-sentence. If it is all lowercase, caseMode is adapt, so it is capitalised at the start of a sentence like any word.",
+      "Case. If a rule’s write contains any capital, caseMode is exact, so “iPhone” stays ���iPhone” and “Kubernetes” keeps its capital K even mid-sentence. If it is all lowercase, caseMode is adapt, so it is capitalised at the start of a sentence like any word.",
       "Timing. The written word takes the combined interval of the heard words it replaced (timing Rule 4). A rule never changes when something was said."
     ]
   },
