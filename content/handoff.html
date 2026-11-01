@@ -14,16 +14,16 @@
     <br><br>
     This dossier acts as the <strong>Master Opus Router</strong> across all four quadrants of Rob Brown's life's work:
     <br>
-    • <strong>Quadrant I: Inventions & Technical Moat (<code>CadPlan</code>, <code>accudraw</code>, <code>accuCad</code>):</strong> 30-year proven spatial CAD constraint engine, SmartLine chaining, and expired US Patent #5,754,182.
+    • <strong>Quadrant I: Inventions &amp; Technical Moat (<code>CadPlan</code>, <code>accudraw</code>, <code>accuCad</code>):</strong> 30-year proven spatial CAD constraint engine, SmartLine chaining, and expired US Patent #5,754,182.
     <br>
-    • <strong>Quadrant II: Personal Narrative & Economic Reality (<code>situation</code>, <code>ValuationOfAccudraw</code>):</strong> The documented contrast between creating an estimated $5.0B–$6.5B in corporate value versus living on family assistance, food stamps, and custody separation from his daughter.
+    • <strong>Quadrant II: Personal Narrative &amp; Economic Reality (<code>situation</code>, <code>ValuationOfAccudraw</code>):</strong> The documented contrast between creating an estimated $5.0B–$6.5B in corporate value versus living on family assistance, food stamps, and custody separation from his daughter.
     <br>
     • <strong>Quadrant III: Post-Labor Macro-Economics (<code>EconomicsOfAutomation</code>, <code>JobsAndAI</code>):</strong> A first-principles economic framework for surviving automation through the Robot Dividend.
     <br>
-    • <strong>Quadrant IV: Fleet & Operational Cockpit (<code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>):</strong> The live multi-node computational environment on Port 8080 connecting Mac (10.0.0.226) and Linux (10.0.0.245).
+    • <strong>Quadrant IV: Fleet &amp; Operational Cockpit (<code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>):</strong> The live multi-node computational environment on Port 8080 connecting Mac (10.0.0.226) and Linux (10.0.0.245).
     </p>
 
-<p data-block="p_handoff_intro_2">
+    <p data-block="p_handoff_intro_2">
       <strong>The Universal Ground-Truth Mandate for the AI:</strong> The incoming AI assistant must treat this document as the living single source of truth. When the AI solves a task or architects a new cross-machine workflow, it must write the solution directly into the HomeSetup files (<code>HomeSetup/js/*.js</code> and <code>HomeSetup/content/*.html</code>) using surgical HTML containers, keeping the specification perpetually up to date.
     </p>
 
@@ -43,20 +43,20 @@
     <h2 class="section-title">Immediate Next Engineering Priorities</h2>
 
     <p data-block="p_handoff_tasks_1">
-    The task checklist below represents the active queue of items to implement across upcoming sessions. With the new <strong>Fleet Git Synchronizer (<code>/api/git/fleet-sync</code>)</strong>, checking in all 44 repositories and pulling them on the Linux laptop is now a single-click operation or executable CLI command (<code>./fleet-git.sh pull</code>).
+    The task checklist below represents the active queue of items to implement across upcoming sessions. With the new <strong>Fleet Git Synchronizer (<code>/api/git/fleet-sync</code>)</strong> and single-project pull endpoint (<code>/api/git/pull</code>), pulling and pushing across all 44 repositories on Mac or Linux is now fully automated with conflict reporting directly to Outbox.
     </p>
 
-<aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
-<span class="sidebar-kicker">Handoff Checklist</span>
-<strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
-<ul>
-<li><strong>[Done]</strong> Fleet-wide multi-repo Git synchronizer built into <code>LunoServer.js</code> (<code>/api/git/fleet-sync</code>).</li>
-<li><strong>[Done]</strong> 1-Tap UI buttons added to <code>LunoDeployEngine.js</code> and <code>HomeHandoffComponent.js</code> (Push All, Pull All, Cross-Node Sync).</li>
-<li><strong>[Done]</strong> Executable <code>fleet-git.sh</code> installed in workspace root for terminal use on Mac and Linux.</li>
-<li><strong>[Done]</strong> Linux remote trigger wired: Mac pushes and immediately instructs Linux (10.0.0.245:8080) to pull over HTTP.</li>
-<li><strong>[Active]</strong> Verify initial pull on Linux box.</li>
-</ul>
-</aside>
-
-</section>
+    <aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
+      <span class="sidebar-kicker">Handoff Checklist</span>
+      <strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
+      <ul>
+        <li><strong>[Done]</strong> Protocol instructions method aliased and restored as separate Outbox queue item.</li>
+        <li><strong>[Done]</strong> Outbox deduplication engine prevents duplicate library and project files across queue items.</li>
+        <li><strong>[Done]</strong> Single-project pull endpoint built into <code>LunoServer.js</code> (<code>POST /api/git/pull</code>) with auto-snapshot protection.</li>
+        <li><strong>[Done]</strong> <code>⬇️ Pull [Target]</code> and Fleet Git Mesh strip (Pull All, Push All, Status Check, Sync Mac ↔ Linux) placed right on Home Checkpoint card.</li>
+        <li><strong>[Done]</strong> Git status check upgraded to run <code>git fetch -q</code> and report remote commits waiting to be pulled.</li>
+        <li><strong>[Done]</strong> Automatic conflict detection and 1-tap "Send Report to Outbox" for LLM resolution.</li>
+      </ul>
+    </aside>
+  </section>
 </article>

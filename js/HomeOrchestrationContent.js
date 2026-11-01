@@ -47,17 +47,21 @@ class HomeOrchestrationContent {
 
   static sidebar_server_runner_patterns() {
       return [
-        "Luno-to-Luno Federation Recipes (Port 8080 Bridge):\n" +
-        "• 1. Query Projects on the Mac:\n" +
+        "Server Runner Execution Directives & Scope Boundary:\n" +
+        "• 1. Scope Invariants (CRITICAL):\n" +
+        "  - `__dirname` and `__filename` are NOT in scope inside `<script data-file=\"RUN: SERVER\">`!\n" +
+        "  - Always resolve paths via `process.cwd()`, `path.resolve(process.cwd(), '..')`, or `LunoServer.resolveProjectBaseDir(projectName)`.\n" +
+        "  - Active globals provided: `require`, `process`, `LunoServer`, `console`, and `globalThis`.\n" +
+        "• 2. Path Resolution Pattern:\n" +
         "  ```javascript\n" +
-        "  const http = require('http');\n" +
-        "  // Fetch Mac project list directly from its Luno server\n" +
-        "  http.get('http://<mac-ip>:8080/api/projects', (res) => { ... });\n" +
+        "  const path = require('path');\n" +
+        "  const fs = require('fs');\n" +
+        "  const projectDir = typeof LunoServer !== 'undefined' && LunoServer.resolveProjectBaseDir\n" +
+        "    ? LunoServer.resolveProjectBaseDir('QuoraToys')\n" +
+        "    : path.resolve(process.cwd(), 'QuoraToys');\n" +
         "  ```\n" +
-        "• 2. Forward Script to Run on Mac:\n" +
-        "  Post code to Mac's Luno endpoint to execute in Darwin environment.\n" +
-        "• 3. Automated Git Linkage:\n" +
-        "  Initialize `HomeSetup` Git repo and push to GitHub Pages without touching terminal."
+        "• 3. Luno Federation & Cross-Node Dispatch:\n" +
+        "  Use Node's native `http` module to send directives across port 8080 without spawning external terminal shells."
       ];
     }
   static p_orch_runner_1() {

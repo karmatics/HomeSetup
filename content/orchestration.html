@@ -11,22 +11,23 @@
     <p data-block="p_orch_flow_1">
       With Luno running on the Mac on port 8080 and on the Ubuntu laptop on port 8080, cross-machine orchestration enters a clean, unified paradigm: <strong>Luno-to-Luno HTTP Federation</strong>.
       <br><br>
-      Instead of invoking complex terminal shell pipelines, an LLM generating <code>&lt;script data-file="RUN: SERVER" data-action="run-server"&gt;</code> on the Ubuntu host can use Node's <code>http</code> module to send directives straight to <code>http://&lt;mac-ip&gt;:8080/api/...</code>.
+      Instead of invoking complex terminal shell pipelines, an LLM generating <code>&lt;script data-file="RUN: SERVER" data-action="run-server"&gt;</code> on either host can use Node's native modules and LunoServer APIs.
       <br><br>
-      This allows the AI to query files on the Mac, verify Git configurations, and transfer project bundles across the wire with zero manual intervention.
+      <strong>Scope Invariant for Server Runners:</strong> <code>__dirname</code> and <code>__filename</code> are strictly <em>not</em> in scope in evaluated runner scripts. All scripts must resolve filesystem roots via <code>process.cwd()</code>, <code>path.resolve(process.cwd(), '..')</code>, or <code>LunoServer.resolveProjectBaseDir(projectName)</code>.
     </p>
 
     <p data-block="p_orch_flow_2">
-      This turns the AI into an active system administrator for your home setup: you express your intent in plain English, the AI outputs an executable runner container, and with one click of "Paste from Chatbot", the script executes on the Linux host and returns structured execution telemetry back to the screen.
+      This turns the AI into an active system administrator for your home setup: you express your intent in plain English, the AI outputs an executable runner container, and with one click of "Paste from Chatbot", the script executes on the host and returns structured execution telemetry back to the screen.
     </p>
 
     <aside data-block="sidebar_server_runner_patterns" data-type="sidebar">
       <span class="sidebar-kicker">Runner Protocol</span>
-      <strong class="sidebar-title">Luno-to-Luno Federation Recipes (Port 8080 Bridge)</strong>
+      <strong class="sidebar-title">Server Runner Execution Directives &amp; Scope Boundary</strong>
       <ul>
+        <li><strong>Scope Invariant:</strong> <code>__dirname</code> and <code>__filename</code> are not defined. Use <code>process.cwd()</code> or <code>LunoServer.resolveProjectBaseDir()</code>.</li>
+        <li><strong>Available Globals:</strong> <code>require</code>, <code>process</code>, <code>LunoServer</code>, <code>console</code>.</li>
         <li><strong>Query Projects on the Mac:</strong> Fetch Mac project list directly from its Luno server on port 8080.</li>
-        <li><strong>Cross-Node Script Execution:</strong> Dispatch computational jobs to the Mac via Luno's server endpoints.</li>
-        <li><strong>Git Remote Synchronization:</strong> Wire new local projects like <code>HomeSetup</code> to GitHub Pages automatically.</li>
+        <li><strong>Cross-Node Script Execution:</strong> Dispatch computational jobs to peer nodes via Luno's HTTP API.</li>
       </ul>
     </aside>
   </section>
