@@ -1,441 +1,452 @@
 class HomeHandoffComponent {
 
   static render(container) {
-      container.innerHTML = '';
+        container.innerHTML = '';
 
-      const wrap = makeElement('div', {
-        style: {
-          background: '#070a13',
-          border: '1.5px solid #21262d',
-          borderRadius: '12px',
-          overflow: 'hidden',
-          boxShadow: '0 16px 40px rgba(0,0,0,0.65)',
-          display: 'flex',
-          flexDirection: 'column',
-          fontFamily: 'monospace'
-        }
-      });
-
-      // 1. Header Toolbar with Quick Handoff Action
-      const header = makeElement('div', {
-        style: {
-          padding: '12px 16px',
-          background: 'rgba(15, 23, 42, 0.95)',
-          borderBottom: '1px solid #21262d',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '8px'
-        }
-      }, [
-        makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
-          makeElement('span', { style: { fontSize: '18px' } }, '🏛️'),
-          makeElement('div', {}, [
-            makeElement('strong', { style: { fontSize: '13px', color: '#00f2fe', display: 'block' } }, 'Master Opus Router & Fleet Git Synchronizer'),
-            makeElement('span', { style: { fontSize: '10px', color: '#94a3b8' } }, 'The 4 Quadrants of Rob Brown • Universal Port 8080 Git Mesh')
-          ])
-        ]),
-        makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' } }, [
-          makeElement('button', {
-            className: 'dr-nav-btn primary',
-            style: { padding: '5px 12px', fontSize: '11px', fontWeight: 'bold' },
-            onclick: () => HomeHandoffComponent.copyHandoffPrompt()
-          }, '📋 Copy Handoff Prompt'),
-          makeElement('button', {
-            className: 'dr-nav-btn',
-            style: { padding: '5px 10px', fontSize: '11px', color: '#d2a8ff', borderColor: '#8257e5' },
-            onclick: () => HomeHandoffComponent.pushHandoffToOutbox()
-          }, '📤 Push to Outbox')
-        ])
-      ]);
-      wrap.appendChild(header);
-
-      // Fleet Git Control Banner
-      const fleetGitBanner = makeElement('div', {
-        style: {
-          padding: '10px 16px',
-          background: 'linear-gradient(135deg, #0d2818 0%, #0d1117 100%)',
-          borderBottom: '1px solid #238636',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '10px'
-        }
-      }, [
-        makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
-          makeElement('strong', { style: { color: '#3fb950', fontSize: '12px' } }, '⚡ 1-Tap Fleet Git Sync:'),
-          makeElement('span', { id: 'fleet-mini-status', style: { color: '#8b949e', fontSize: '11px' } }, 'Mac & Linux 100% synchronized across all repositories')
-        ]),
-        makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap' } }, [
-          makeElement('button', {
-            className: 'dr-nav-btn',
-            style: { padding: '3px 8px', fontSize: '10.5px', background: '#238636', color: '#fff', border: 'none', fontWeight: 'bold' },
-            onclick: () => HomeHandoffComponent.syncFleetGit('push')
-          }, '⬆️ Push All (Local)'),
-          makeElement('button', {
-            className: 'dr-nav-btn',
-            style: { padding: '3px 8px', fontSize: '10.5px', color: '#00f2fe', borderColor: '#00f2fe66' },
-            onclick: () => HomeHandoffComponent.syncFleetGit('pull')
-          }, '⬇️ Pull All (Local)'),
-          makeElement('button', {
-            className: 'dr-nav-btn',
-            style: { padding: '3px 8px', fontSize: '10.5px', background: '#271052', color: '#d2a8ff', border: '1px solid #8257e5', fontWeight: 'bold' },
-            onclick: () => HomeHandoffComponent.syncFleetGit('cross_node')
-          }, '🌐 Sync Mac ➔ Linux (1-Tap)')
-        ])
-      ]);
-      wrap.appendChild(fleetGitBanner);
-
-      // 2. Search & Quadrant Filter Bar
-      const filterBar = makeElement('div', {
-        style: {
-          padding: '10px 16px',
-          background: '#0d1117',
-          borderBottom: '1px solid #161e2b',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '10px'
-        }
-      });
-
-      const searchInput = makeElement('input', {
-        id: 'opus-search-input',
-        type: 'text',
-        placeholder: '🔍 Search projects, patents, models, or topics (e.g. Opus, AccuDraw, Robot Dividend)...',
-        style: {
-          flex: '1 1 280px',
-          background: '#070a13',
-          border: '1px solid #30363d',
-          borderRadius: '6px',
-          padding: '6px 10px',
-          color: '#00f2fe',
-          fontSize: '11px',
-          fontFamily: 'monospace',
-          outline: 'none'
-        }
-      });
-
-      const quadrantChips = makeElement('div', { style: { display: 'flex', gap: '4px', flexWrap: 'wrap' } });
-      const filters = [
-        { id: 'all', label: 'All Projects' },
-        { id: 'OPUS', label: '👑 Opus Master', col: '#00f2fe' },
-        { id: 'I', label: 'Q-I: CAD Inventions', col: '#00f2fe' },
-        { id: 'II', label: 'Q-II: Narrative & Valuation', col: '#ef4444' },
-        { id: 'III', label: 'Q-III: Post-Labor Economics', col: '#f59e0b' },
-        { id: 'IV', label: 'Q-IV: Fleet & Cockpit', col: '#10b981' }
-      ];
-
-      let activeFilter = 'all';
-
-      filters.forEach(f => {
-        const btn = makeElement('button', {
-          className: `dr-tab-btn ${f.id === 'all' ? 'active' : ''}`,
-          style: { padding: '3px 8px', fontSize: '10.5px' },
-          onclick: () => {
-            activeFilter = f.id;
-            filterBar.querySelectorAll('.dr-tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderCards();
+        const wrap = makeElement('div', {
+          style: {
+            background: '#070a13',
+            border: '1.5px solid #21262d',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            boxShadow: '0 16px 40px rgba(0,0,0,0.65)',
+            display: 'flex',
+            flexDirection: 'column',
+            fontFamily: 'monospace'
           }
-        }, f.label);
-        quadrantChips.appendChild(btn);
-      });
-
-      filterBar.appendChild(searchInput);
-      filterBar.appendChild(quadrantChips);
-      wrap.appendChild(filterBar);
-
-      // 3. Project Matrix Grid
-      const cardsContainer = makeElement('div', {
-        id: 'opus-cards-container',
-        style: {
-          padding: '16px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
-          gap: '12px',
-          background: '#090d16',
-          maxHeight: '520px',
-          overflowY: 'auto'
-        }
-      });
-      wrap.appendChild(cardsContainer);
-
-      // The Master Projects Directory
-      const projects = [
-        {
-          quadrant: 'OPUS',
-          name: 'Opus',
-          title: 'The Master Opus Router & Living Portfolio',
-          color: '#00f2fe',
-          icon: '👑',
-          desc: 'The master orchestrator uniting all four quadrants of Rob Brown: CAD inventions, personal narrative & legal valuation, post-labor economics, and the multi-node cockpit.',
-          keyFacts: ['All 4 Quadrants', 'Master Gateway', 'DocumentReader Portal', 'Top-Level Project'],
-          url: '../Opus/index.html'
-        },
-        {
-          quadrant: 'I',
-          name: 'CadPlan',
-          title: 'Master CAD Specification & 3D Lab',
-          color: '#00f2fe',
-          icon: '📐',
-          desc: '3D AccuDraw constraint engine, 50ms chorded tentative snapping, SmartLine chaining, DXF bulge factors tan(θ/4), and on-curve spline relaxation.',
-          keyFacts: ['US Patent #5,754,182', '3-Axis Mini-Jack', 'No-Enter Key Command Engine'],
-          url: '../CadPlan/index.html'
-        },
-        {
-          quadrant: 'I',
-          name: 'accuCad',
-          title: 'Unified 3D WebGL Workstation',
-          color: '#00f2fe',
-          icon: '🏛️',
-          desc: 'Production Three.js drafting studio with direction-cosine orientation basis, tool settings sidebar, GLB model face snapping [Q], and DXF exporter.',
-          keyFacts: ['Live 3D Viewport', 'PBR Materials', 'AccuDrawLogic Kernel'],
-          url: '../accuCad/index.html'
-        },
-        {
-          quadrant: 'I',
-          name: 'accudraw',
-          title: '30-Year Historical Lore & Patents',
-          color: '#00f2fe',
-          icon: '📜',
-          desc: 'Complete archive of Bentley Systems corporate first patent, 1995-1996 MicroStation Manager reprints, Scott Williams profile, and mathematical lore.',
-          keyFacts: ['Sole Inventor: Robert J. Brown', 'MicroStation 95 Baseline', 'Public Domain Mathematics'],
-          url: '../accudraw/index.html'
-        },
-        {
-          quadrant: 'II',
-          name: 'situation',
-          title: 'Executive Career Dossier & Legal Reality',
-          color: '#ef4444',
-          icon: '⚖️',
-          desc: 'Detailed forensic narrative: the contrast between creating $5.0B-$6.5B in corporate value versus living on food stamps, caretaker bias, and daughter custody separation.',
-          keyFacts: ['Forensic Valuation', 'Parental Alienation', 'DocumentReader Dossier'],
-          url: '../situation/index.html'
-        },
-        {
-          quadrant: 'II',
-          name: 'ValuationOfAccudraw',
-          title: 'Forensic Enterprise Valuation Model',
-          color: '#ef4444',
-          icon: '📊',
-          desc: 'Quantitative market cap attribution analysis: modeling Bentley Systems DOT lock-in, recurring maintenance revenues, and acquisition avoidance in 1995.',
-          keyFacts: ['$5.0B to $6.5B Attribution', '48 State DOTs', 'Anti-Churn Moat'],
-          url: '../ValuationOfAccudraw/index.html'
-        },
-        {
-          quadrant: 'III',
-          name: 'EconomicsOfAutomation',
-          title: 'The Robot Dividend & Post-Labor Model',
-          color: '#f59e0b',
-          icon: '🤖',
-          desc: 'First-principles macro-economic model for human survival through automation: the Colony of 100,000, tangible currency, and game theory stress-testing.',
-          keyFacts: ['The Robot Dividend', 'Doomer Loop Breaker', 'Interactive Tax Simulator'],
-          url: '../EconomicsOfAutomation/index.html'
-        },
-        {
-          quadrant: 'III',
-          name: 'JobsAndAI',
-          title: 'The Automation Horizon Analysis',
-          color: '#f59e0b',
-          icon: '📈',
-          desc: 'Empirical analysis of generative AI and spatial robotics replacing human labor, proving why traditional wage-labor taxation collapses.',
-          keyFacts: ['Labor Decoupling', 'Capital Saturation', 'Macroeconomic Thesis'],
-          url: '../JobsAndAI/index.html'
-        },
-        {
-          quadrant: 'IV',
-          name: 'HomeSetup',
-          title: 'Multi-Node Fleet & Infrastructure Dossier',
-          color: '#10b981',
-          icon: '🖥️',
-          desc: 'The master operational cockpit: verified Port 8080 federation between Ubuntu Linux (10.0.0.245) and Mac (10.0.0.226), shared drive syncing, and handoff ledgers.',
-          keyFacts: ['Universal Port 8080', 'Luno-to-Luno Mesh', 'Zero-Leak Security'],
-          url: './index.html'
-        },
-        {
-          quadrant: 'IV',
-          name: 'Luno',
-          title: 'Phone-First Dual-Mode AI Cockpit',
-          color: '#10b981',
-          icon: '🌙',
-          desc: 'Zero-token clipboard container development loop (<script data-method="...">), in-browser AST class patcher, Outbox queue manager, and 1-tap Pages deploy.',
-          keyFacts: ['HTML Container Protocol', 'In-Browser Acorn AST', '1-Tap GitHub Pages'],
-          url: '../Luno/index.html'
-        },
-        {
-          quadrant: 'IV',
-          name: 'Library',
-          title: 'Central Shared Dependency Hub',
-          color: '#10b981',
-          icon: '📚',
-          desc: 'Reusable shared modules powering all projects: DomBasics, UITools, DocumentReader, ThreeJSLoader, VideoPlayer, and DictationWidget.',
-          keyFacts: ['Zero-Copy Architecture', 'Universal UI Elements', 'Audio/Midi Engines'],
-          url: '../Library/index.html'
-        }
-      ];
-
-      function renderCards() {
-        cardsContainer.innerHTML = '';
-        const query = searchInput.value.toLowerCase().trim();
-
-        const filtered = projects.filter(p => {
-          if (activeFilter !== 'all' && p.quadrant !== activeFilter) return false;
-          if (!query) return true;
-          const text = `${p.name} ${p.title} ${p.desc} ${p.keyFacts.join(' ')}`.toLowerCase();
-          return text.includes(query);
         });
 
-        if (filtered.length === 0) {
-          cardsContainer.innerHTML = '<div style="grid-column: 1/-1; padding: 28px; text-align: center; color: #64748b; font-style: italic;">No projects matched your search query. Clear search or select "All Projects".</div>';
-          return;
-        }
+        // 1. Header Toolbar with Quick Handoff Action
+        const header = makeElement('div', {
+          style: {
+            padding: '12px 16px',
+            background: 'rgba(15, 23, 42, 0.95)',
+            borderBottom: '1px solid #21262d',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '8px'
+          }
+        }, [
+          makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
+            makeElement('span', { style: { fontSize: '18px' } }, '🏛️'),
+            makeElement('div', {}, [
+              makeElement('strong', { style: { fontSize: '13px', color: '#00f2fe', display: 'block' } }, 'Master Opus Router & Fleet Git Synchronizer'),
+              makeElement('span', { style: { fontSize: '10px', color: '#94a3b8' } }, 'The 4 Quadrants of Rob Brown • Universal Port 8080 Git Mesh')
+            ])
+          ]),
+          makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' } }, [
+            makeElement('button', {
+              className: 'dr-nav-btn primary',
+              style: { padding: '5px 12px', fontSize: '11px', fontWeight: 'bold' },
+              onclick: () => HomeHandoffComponent.copyHandoffPrompt()
+            }, '📋 Copy Handoff Prompt'),
+            makeElement('button', {
+              className: 'dr-nav-btn',
+              style: { padding: '5px 10px', fontSize: '11px', color: '#d2a8ff', borderColor: '#8257e5' },
+              onclick: () => HomeHandoffComponent.pushHandoffToOutbox()
+            }, '📤 Push to Outbox')
+          ])
+        ]);
+        wrap.appendChild(header);
 
-        filtered.forEach(p => {
-          const isOpus = p.name === 'Opus';
-          const card = makeElement('div', {
-            style: {
-              background: isOpus ? 'rgba(0, 242, 254, 0.08)' : 'rgba(255, 255, 255, 0.02)',
-              border: `1.5px solid ${isOpus ? '#00f2fe' : p.color + '33'}`,
-              borderLeft: `5px solid ${p.color}`,
-              borderRadius: '8px',
-              padding: '12px 14px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              gap: '8px',
-              boxShadow: isOpus ? '0 0 16px rgba(0, 242, 254, 0.25)' : 'none',
-              transition: 'transform 0.15s ease, border-color 0.15s ease'
+        // Fleet Git Control Banner
+        const fleetGitBanner = makeElement('div', {
+          style: {
+            padding: '10px 16px',
+            background: 'linear-gradient(135deg, #0d2818 0%, #0d1117 100%)',
+            borderBottom: '1px solid #238636',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '10px'
+          }
+        }, [
+          makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [
+            makeElement('strong', { style: { color: '#3fb950', fontSize: '12px' } }, '⚡ 1-Tap Fleet Git Sync:'),
+            makeElement('span', { id: 'fleet-mini-status', style: { color: '#8b949e', fontSize: '11px' } }, 'Mac & Linux 100% synchronized across all repositories')
+          ]),
+          makeElement('div', { style: { display: 'flex', gap: '6px', flexWrap: 'wrap' } }, [
+            makeElement('button', {
+              className: 'dr-nav-btn',
+              style: { padding: '3px 8px', fontSize: '10.5px', background: '#238636', color: '#fff', border: 'none', fontWeight: 'bold' },
+              onclick: () => HomeHandoffComponent.syncFleetGit('push')
+            }, '⬆️ Push All (Local)'),
+            makeElement('button', {
+              className: 'dr-nav-btn',
+              style: { padding: '3px 8px', fontSize: '10.5px', color: '#00f2fe', borderColor: '#00f2fe66' },
+              onclick: () => HomeHandoffComponent.syncFleetGit('pull')
+            }, '⬇️ Pull All (Local)'),
+            makeElement('button', {
+              className: 'dr-nav-btn',
+              style: { padding: '3px 8px', fontSize: '10.5px', background: '#271052', color: '#d2a8ff', border: '1px solid #8257e5', fontWeight: 'bold' },
+              onclick: () => HomeHandoffComponent.syncFleetGit('cross_node')
+            }, '🌐 Sync Mac ➔ Linux (1-Tap)')
+          ])
+        ]);
+        wrap.appendChild(fleetGitBanner);
+
+        // 2. Search & Quadrant Filter Bar
+        const filterBar = makeElement('div', {
+          style: {
+            padding: '10px 16px',
+            background: '#0d1117',
+            borderBottom: '1px solid #161e2b',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '10px'
+          }
+        });
+
+        const searchInput = makeElement('input', {
+          id: 'opus-search-input',
+          type: 'text',
+          placeholder: '🔍 Search projects, patents, models, or topics (e.g. QuoraToys, AccuDraw, Robot Dividend)...',
+          style: {
+            flex: '1 1 280px',
+            background: '#070a13',
+            border: '1px solid #30363d',
+            borderRadius: '6px',
+            padding: '6px 10px',
+            color: '#00f2fe',
+            fontSize: '11px',
+            fontFamily: 'monospace',
+            outline: 'none'
+          }
+        });
+
+        const quadrantChips = makeElement('div', { style: { display: 'flex', gap: '4px', flexWrap: 'wrap' } });
+        const filters = [
+          { id: 'all', label: 'All Projects' },
+          { id: 'OPUS', label: '👑 Opus Master', col: '#00f2fe' },
+          { id: 'I', label: 'Q-I: CAD Inventions', col: '#00f2fe' },
+          { id: 'II', label: 'Q-II: Narrative & Valuation', col: '#ef4444' },
+          { id: 'III', label: 'Q-III: Post-Labor Economics', col: '#f59e0b' },
+          { id: 'IV', label: 'Q-IV: Fleet & Cockpit', col: '#10b981' }
+        ];
+
+        let activeFilter = 'all';
+
+        filters.forEach(f => {
+          const btn = makeElement('button', {
+            className: `dr-tab-btn ${f.id === 'all' ? 'active' : ''}`,
+            style: { padding: '3px 8px', fontSize: '10.5px' },
+            onclick: () => {
+              activeFilter = f.id;
+              filterBar.querySelectorAll('.dr-tab-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              renderCards();
             }
+          }, f.label);
+          quadrantChips.appendChild(btn);
+        });
+
+        filterBar.appendChild(searchInput);
+        filterBar.appendChild(quadrantChips);
+        wrap.appendChild(filterBar);
+
+        // 3. Project Matrix Grid
+        const cardsContainer = makeElement('div', {
+          id: 'opus-cards-container',
+          style: {
+            padding: '16px',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+            gap: '12px',
+            background: '#090d16',
+            maxHeight: '520px',
+            overflowY: 'auto'
+          }
+        });
+        wrap.appendChild(cardsContainer);
+
+        // The Master Projects Directory
+        const projects = [
+          {
+            quadrant: 'OPUS',
+            name: 'Opus',
+            title: 'The Master Opus Router & Living Portfolio',
+            color: '#00f2fe',
+            icon: '👑',
+            desc: 'The master orchestrator uniting all four quadrants of Rob Brown: CAD inventions, personal narrative & legal valuation, post-labor economics, and the multi-node cockpit.',
+            keyFacts: ['All 4 Quadrants', 'Master Gateway', 'DocumentReader Portal', 'Top-Level Project'],
+            url: '../Opus/index.html'
+          },
+          {
+            quadrant: 'IV',
+            name: 'QuoraToys',
+            title: 'Quora Spatial Annotation, Archival & Drawing Tools',
+            color: '#c084fc',
+            icon: '🧸',
+            desc: 'Active development target: in-situ bookmarklet, browser extension, and archival tool for rich canvas annotations, drawing layers, and thread capturing directly in Quora.',
+            keyFacts: ['Bookmarklet Workshop', 'DrawingTool.js', 'In-Situ Content Script', 'Archival Engine'],
+            url: '../QuoraToys/index.html'
+          },
+          {
+            quadrant: 'I',
+            name: 'CadPlan',
+            title: 'Master CAD Specification & 3D Lab',
+            color: '#00f2fe',
+            icon: '📐',
+            desc: '3D AccuDraw constraint engine, 50ms chorded tentative snapping, SmartLine chaining, DXF bulge factors tan(θ/4), and on-curve spline relaxation.',
+            keyFacts: ['US Patent #5,754,182', '3-Axis Mini-Jack', 'No-Enter Key Command Engine'],
+            url: '../CadPlan/index.html'
+          },
+          {
+            quadrant: 'I',
+            name: 'accuCad',
+            title: 'Unified 3D WebGL Workstation',
+            color: '#00f2fe',
+            icon: '🏛️',
+            desc: 'Production Three.js drafting studio with direction-cosine orientation basis, tool settings sidebar, GLB model face snapping [Q], and DXF exporter.',
+            keyFacts: ['Live 3D Viewport', 'PBR Materials', 'AccuDrawLogic Kernel'],
+            url: '../accuCad/index.html'
+          },
+          {
+            quadrant: 'I',
+            name: 'accudraw',
+            title: '30-Year Historical Lore & Patents',
+            color: '#00f2fe',
+            icon: '📜',
+            desc: 'Complete archive of Bentley Systems corporate first patent, 1995-1996 MicroStation Manager reprints, Scott Williams profile, and mathematical lore.',
+            keyFacts: ['Sole Inventor: Robert J. Brown', 'MicroStation 95 Baseline', 'Public Domain Mathematics'],
+            url: '../accudraw/index.html'
+          },
+          {
+            quadrant: 'II',
+            name: 'situation',
+            title: 'Executive Career Dossier & Legal Reality',
+            color: '#ef4444',
+            icon: '⚖️',
+            desc: 'Detailed forensic narrative: the contrast between creating $5.0B-$6.5B in corporate value versus living on food stamps, caretaker bias, and daughter custody separation.',
+            keyFacts: ['Forensic Valuation', 'Parental Alienation', 'DocumentReader Dossier'],
+            url: '../situation/index.html'
+          },
+          {
+            quadrant: 'II',
+            name: 'ValuationOfAccudraw',
+            title: 'Forensic Enterprise Valuation Model',
+            color: '#ef4444',
+            icon: '📊',
+            desc: 'Quantitative market cap attribution analysis: modeling Bentley Systems DOT lock-in, recurring maintenance revenues, and acquisition avoidance in 1995.',
+            keyFacts: ['$5.0B to $6.5B Attribution', '48 State DOTs', 'Anti-Churn Moat'],
+            url: '../ValuationOfAccudraw/index.html'
+          },
+          {
+            quadrant: 'III',
+            name: 'EconomicsOfAutomation',
+            title: 'The Robot Dividend & Post-Labor Model',
+            color: '#f59e0b',
+            icon: '🤖',
+            desc: 'First-principles macro-economic model for human survival through automation: the Colony of 100,000, tangible currency, and game theory stress-testing.',
+            keyFacts: ['The Robot Dividend', 'Doomer Loop Breaker', 'Interactive Tax Simulator'],
+            url: '../EconomicsOfAutomation/index.html'
+          },
+          {
+            quadrant: 'III',
+            name: 'JobsAndAI',
+            title: 'The Automation Horizon Analysis',
+            color: '#f59e0b',
+            icon: '📈',
+            desc: 'Empirical analysis of generative AI and spatial robotics replacing human labor, proving why traditional wage-labor taxation collapses.',
+            keyFacts: ['Labor Decoupling', 'Capital Saturation', 'Macroeconomic Thesis'],
+            url: '../JobsAndAI/index.html'
+          },
+          {
+            quadrant: 'IV',
+            name: 'HomeSetup',
+            title: 'Multi-Node Fleet & Infrastructure Dossier',
+            color: '#10b981',
+            icon: '🖥️',
+            desc: 'The master operational cockpit: verified Port 8080 federation between Ubuntu Linux (10.0.0.245) and Mac (10.0.0.226), shared drive syncing, and handoff ledgers.',
+            keyFacts: ['Universal Port 8080', 'Luno-to-Luno Mesh', 'Zero-Leak Security'],
+            url: './index.html'
+          },
+          {
+            quadrant: 'IV',
+            name: 'Luno',
+            title: 'Phone-First Dual-Mode AI Cockpit',
+            color: '#10b981',
+            icon: '🌙',
+            desc: 'Zero-token clipboard container development loop (<script data-method="...">), in-browser AST class patcher, Outbox queue manager, and 1-tap Pages deploy.',
+            keyFacts: ['HTML Container Protocol', 'In-Browser Acorn AST', '1-Tap GitHub Pages'],
+            url: '../Luno/index.html'
+          },
+          {
+            quadrant: 'IV',
+            name: 'Library',
+            title: 'Central Shared Dependency Hub',
+            color: '#10b981',
+            icon: '📚',
+            desc: 'Reusable shared modules powering all projects: DomBasics, UITools, DocumentReader, ThreeJSLoader, VideoPlayer, and DictationWidget.',
+            keyFacts: ['Zero-Copy Architecture', 'Universal UI Elements', 'Audio/Midi Engines'],
+            url: '../Library/index.html'
+          }
+        ];
+
+        function renderCards() {
+          cardsContainer.innerHTML = '';
+          const query = searchInput.value.toLowerCase().trim();
+
+          const filtered = projects.filter(p => {
+            if (activeFilter !== 'all' && p.quadrant !== activeFilter) return false;
+            if (!query) return true;
+            const text = `${p.name} ${p.title} ${p.desc} ${p.keyFacts.join(' ')}`.toLowerCase();
+            return text.includes(query);
           });
 
-          const topRow = makeElement('div', {
-            style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }
-          }, [
-            makeElement('div', {}, [
-              makeElement('span', { style: { fontSize: '10px', color: p.color, fontWeight: 'bold' } }, isOpus ? 'MASTER GATEWAY • ' : `QUADRANT ${p.quadrant} • `),
-              makeElement('strong', { style: { color: isOpus ? '#00f2fe' : '#f8fafc', fontSize: '13.5px' } }, `${p.icon} ${p.name}`),
-              makeElement('div', { style: { color: p.color, fontSize: '10.5px', marginTop: '1px' } }, p.title)
-            ]),
-            makeElement('span', {
+          if (filtered.length === 0) {
+            cardsContainer.innerHTML = '<div style="grid-column: 1/-1; padding: 28px; text-align: center; color: #64748b; font-style: italic;">No projects matched your search query. Clear search or select "All Projects".</div>';
+            return;
+          }
+
+          filtered.forEach(p => {
+            const isOpus = p.name === 'Opus';
+            const isQuora = p.name === 'QuoraToys';
+            const card = makeElement('div', {
               style: {
-                fontSize: '9px',
-                background: `${p.color}18`,
-                color: p.color,
-                border: `1px solid ${p.color}44`,
-                padding: '1px 6px',
-                borderRadius: '10px',
-                fontWeight: 'bold',
-                flexShrink: 0
+                background: isOpus ? 'rgba(0, 242, 254, 0.08)' : (isQuora ? 'rgba(192, 132, 252, 0.08)' : 'rgba(255, 255, 255, 0.02)'),
+                border: `1.5px solid ${isOpus ? '#00f2fe' : (isQuora ? '#c084fc' : p.color + '33')}`,
+                borderLeft: `5px solid ${p.color}`,
+                borderRadius: '8px',
+                padding: '12px 14px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                gap: '8px',
+                boxShadow: isOpus ? '0 0 16px rgba(0, 242, 254, 0.25)' : (isQuora ? '0 0 14px rgba(192, 132, 252, 0.2)' : 'none'),
+                transition: 'transform 0.15s ease, border-color 0.15s ease'
               }
-            }, isOpus ? 'MASTER' : `Q-${p.quadrant}`)
-          ]);
-          card.appendChild(topRow);
+            });
 
-          const descEl = makeElement('p', {
-            style: { margin: 0, fontSize: '11px', color: '#cbd5e1', lineHeight: '1.45' }
-          }, p.desc);
-          card.appendChild(descEl);
+            const topRow = makeElement('div', {
+              style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }
+            }, [
+              makeElement('div', {}, [
+                makeElement('span', { style: { fontSize: '10px', color: p.color, fontWeight: 'bold' } }, isOpus ? 'MASTER GATEWAY • ' : `QUADRANT ${p.quadrant} • `),
+                makeElement('strong', { style: { color: isOpus ? '#00f2fe' : (isQuora ? '#d2a8ff' : '#f8fafc'), fontSize: '13.5px' } }, `${p.icon} ${p.name}`),
+                makeElement('div', { style: { color: p.color, fontSize: '10.5px', marginTop: '1px' } }, p.title)
+              ]),
+              makeElement('span', {
+                style: {
+                  fontSize: '9px',
+                  background: `${p.color}18`,
+                  color: p.color,
+                  border: `1px solid ${p.color}44`,
+                  padding: '1px 6px',
+                  borderRadius: '10px',
+                  fontWeight: 'bold',
+                  flexShrink: 0
+                }
+              }, isOpus ? 'MASTER' : (isQuora ? 'ACTIVE TARGET' : `Q-${p.quadrant}`))
+            ]);
+            card.appendChild(topRow);
 
-          const tagsRow = makeElement('div', {
-            style: { display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '2px' }
-          }, p.keyFacts.map(k => makeElement('span', {
-            style: { fontSize: '9px', background: '#070a13', color: '#94a3b8', border: '1px solid #1e293b', padding: '1px 5px', borderRadius: '4px' }
-          }, k)));
-          card.appendChild(tagsRow);
+            const descEl = makeElement('p', {
+              style: { margin: 0, fontSize: '11px', color: '#cbd5e1', lineHeight: '1.45' }
+            }, p.desc);
+            card.appendChild(descEl);
 
-          const actionRow = makeElement('div', {
-            style: {
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              marginTop: '8px',
-              paddingTop: '6px',
-              borderTop: '1px solid #161e2b',
-              gap: '6px',
-              flexWrap: 'wrap'
-            }
-          }, [
-            makeElement('a', {
-              href: p.url,
-              target: '_blank',
+            const tagsRow = makeElement('div', {
+              style: { display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '2px' }
+            }, p.keyFacts.map(k => makeElement('span', {
+              style: { fontSize: '9px', background: '#070a13', color: '#94a3b8', border: '1px solid #1e293b', padding: '1px 5px', borderRadius: '4px' }
+            }, k)));
+            card.appendChild(tagsRow);
+
+            const actionRow = makeElement('div', {
               style: {
-                color: '#38bdf8',
-                textDecoration: 'none',
-                fontSize: '10.5px',
-                fontWeight: 'bold',
-                display: 'inline-flex',
+                display: 'flex',
+                justifyContent: 'space-between',
                 alignItems: 'center',
-                gap: '4px'
+                marginTop: '8px',
+                paddingTop: '6px',
+                borderTop: '1px solid #161e2b',
+                gap: '6px',
+                flexWrap: 'wrap'
               }
-            }, '↗ Open Tab'),
-            makeElement('div', { style: { display: 'flex', gap: '4px' } }, [
-              makeElement('button', {
-                className: 'dr-nav-btn',
-                style: { padding: '2px 7px', fontSize: '9.5px', color: isOpus ? '#00f2fe' : '#c9d1d9', borderColor: isOpus ? '#00f2fe' : '#334155' },
-                title: 'Switch Luno target to this project',
-                onclick: () => {
-                  if (typeof ClientApp !== 'undefined' && typeof ClientApp.switchExclusiveTargetProject === 'function') {
-                    ClientApp.switchExclusiveTargetProject(p.name);
-                  } else if (typeof ClientApp !== 'undefined' && ClientApp.setTargetProject) {
-                    ClientApp.setTargetProject(p.name, { openTab: true });
+            }, [
+              makeElement('a', {
+                href: p.url,
+                target: '_blank',
+                style: {
+                  color: '#38bdf8',
+                  textDecoration: 'none',
+                  fontSize: '10.5px',
+                  fontWeight: 'bold',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px'
+                }
+              }, '↗ Open Tab'),
+              makeElement('div', { style: { display: 'flex', gap: '4px' } }, [
+                makeElement('button', {
+                  className: 'dr-nav-btn',
+                  style: { padding: '2px 7px', fontSize: '9.5px', color: isOpus ? '#00f2fe' : (isQuora ? '#d2a8ff' : '#c9d1d9'), borderColor: isOpus ? '#00f2fe' : (isQuora ? '#8257e5' : '#334155') },
+                  title: 'Switch Luno target to this project',
+                  onclick: () => {
+                    if (typeof ClientApp !== 'undefined' && typeof ClientApp.switchExclusiveTargetProject === 'function') {
+                      ClientApp.switchExclusiveTargetProject(p.name);
+                    } else if (typeof ClientApp !== 'undefined' && ClientApp.setTargetProject) {
+                      ClientApp.setTargetProject(p.name, { openTab: true });
+                    }
                   }
-                }
-              }, '🎯 Target'),
-              makeElement('button', {
-                className: 'dr-nav-btn',
-                style: { padding: '2px 7px', fontSize: '9.5px', color: '#d2a8ff', borderColor: '#8257e566' },
-                title: 'Copy brief context prompt for this project',
-                onclick: () => {
-                  const prompt = `# PROJECT FOCUS: [${p.name}] - ${p.title}\nDomain: ${p.quadrant}\nAuthor: Rob Brown (Inventor of AccuDraw)\nDescription: ${p.desc}\nKey Technical Aspects:\n- ${p.keyFacts.join('\n- ')}\n`;
-                  navigator.clipboard.writeText(prompt).then(() => alert(`✓ Copied context for [${p.name}] to clipboard!`));
-                }
-              }, '📋 Context')
-            ])
-          ]);
-          card.appendChild(actionRow);
+                }, '🎯 Target'),
+                makeElement('button', {
+                  className: 'dr-nav-btn',
+                  style: { padding: '2px 7px', fontSize: '9.5px', color: '#d2a8ff', borderColor: '#8257e566' },
+                  title: 'Copy brief context prompt for this project',
+                  onclick: () => {
+                    const prompt = `# PROJECT FOCUS: [${p.name}] - ${p.title}\nDomain: ${p.quadrant}\nAuthor: Rob Brown (Inventor of AccuDraw)\nDescription: ${p.desc}\nKey Technical Aspects:\n- ${p.keyFacts.join('\n- ')}\n`;
+                    navigator.clipboard.writeText(prompt).then(() => alert(`✓ Copied context for [${p.name}] to clipboard!`));
+                  }
+                }, '📋 Context')
+              ])
+            ]);
+            card.appendChild(actionRow);
 
-          cardsContainer.appendChild(card);
-        });
-      }
-
-      searchInput.oninput = () => renderCards();
-      renderCards();
-
-      // 4. Footer Status & Live Probes
-      const footerBar = makeElement('div', {
-        style: {
-          padding: '10px 16px',
-          background: '#0a0e1a',
-          borderTop: '1px solid #21262d',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '8px',
-          fontSize: '11px',
-          color: '#8b949e'
+            cardsContainer.appendChild(card);
+          });
         }
-      }, [
-        makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' } }, [
-          makeElement('span', {}, 'Fleet Link:'),
-          makeElement('span', { id: 'mac-linux-sync-badge', style: { color: '#10b981', background: 'rgba(16, 185, 129, 0.1)', padding: '2px 6px', borderRadius: '4px' } }, 'Mac & Linux Federated (Port 8080)'),
-          makeElement('button', {
-            className: 'dr-nav-btn',
-            id: 'btn-probe-linux-link',
-            style: { padding: '2px 8px', fontSize: '10px', color: '#00f2fe' },
-            onclick: () => HomeHandoffComponent.probeLinuxLink()
-          }, '⚡ Probe Remote Node')
-        ]),
-        makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants + Opus Active')
-      ]);
-      wrap.appendChild(footerBar);
 
-      container.appendChild(wrap);
-    }
+        searchInput.oninput = () => renderCards();
+        renderCards();
+
+        // 4. Footer Status & Live Probes
+        const footerBar = makeElement('div', {
+          style: {
+            padding: '10px 16px',
+            background: '#0a0e1a',
+            borderTop: '1px solid #21262d',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '8px',
+            fontSize: '11px',
+            color: '#8b949e'
+          }
+        }, [
+          makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' } }, [
+            makeElement('span', {}, 'Fleet Link:'),
+            makeElement('span', { id: 'mac-linux-sync-badge', style: { color: '#10b981', background: 'rgba(16, 185, 129, 0.1)', padding: '2px 6px', borderRadius: '4px' } }, 'Mac & Linux Federated (Port 8080)'),
+            makeElement('button', {
+              className: 'dr-nav-btn',
+              id: 'btn-probe-linux-link',
+              style: { padding: '2px 8px', fontSize: '10px', color: '#00f2fe' },
+              onclick: () => HomeHandoffComponent.probeLinuxLink()
+            }, '⚡ Probe Remote Node')
+          ]),
+          makeElement('span', { style: { color: '#00f2fe' } }, '● All 4 Quadrants + QuoraToys Synced')
+        ]);
+        wrap.appendChild(footerBar);
+
+        container.appendChild(wrap);
+      }
   static getHandoffMarkdown() {
     return `# 🏛️ ROB BROWN'S LIVING SPECIFICATION OPUS: MASTER HANDOFF & RESUME DIRECTIVE
   **Generated:** ${new Date().toISOString()} • **Author & Inventor:** Rob Brown

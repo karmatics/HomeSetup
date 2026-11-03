@@ -65,17 +65,16 @@ class HomeHandoffContent {
   }
 
   static sidebar_next_thread_checklist() {
-      return [
-        "Actionable Next-Thread Checklist:\n" +
-        "• [Done] Verified Mac Mini (Apple Silicon arm64, ScreenFlow v10.5.2) on 10.0.0.226:8080.\n" +
-        "• [Done] Verified 36 Git repositories on Mac mapped to git@github.com:karmatics/<repo>.git.\n" +
-        "• [Done] Cross-wire remote code execution verified via POST /api/save?project=Luno.\n" +
-        "• [Done] Linked missing remotes for Library and Luno on Linux.\n" +
-        "• [Active] Verifying Linux GitHub SSH authorization.\n" +
-        "• [Pending] Initialize dedicated Git repository for HomeSetup & wire to GitHub Pages.\n" +
-        "• [Pending] Draft Supabase relational schema for public comments and annotations."
-      ];
-    }
+        return [
+          "Actionable Next-Thread Checklist:\n" +
+          "• [Done] QuoraToys full code and in-situ drawing tools bootstrapped to Linux box over HTTP.\n" +
+          "• [Done] Single-project pull endpoint built into LunoServer.js (POST /api/git/pull) with auto-snapshot protection.\n" +
+          "• [Done] Fleet Git Mesh strip (Pull All, Push All, Status Check, Sync Mac ↔ Linux) placed right on Home Checkpoint card.\n" +
+          "• [Done] Git status check upgraded to run git fetch -q and report remote commits waiting to be pulled.\n" +
+          "• [Done] Cross-wire remote code execution verified via POST /api/save?project=QuoraToys.\n" +
+          "• [Ready] When sitting at Linux laptop, opening Luno immediately reveals QuoraToys up-to-date with working 'Pull' buttons for ongoing syncing."
+        ];
+      }
 }
 
 globalThis.HomeHandoffContent = HomeHandoffContent;

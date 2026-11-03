@@ -35,7 +35,7 @@
   "styles": [
     "basic3d.css"
   ],
-  "processedCountSinceCheckpoint": 0,
+  "processedCountSinceCheckpoint": 3,
   "changedMethods": {
     "js/HomeDictationDocsData.js": "2026-10-30T22:57:54.544Z",
     "js/HomeDictationStudioComponent.js": "2026-10-30T22:57:54.544Z",
@@ -54,9 +54,12 @@
     "content/orchestration.html": "2026-11-01T05:38:14.589Z",
     "QuoraToys/extension/background.js": "2026-11-01T05:49:34.639Z",
     "QuoraToys/extension/features/DrawingTool.js": "2026-11-01T05:49:34.639Z",
-    "QuoraToys/extension/features/QuoraToysInSitu.js": "2026-11-01T05:53:15.470Z"
+    "QuoraToys/extension/features/QuoraToysInSitu.js": "2026-11-01T05:53:15.470Z",
+    "js/HomeHandoffComponent.js": "2026-11-03T07:20:14.177Z",
+    "js/HomeHandoffContent.js": "2026-11-03T07:20:14.177Z",
+    "content/handoff.html": "2026-11-03T07:20:14.177Z"
   },
-  "lastCheckpointTime": "2026-11-02T07:23:09.277Z",
+  "lastCheckpointTime": "2026-11-02T07:23:51.363Z",
   "pendingCheckpointDescription": "Clean working tree",
   "visibilitySets": {
     "handoff-lean": [
