@@ -43,18 +43,22 @@
     <h2 class="section-title">Immediate Next Engineering Priorities</h2>
 
     <p data-block="p_handoff_tasks_1">
-    The multi-machine fleet operates on a unified, zero-password Port 8080 mesh. Whenever you hit <strong>"🚀 1-Tap Sync to Fleet"</strong> on either machine, local repositories are committed without mutating configuration files, pushed to GitHub Pages, and pulled directly onto the peer laptop over your local Wi-Fi.
+    The multi-machine fleet is now organized under a <strong>Unified Git &amp; Fleet Deck</strong>. It separates your workflow cleanly into two clear layers:
+    <br><br>
+    1. <strong>Current Project Checkpoint (Single Target):</strong> Displays the live status of the project you are editing (e.g. <code>HomeSetup</code>), showing exactly which files are modified. When modified, you tap <strong>"📸 Checkpoint &amp; Deploy"</strong> to commit and publish directly to its GitHub Pages site.
+    <br><br>
+    2. <strong>Fleet-Wide Multi-Machine Sync (All 44 Repos):</strong> When sitting down at either your Mac or Linux laptop, tap <strong>"⬇️ Catch Up Fleet"</strong> to pull all updates with automatic local snapshot safety. When finishing work, tap <strong>"🚀 Sync Fleet to Peer"</strong> to push all repos to GitHub and command your other laptop to pull over Port 8080.
     </p>
 
 <aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
 <span class="sidebar-kicker">Handoff Checklist</span>
 <strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
 <ul>
-<li><strong>[Done]</strong> Luno-to-Luno cross-wire orchestrator built: Mac pushes to GitHub Pages and commands Linux node over Port 8080.</li>
-<li><strong>[Done]</strong> Fixed luno.json timestamp dirtying bug: server file-equality check skips rewriting unchanged files.</li>
-<li><strong>[Done]</strong> Dynamic peer discovery: subnet scanner locates Linux peer without hardcoding static IP addresses.</li>
-<li><strong>[Done]</strong> In-situ Note-to-Edit loop active: notes attach with hotkey [C], compile to Outbox, and auto-archive on patch application.</li>
-<li><strong>[Ready]</strong> Tap "Paste from Chatbot" in Luno: the server runner executes the full Mac ➔ GitHub ➔ Linux sync automatically.</li>
+<li><strong>[Done]</strong> Replaced competing sync/checkpoint cards with one unified Git &amp; Fleet Deck.</li>
+<li><strong>[Done]</strong> Real-time project status: shows exact modified files when dirty, or confirmed clean with Pages.</li>
+<li><strong>[Done]</strong> Eliminated luno.json timestamp dirtying: configuration stays static and unpolluted.</li>
+<li><strong>[Done]</strong> Verified cross-wire execution: Mac pushes 39 repos live, Linux peer responds at 10.0.0.245:8080.</li>
+<li><strong>[Ready for Test]</strong> In-situ Note-to-Edit loop: attach a directive on any paragraph to verify auto-resolution!</li>
 </ul>
 </aside>
 

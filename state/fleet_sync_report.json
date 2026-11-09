@@ -1,0 +1,877 @@
+{
+  "timestamp": "2026-11-09T05:19:24.202Z",
+  "localHost": "mac-mini-rob.local",
+  "phases": {
+    "phase1_macPush": {
+      "totalReposScanned": 79,
+      "pushed": [
+        "AardvarkExtension",
+        "AardvarkPlaylist",
+        "AlphabetGame",
+        "Basic3D",
+        "BasicsWithDialogBox",
+        "BookmarkletWorkshop",
+        "Bunny",
+        "Bunny3d",
+        "CadPlan",
+        "Calculator",
+        "Comments",
+        "Community",
+        "DictationExperiment",
+        "DictationLab",
+        "EconomicsOfAutomation",
+        "FindTheDifferenceCheater",
+        "GameTheoryStory",
+        "HomeSetup",
+        "House",
+        "JobsAndAI",
+        "LegoDetective",
+        "Library",
+        "Luno",
+        "LunoParser",
+        "Opus",
+        "PleasureAndPain",
+        "QuoraToys",
+        "RunOnServerTools",
+        "TouchController",
+        "ValuationOfAccudraw",
+        "Voting",
+        "accuCad",
+        "accudraw",
+        "guessTheNoteGame",
+        "junk",
+        "pianorolls",
+        "situation",
+        "squircle",
+        "vibes"
+      ],
+      "alreadyClean": 0,
+      "errors": [
+        {
+          "repo": "BulbAndButton",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "Es6Converter",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "MathStorm",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "Penrose",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "SvgStudio",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "TriBlob",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "aardvarkBookmarklet",
+          "error": "ERROR: Repository not found.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        },
+        {
+          "repo": "teacup",
+          "error": "ERROR: Permission to Lunocracy/teacup.git denied to karmatics.\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\nCommand failed: git push origin main 2>&1"
+        }
+      ]
+    },
+    "phase2_linuxPeer": {
+      "ip": "10.0.0.245",
+      "ping": {
+        "status": "online",
+        "pid": 6147,
+        "platform": "linux",
+        "isMac": false,
+        "isLinux": true,
+        "suggestedPeer": "10.0.0.226",
+        "rootDir": "/home/rob/source/LunoProjects/Luno",
+        "version": "v3.8.0"
+      }
+    },
+    "phase3_bootstrap": {
+      "lunoCoreFilesPushed": 6,
+      "homeSetupFilesPushed": 3,
+      "linuxSaveStatus": "OK"
+    },
+    "phase4_linuxPull": {
+      "error": "Connection timed out"
+    },
+    "phase5_finalParity": {
+      "success": true,
+      "action": "status",
+      "timestamp": "2026-11-09T05:19:06.694Z",
+      "totalRepos": 51,
+      "hasConflicts": false,
+      "conflictCount": 0,
+      "failedCount": 0,
+      "dirtyCount": 2,
+      "dirtyProjects": [
+        {
+          "name": "HomeSetup",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/HomeSetup.git",
+          "hasUncommitted": true,
+          "uncommittedFiles": [
+            {
+              "code": "M",
+              "file": "ontent/handoff.html"
+            },
+            {
+              "code": "M",
+              "file": "js/HomeHandoffComponent.js"
+            }
+          ],
+          "uncommittedCount": 2,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": true,
+          "statusText": "M content/handoff.html\n M js/HomeHandoffComponent.js"
+        },
+        {
+          "name": "Luno",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Luno.git",
+          "hasUncommitted": true,
+          "uncommittedFiles": [
+            {
+              "code": "M",
+              "file": "pp/ClientApp.js"
+            },
+            {
+              "code": "M",
+              "file": "app/ClientAppUI.js"
+            },
+            {
+              "code": "M",
+              "file": "app/LunoApiClient.js"
+            },
+            {
+              "code": "M",
+              "file": "app/LunoDeployEngine.js"
+            },
+            {
+              "code": "M",
+              "file": "core/LunoServer.js"
+            },
+            {
+              "code": "M",
+              "file": "luno.json"
+            }
+          ],
+          "uncommittedCount": 6,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": true,
+          "statusText": "M app/ClientApp.js\n M app/ClientAppUI.js\n M app/LunoApiClient.js\n M app/LunoDeployEngine.js\n M core/LunoServer.js\n M luno.json"
+        }
+      ],
+      "results": [
+        {
+          "name": "AardvarkExtension",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/AardvarkExtension.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "AardvarkPlaylist",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/AardvarkPlaylist.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "AlphabetGame",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/AlphabetGame.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Basic3D",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Basic3D.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "BasicsWithDialogBox",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/BasicsWithDialogBox.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "BookmarkletWorkshop",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/BookmarkletWorkshop.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "BulbAndButton",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/BulbAndButton.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "CadPlan",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/CadPlan.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Calculator",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Calculator.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Comments",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Comments.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Community",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Community.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "EconomicsOfAutomation",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/EconomicsOfAutomation.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Es6Converter",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Es6Converter.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "FallingWater",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/FallingWater.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "FourDFun",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/FourDFun.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "FunInFourD",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/FunInFourD.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "HomeSetup",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/HomeSetup.git",
+          "hasUncommitted": true,
+          "uncommittedFiles": [
+            {
+              "code": "M",
+              "file": "ontent/handoff.html"
+            },
+            {
+              "code": "M",
+              "file": "js/HomeHandoffComponent.js"
+            }
+          ],
+          "uncommittedCount": 2,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": true,
+          "statusText": "M content/handoff.html\n M js/HomeHandoffComponent.js"
+        },
+        {
+          "name": "Hypercube",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Hypercube.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "JobsAndAI",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/JobsAndAI.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "LegoDetective",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/LegoDetective.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Library",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Library.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Luno",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Luno.git",
+          "hasUncommitted": true,
+          "uncommittedFiles": [
+            {
+              "code": "M",
+              "file": "pp/ClientApp.js"
+            },
+            {
+              "code": "M",
+              "file": "app/ClientAppUI.js"
+            },
+            {
+              "code": "M",
+              "file": "app/LunoApiClient.js"
+            },
+            {
+              "code": "M",
+              "file": "app/LunoDeployEngine.js"
+            },
+            {
+              "code": "M",
+              "file": "core/LunoServer.js"
+            },
+            {
+              "code": "M",
+              "file": "luno.json"
+            }
+          ],
+          "uncommittedCount": 6,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": true,
+          "statusText": "M app/ClientApp.js\n M app/ClientAppUI.js\n M app/LunoApiClient.js\n M app/LunoDeployEngine.js\n M core/LunoServer.js\n M luno.json"
+        },
+        {
+          "name": "LunoParser",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/LunoParser.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "MathStorm",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/MathStorm.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Opus",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Opus.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Penrose",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Penrose.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "PleasureAndPain",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/PleasureAndPain.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "PromptDumps",
+          "branch": "main",
+          "remoteUrl": "",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "QuoraToys",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/QuoraToys.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "RunOnServerTools",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/RunOnServerTools.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "SvgStudio",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/SvgStudio.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "TaxChart",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/TaxChart.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "TouchController",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/TouchController.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "TriBlob",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/TriBlob.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Trippy",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Trippy.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "ValuationOfAccudraw",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/ValuationOfAccudraw.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "Voting",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/Voting.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "aardvarkBookmarklet",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/aardvarkBookmarklet.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "accuCad",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/accuCad.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "accudraw",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/accudraw.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "asdfasdf",
+          "branch": "main",
+          "remoteUrl": "",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "assets",
+          "branch": "main",
+          "remoteUrl": "",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "guessTheNoteGame",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/guessTheNoteGame.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "junk",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/junk.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "pianorolls",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/pianorolls.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "playlists",
+          "branch": "main",
+          "remoteUrl": "",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "puzzle",
+          "branch": "main",
+          "remoteUrl": "",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "situation",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/situation.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "squircle",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/squircle.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "teacup",
+          "branch": "main",
+          "remoteUrl": "git@github.com:Lunocracy/teacup.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        },
+        {
+          "name": "vibes",
+          "branch": "main",
+          "remoteUrl": "https://github.com/karmatics/vibes.git",
+          "hasUncommitted": false,
+          "uncommittedFiles": [],
+          "uncommittedCount": 0,
+          "behind": 0,
+          "ahead": 0,
+          "needPull": false,
+          "needPush": false,
+          "statusText": ""
+        }
+      ]
+    }
+  }
+}
