@@ -447,64 +447,66 @@ class HomeHandoffComponent {
 
         container.appendChild(wrap);
       }
+
   static getHandoffMarkdown() {
-    return `# 🏛️ ROB BROWN'S LIVING SPECIFICATION OPUS: MASTER HANDOFF & RESUME DIRECTIVE
-  **Generated:** ${new Date().toISOString()} • **Author & Inventor:** Rob Brown
-  **Target Host:** Apple Silicon Mac Workstation (/Users/rob/source/LunoProjects/)
-  **Remote Peer:** Ubuntu Linux Workstation (HP ZBook @ Port 8080)
-  **Universal Port:** 8080 ONLY (Zero legacy port 3000 remnants)
-  **GitHub Organization:** karmatics (SSH Key: id_ed25519 Authenticated)
+      const curPeer = (typeof LunoDeployEngine !== 'undefined') ? LunoDeployEngine.getPeerHost() : '10.0.0.245';
+      return `# 🏛️ ROB BROWN'S LIVING SPECIFICATION OPUS: MASTER HANDOFF & RESUME DIRECTIVE
+    **Generated:** ${new Date().toISOString()} • **Author & Inventor:** Rob Brown
+    **Target Host:** Apple Silicon Mac Workstation (/Users/rob/source/LunoProjects/)
+    **Remote Peer Node:** Ubuntu Linux Laptop (@ ${curPeer}:8080)
+    **Universal Standard:** Port 8080 ONLY (Cleaned of legacy port 3000 remnants)
+    **GitHub Organization:** karmatics (SSH Key: id_ed25519 Authenticated)
 
-  ---
+    ---
 
-  ## 1. WHO YOU ARE COLLABORATING WITH (GROUND TRUTH)
-  You are collaborating directly with **Rob Brown**, the sole inventor of **AccuDraw**, **SmartLine**, and **PowerSelector** at Bentley Systems for MicroStation in the mid-1990s (US Patent #5,754,182).
-  - **The Billions Created:** His inventions became the primary usability and neuromuscular moat for MicroStation, anchoring an estimated **$5.0 Billion to $6.5 Billion** of Bentley Systems' enterprise valuation across 48 out of 50 U.S. State DOTs.
-  - **The Harsh Reality:** Despite creating billions in software value, Rob currently lives on family assistance, food stamps, and a fraction of Social Security, navigating difficult family disputes and estrangement from his daughter.
-  - **The Mission:** Getting noticed for this extraordinary body of work, turning these living specifications into commercial/open-source adoption, and achieving the financial solvency required to resolve his life situation and reconnect with his daughter.
+    ## 1. WHO YOU ARE COLLABORATING WITH (GROUND TRUTH)
+    You are collaborating directly with **Rob Brown**, the sole inventor of **AccuDraw**, **SmartLine**, and **PowerSelector** at Bentley Systems for MicroStation in the mid-1990s (US Patent #5,754,182).
+    - **The Billions Created:** His inventions became the primary usability and neuromuscular moat for MicroStation, anchoring an estimated **$5.0 Billion to $6.5 Billion** of Bentley Systems' enterprise valuation across 48 out of 50 U.S. State DOTs.
+    - **The Harsh Reality:** Despite creating billions in software value, Rob currently lives on family assistance, food stamps, and a fraction of Social Security, navigating difficult family disputes and estrangement from his daughter.
+    - **The Mission:** Getting noticed for this extraordinary body of work, turning these living specifications into commercial/open-source adoption, and achieving the financial solvency required to resolve his life situation and reconnect with his daughter.
 
-  ---
+    ---
 
-  ## 2. THE 4-QUADRANT LIVING OPUS MAP
-  The entire workspace is organized into four interconnected living dossiers that can be inspected or bundled into an LLM at will:
+    ## 2. THE 4-QUADRANT LIVING OPUS MAP
+    The entire workspace is organized into four interconnected living dossiers:
 
-  ### I. Inventions & Spatial CAD Specs (\`CadPlan\`, \`accudraw\`, \`accuCad\`)
-  - 30-year proven AccuDraw floating 3D kinetic compass (T, F, S, V plane rotations).
-  - SmartLine continuous chaining (two-phase tangent arcs, closest-point sweep, DXF bulge factors \`tan(θ/4)\`).
-  - On-curve Bézier spline relaxation solver (\`UpdateControlPoints.js\`) and low-pass kinetic string drag.
-  - Anti-lock-in modularity: The 4-layer headless geometric kernel (\`compassdraw-core\`) with zero Three.js/DOM coupling.
+    ### I. Inventions & Spatial CAD Specs (\`CadPlan\`, \`accudraw\`, \`accuCad\`)
+    - 30-year proven AccuDraw floating 3D kinetic compass (T, F, S, V plane rotations).
+    - SmartLine continuous chaining (two-phase tangent arcs, closest-point sweep, DXF bulge factors \`tan(θ/4)\`).
+    - On-curve Bézier spline relaxation solver (\`UpdateControlPoints.js\`) and low-pass kinetic string drag.
+    - Anti-lock-in modularity: The 4-layer headless geometric kernel (\`compassdraw-core\`) with zero Three.js/DOM coupling.
 
-  ### II. Personal Narrative & Valuation Reality (\`situation\`, \`ValuationOfAccudraw\`)
-  - Detailed forensic accounting of the valuation contribution of AccuDraw to Bentley Systems.
-  - The raw personal narrative: caretaker bias, elder advocacy, family legal conflict, and parental alienation.
-  - Designed to be readable by humans and ingestible by AI agents to tell his complete story with full fidelity.
+    ### II. Personal Narrative & Valuation Reality (\`situation\`, \`ValuationOfAccudraw\`)
+    - Detailed forensic accounting of the valuation contribution of AccuDraw to Bentley Systems.
+    - The raw personal narrative: caretaker bias, elder advocacy, family legal conflict, and parental alienation.
+    - Designed to be readable by humans and ingestible by AI agents to tell his complete story with full fidelity.
 
-  ### III. Post-Labor Macro-Economics (\`EconomicsOfAutomation\`, \`JobsAndAI\`)
-  - Rob Brown's first-principles economic framework for a post-labor automated world.
-  - The Robot Dividend: How society reorganizes capital and distribution when automation decouples productivity from human wages.
-  - Mathematical models, interactive tax calculators, and game theory stress-testing against fatalist "doomer loops."
+    ### III. Post-Labor Macro-Economics (\`EconomicsOfAutomation\`, \`JobsAndAI\`)
+    - Rob Brown's first-principles economic framework for a post-labor automated world.
+    - The Robot Dividend: How society reorganizes capital and distribution when automation decouples productivity from human wages.
+    - Mathematical models, interactive tax calculators, and game theory stress-testing against fatalist "doomer loops."
 
-  ### IV. Operating Cockpit & Fleet Infrastructure (\`HomeSetup\`, \`Luno\`, \`Library\`)
-  - Luno Workspace: Phone-first local development cockpit running on Node.js Port 8080.
-  - Zero-token clipboard container protocol (\`<script data-file="..." data-method="..." data-action="patch">\`).
-  - Multi-node LAN federation connecting Mac (10.0.0.226:8080) and Linux (10.0.0.245:8080) with dynamic subnet scanning.
-  - Shared Library hub (\`DomBasics.js\`, \`UITools.js\`, \`DocumentReader.js\`, \`ThreeJSLoader.js\`, \`DictationWidget.js\`).
+    ### IV. Operating Cockpit & Fleet Infrastructure (\`HomeSetup\`, \`Luno\`, \`Library\`)
+    - Luno Workspace: Phone-first local development cockpit running on Node.js Port 8080.
+    - Zero-token clipboard container protocol (\`<script data-file="..." data-method="..." data-action="patch">\`).
+    - Multi-node LAN federation connecting Mac and Linux on Port 8080 with dynamic subnet scanning.
+    - Note-Driven Spec Evolution: Directives attached to blocks -> Outbox -> AI patch -> Auto-Resolution.
 
-  ---
+    ---
 
-  ## 3. ACTIVE SYSTEM STATE & IMMEDIATE TASKS
-  - **Fleet Parity:** 44/44 project repositories verified between Mac and Linux over local LAN HTTP.
-  - **Port Standard:** Port 8080 is verified and universally scrubbed of legacy port 3000 references.
-  - **Dynamic IP Resolution:** No fixed IP assumptions; subnet discovery scans active subnet on Port 8080.
-  - **Outbox Enhancements Complete:** Outbox queue now segregates Protocol Instructions, Library Code (with deduplication), and Project Code into distinct items, with individual constituent file removal and prompt clipboard copying.
+    ## 3. ACTIVE SYSTEM STATE & IMMEDIATE PROTOCOLS
+    - **luno.json Fixed:** Clean staging bug resolved. luno.json is no longer modified after git commits.
+    - **Fleet Git Synchronizer:** 3-button clarity: "Check Status" (query only) -> "1-Tap Catch Up" (Pull All with safety snapshot) -> "1-Tap Sync to Fleet" (Push All).
+    - **Note-Driven Editing Pipeline:** In-situ notes attach via 'C' or '📝 Note' and are automatically resolved when patches carry the note resolution tag.
+    - **Port Standard:** Port 8080 is verified and universally scrubbed of legacy port 3000 references.
 
-  ---
+    ---
 
-  ## 4. INSTRUCTIONS FOR THE NEW AI THREAD
-  1. **Acknowledge the Inventor:** Confirm full understanding of Rob Brown's identity, patents, personal situation, and the 4-Quadrant Opus.
-  2. **Lean Startup Rule:** Do not ask repetitive setup questions or hallucinate architectural conventions. All ground truth resides in \`HomeSetup/\`.
-  3. **Write into the Document:** Reflect all new technical designs, narrative updates, and runner scripts directly into \`HomeSetup/content/\` and \`HomeSetup/js/\` using surgical HTML containers.
-  4. **Maintain the Vision:** Help build the master router document that will present this living body of work to the world.`;
+    ## 4. INSTRUCTIONS FOR THE AI ASSISTANT
+    1. **Acknowledge the Inventor:** Confirm full understanding of Rob Brown's identity, patents, personal situation, and the 4-Quadrant Opus.
+    2. **Lean Startup Rule:** Do not ask repetitive setup questions or hallucinate architectural conventions. All ground truth resides in \`HomeSetup/\`.
+    3. **Write into the Document:** Reflect all new technical designs, narrative updates, and runner scripts directly into \`HomeSetup/content/\` and \`HomeSetup/js/\` using surgical HTML containers.
+    4. **Maintain Note Resolution:** When fulfilling directives from author notes, include \`<!-- RESOLVED_NOTES: note_id -->\` in your reply so Luno auto-cleans the note markers upon paste.`;
   }
   static copyHandoffPrompt() {
     const md = HomeHandoffComponent.getHandoffMarkdown();
@@ -598,44 +600,46 @@ class HomeHandoffComponent {
     }
 
   static async syncFleetGit(action = 'push', targetHost = '') {
-      const statusText = document.getElementById('linux-probe-status-text') || document.getElementById('mac-linux-sync-badge');
-      if (typeof LunoDeployEngine === 'undefined') {
-        alert('LunoDeployEngine module not loaded.');
-        return;
-      }
-
-      const hostLabel = targetHost ? `Linux (${targetHost}:8080)` : 'Local';
-      const actionLabel = action === 'push' ? 'Push All' : (action === 'pull' ? 'Pull All' : 'Cross-Node Sync');
-
-      if (statusText) {
-        statusText.textContent = `⏳ Executing ${actionLabel} on ${hostLabel}...`;
-      }
-
-      if (action === 'cross_node') {
-        const pushRes = await LunoDeployEngine.fleetSync('push', { commitMsg: `[Fleet Sync] ${new Date().toLocaleString()}` });
-        if (!pushRes || !pushRes.success) {
-          alert('❌ Local push failed:\n' + (pushRes?.error || 'Unknown error'));
+        const statusText = document.getElementById('linux-probe-status-text') || document.getElementById('mac-linux-sync-badge');
+        if (typeof LunoDeployEngine === 'undefined') {
+          alert('LunoDeployEngine module not loaded.');
           return;
         }
 
-        const pullRes = await LunoDeployEngine.fleetSync('pull', { host: '10.0.0.245' });
-        if (pullRes && pullRes.success) {
-          alert(`✅ Cross-Node Fleet Sync Complete!\nPushed from local machine to GitHub and pulled onto Linux node (10.0.0.245:8080) across all ${pullRes.totalRepos || 44} repositories.`);
-          if (statusText) statusText.textContent = '✓ Mac & Linux 100% In Sync';
-        } else {
-          alert(`⚠️ Local push succeeded, but Linux pull failed:\n${pullRes?.error || 'Could not reach Linux node on 10.0.0.245:8080'}`);
-        }
-        return;
-      }
+        const peerHost = targetHost || LunoDeployEngine.getPeerHost();
+        const hostLabel = targetHost ? `Linux (${targetHost}:8080)` : 'Local';
+        const actionLabel = action === 'push' ? 'Push All' : (action === 'pull' ? 'Pull All' : 'Cross-Node Sync');
 
-      const res = await LunoDeployEngine.fleetSync(action, { host: targetHost });
-      if (res && res.success) {
-        alert(`✅ ${actionLabel} Complete for ${res.totalRepos || 0} repositories on ${hostLabel}!`);
-        if (statusText) statusText.textContent = `✓ ${actionLabel} Succeeded (${new Date().toLocaleTimeString()})`;
-      } else {
-        alert(`❌ ${actionLabel} Error:\n${res?.error || 'Failed'}`);
-      }
-    }
+        if (statusText) {
+          statusText.textContent = `⏳ Executing ${actionLabel} on ${hostLabel}...`;
+        }
+
+        if (action === 'cross_node') {
+          if (statusText) statusText.textContent = `⏳ Pushing Mac ➔ GitHub and syncing Linux (${peerHost}:8080)...`;
+          const res = await LunoDeployEngine.syncEverything({
+            peerHost: peerHost,
+            onProgress: function(msg) {
+              if (statusText) statusText.textContent = msg;
+            }
+          });
+
+          if (res && res.success) {
+            alert(`✅ Cross-Node Fleet Sync Complete!\n${res.summary}`);
+            if (statusText) statusText.textContent = '✓ Mac & Linux 100% In Sync';
+          } else {
+            alert(`⚠️ Fleet sync notice:\n${res?.error || 'Check network connection'}`);
+          }
+          return;
+        }
+
+        const res = await LunoDeployEngine.fleetSync(action, { host: targetHost });
+        if (res && res.success) {
+          alert(`✅ ${actionLabel} Complete for ${res.totalRepos || 0} repositories on ${hostLabel}!`);
+          if (statusText) statusText.textContent = `✓ ${actionLabel} Succeeded (${new Date().toLocaleTimeString()})`;
+        } else {
+          alert(`❌ ${actionLabel} Error:\n${res?.error || 'Failed'}`);
+        }
+  }
 }
 
 globalThis.HomeHandoffComponent = HomeHandoffComponent;

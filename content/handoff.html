@@ -43,21 +43,20 @@
     <h2 class="section-title">Immediate Next Engineering Priorities</h2>
 
     <p data-block="p_handoff_tasks_1">
-    The task checklist below represents the active queue of items to implement across upcoming sessions. With the new <strong>Fleet Git Synchronizer (<code>/api/git/fleet-sync</code>)</strong> and single-project pull endpoint (<code>/api/git/pull</code>), pulling and pushing across all 44 repositories on Mac or Linux is now fully automated with conflict reporting directly to Outbox.
+    The multi-machine fleet operates on a unified, zero-password Port 8080 mesh. Whenever you hit <strong>"🚀 1-Tap Sync to Fleet"</strong> on either machine, local repositories are committed without mutating configuration files, pushed to GitHub Pages, and pulled directly onto the peer laptop over your local Wi-Fi.
     </p>
 
-    <aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
-    <span class="sidebar-kicker">Handoff Checklist</span>
-    <strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
-    <ul>
-    <li><strong>[Done]</strong> QuoraToys full code and in-situ drawing tools bootstrapped to Linux box over HTTP.</li>
-    <li><strong>[Done]</strong> Single-project pull endpoint built into <code>LunoServer.js</code> (<code>POST /api/git/pull</code>) with auto-snapshot protection.</li>
-    <li><strong>[Done]</strong> <code>⬇️ Pull [Target]</code> and Fleet Git Mesh strip (Pull All, Push All, Status Check, Sync Mac ↔ Linux) placed right on Home Checkpoint card.</li>
-    <li><strong>[Done]</strong> Git status check upgraded to run <code>git fetch -q</code> and report remote commits waiting to be pulled.</li>
-    <li><strong>[Done]</strong> Cross-wire remote code execution verified via <code>POST /api/save?project=QuoraToys</code>.</li>
-    <li><strong>[Ready]</strong> When sitting at Linux laptop, opening Luno immediately reveals QuoraToys up-to-date with working "Pull" buttons for ongoing syncing.</li>
-    </ul>
-    </aside>
+<aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
+<span class="sidebar-kicker">Handoff Checklist</span>
+<strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
+<ul>
+<li><strong>[Done]</strong> Luno-to-Luno cross-wire orchestrator built: Mac pushes to GitHub Pages and commands Linux node over Port 8080.</li>
+<li><strong>[Done]</strong> Fixed luno.json timestamp dirtying bug: server file-equality check skips rewriting unchanged files.</li>
+<li><strong>[Done]</strong> Dynamic peer discovery: subnet scanner locates Linux peer without hardcoding static IP addresses.</li>
+<li><strong>[Done]</strong> In-situ Note-to-Edit loop active: notes attach with hotkey [C], compile to Outbox, and auto-archive on patch application.</li>
+<li><strong>[Ready]</strong> Tap "Paste from Chatbot" in Luno: the server runner executes the full Mac ➔ GitHub ➔ Linux sync automatically.</li>
+</ul>
+</aside>
 
 </section>
 </article>

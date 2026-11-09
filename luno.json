@@ -35,32 +35,6 @@
   "styles": [
     "basic3d.css"
   ],
-  "processedCountSinceCheckpoint": 0,
-  "changedMethods": {
-    "js/HomeDictationDocsData.js": "2026-10-30T22:57:54.544Z",
-    "js/HomeDictationStudioComponent.js": "2026-10-30T22:57:54.544Z",
-    "content/dictation.html": "2026-10-30T23:38:36.960Z",
-    "luno.json": "2026-10-30T22:57:54.544Z",
-    "js/HomeDictationContent.js": "2026-10-30T23:38:36.960Z",
-    "QuoraToys/luno.json": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraToysApp.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraToysContent.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraStudioComponent.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraBookmarkletComponent.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraExtensionComponent.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraArchiverComponent.js": "2026-11-01T01:27:33.615Z",
-    "QuoraToys/js/QuoraToys.js": "2026-11-01T05:53:15.470Z",
-    "js/HomeOrchestrationContent.js": "2026-11-01T05:38:14.589Z",
-    "content/orchestration.html": "2026-11-01T05:38:14.589Z",
-    "QuoraToys/extension/background.js": "2026-11-01T05:49:34.639Z",
-    "QuoraToys/extension/features/DrawingTool.js": "2026-11-01T05:49:34.639Z",
-    "QuoraToys/extension/features/QuoraToysInSitu.js": "2026-11-01T05:53:15.470Z",
-    "js/HomeHandoffComponent.js": "2026-11-03T07:20:14.177Z",
-    "js/HomeHandoffContent.js": "2026-11-03T07:20:14.177Z",
-    "content/handoff.html": "2026-11-03T07:20:14.177Z"
-  },
-  "lastCheckpointTime": "2026-11-08T03:37:05.875Z",
-  "pendingCheckpointDescription": "Clean working tree",
   "visibilitySets": {
     "handoff-lean": [
       "js/HomeHandoffComponent.js",
@@ -98,5 +72,11 @@
       "content/dictation.html",
       "luno.json"
     ]
+  },
+  "processedCountSinceCheckpoint": 3,
+  "changedMethods": {
+    "Luno/core/LunoServer.js": "2026-11-09T05:03:13.578Z",
+    "Luno/app/ClientApp.js": "2026-11-09T05:03:13.578Z",
+    "Luno/app/LunoApiClient.js": "2026-11-09T05:03:13.578Z"
   }
 }
