@@ -1,57 +1,17 @@
 {
-  "timestamp": "2026-10-25T19:14:33.350Z",
-  "status": "READY_FOR_NEW_THREAD",
+  "timestamp": "2026-11-12T06:38:00.000Z",
+  "status": "DEPLOYED_AND_VERIFIED",
   "currentHost": {
     "platform": "darwin",
-    "arch": "arm64",
+    "hostname": "mac-mini-rob.local",
     "webRoot": "/Users/rob/source/LunoProjects",
-    "universalPort": 8080
+    "universalPort": 8080,
+    "githubSshAuthenticated": true,
+    "githubUser": "karmatics"
   },
-  "peerNode": {
-    "ip": "10.0.0.245",
-    "port": 8080,
-    "status": "online",
-    "dynamicScanSupported": true
-  },
-  "opusQuadrants": [
-    {
-      "id": "quadrant_1",
-      "title": "Inventions & CAD Specs",
-      "repos": [
-        "CadPlan",
-        "accudraw",
-        "accuCad"
-      ]
-    },
-    {
-      "id": "quadrant_2",
-      "title": "Personal Narrative & Valuation",
-      "repos": [
-        "situation",
-        "ValuationOfAccudraw"
-      ]
-    },
-    {
-      "id": "quadrant_3",
-      "title": "Post-Labor Macro-Economics",
-      "repos": [
-        "EconomicsOfAutomation",
-        "JobsAndAI"
-      ]
-    },
-    {
-      "id": "quadrant_4",
-      "title": "Operating Cockpit & Fleet",
-      "repos": [
-        "HomeSetup",
-        "Luno",
-        "Library"
-      ]
-    }
-  ],
-  "visibilitySetsReady": [
-    "handoff-lean",
-    "fleet-infrastructure",
-    "full-dossier"
-  ]
+  "gitPagesReady": {
+    "HomeSetup": "https://karmatics.github.io/HomeSetup/",
+    "Luno": "https://karmatics.github.io/Luno/",
+    "noJekyllActive": true
+  }
 }

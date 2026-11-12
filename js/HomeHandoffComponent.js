@@ -532,8 +532,10 @@ class HomeHandoffComponent {
       const statusText = document.getElementById('linux-probe-status-text');
       const badge = document.getElementById('mac-linux-sync-badge');
 
-      if (btn) btn.textContent = '⏳ Probing Linux (8080)...';
-      if (statusText) statusText.textContent = 'Executing server probe to http://10.0.0.245:8080...';
+      const peerHost = (typeof LunoDeployEngine !== 'undefined') ? LunoDeployEngine.getPeerHost() : '10.0.0.245';
+
+      if (btn) btn.textContent = `⏳ Probing (${peerHost}:8080)...`;
+      if (statusText) statusText.textContent = `Executing server probe to http://${peerHost}:8080...`;
 
       try {
         const payload = {
@@ -541,7 +543,7 @@ class HomeHandoffComponent {
           serverScript: `
             const http = require('http');
             const port = 8080;
-            const host = '10.0.0.245';
+            const host = "${peerHost}";
             return new Promise(resolve => {
               const req = http.get('http://' + host + ':' + port + '/api/ping', { timeout: 3500 }, res => {
                 let body = '';
@@ -573,24 +575,24 @@ class HomeHandoffComponent {
         }
 
         if (probeResult && probeResult.ok) {
-          if (btn) btn.textContent = '✓ Linux Online (8080)';
+          if (btn) btn.textContent = `✓ Peer Online (${peerHost})`;
           if (badge) {
             badge.textContent = `Connected (${probeResult.host}:${probeResult.port})`;
             badge.style.background = '#10b981';
           }
           if (statusText) {
-            statusText.innerHTML = `<span style="color:#10b981;font-weight:bold;">✓ Linux node is online on Port 8080!</span><br>Luno Server is actively responding at http://${probeResult.host}:${probeResult.port}. Parity and remote commands verified.`;
+            statusText.innerHTML = `<span style="color:#10b981;font-weight:bold;">✓ Peer node is online on Port 8080!</span><br>Luno Server is actively responding at http://${probeResult.host}:${probeResult.port}. Parity and remote commands verified.`;
           }
-          alert(`✓ Successfully reached Linux Luno node at http://${probeResult.host}:${probeResult.port}!`);
+          alert(`✓ Successfully reached peer node at http://${probeResult.host}:${probeResult.port}!`);
         } else {
-          if (btn) btn.textContent = '⚠️ Linux Standby (8080)';
+          if (btn) btn.textContent = `⚠️ Peer Standby (${peerHost})`;
           if (badge) {
-            badge.textContent = 'Linux Standby';
+            badge.textContent = 'Peer Standby';
             badge.style.background = '#f59e0b';
           }
           if (statusText) {
             const errMsg = probeResult?.error || 'No response on port 8080';
-            statusText.innerHTML = `<span style="color:#f59e0b;font-weight:bold;">Notice: Linux server on 10.0.0.245:8080 not responding (${errMsg}).</span><br>On the Ubuntu machine, ensure \`node server.js\` is running in ~/source/LunoProjects/Luno.`;
+            statusText.innerHTML = `<span style="color:#f59e0b;font-weight:bold;">Notice: Peer node on ${peerHost}:8080 not responding (${errMsg}).</span><br>On the peer machine, ensure \`node server.js\` is running in its Luno directory.`;
           }
         }
       } catch(err) {
@@ -598,48 +600,48 @@ class HomeHandoffComponent {
         if (statusText) statusText.textContent = `Error: ${err.message}`;
       }
     }
-
   static async syncFleetGit(action = 'push', targetHost = '') {
-        const statusText = document.getElementById('linux-probe-status-text') || document.getElementById('mac-linux-sync-badge');
-        if (typeof LunoDeployEngine === 'undefined') {
-          alert('LunoDeployEngine module not loaded.');
-          return;
-        }
+      const statusText = document.getElementById('linux-probe-status-text') || document.getElementById('mac-linux-sync-badge');
+      if (typeof LunoDeployEngine === 'undefined') {
+        alert('LunoDeployEngine module not loaded.');
+        return;
+      }
 
-        const peerHost = targetHost || LunoDeployEngine.getPeerHost();
-        const hostLabel = targetHost ? `Linux (${targetHost}:8080)` : 'Local';
-        const actionLabel = action === 'push' ? 'Push All' : (action === 'pull' ? 'Pull All' : 'Cross-Node Sync');
+      const peerHost = targetHost || LunoDeployEngine.getPeerHost();
+      const isLinux = typeof ClientApp !== 'undefined' && (ClientApp.isLinux || ClientApp.activePlatform === 'linux');
+      const hostLabel = targetHost ? `Node (${targetHost}:8080)` : (isLinux ? 'Linux' : 'Mac');
+      const actionLabel = action === 'push' ? 'Push All' : (action === 'pull' ? 'Catch Up (Pull All)' : 'Cross-Node Fleet Sync');
 
-        if (statusText) {
-          statusText.textContent = `⏳ Executing ${actionLabel} on ${hostLabel}...`;
-        }
+      if (statusText) {
+        statusText.textContent = `⏳ Executing ${actionLabel} on ${hostLabel}...`;
+      }
 
-        if (action === 'cross_node') {
-          if (statusText) statusText.textContent = `⏳ Pushing Mac ➔ GitHub and syncing Linux (${peerHost}:8080)...`;
-          const res = await LunoDeployEngine.syncEverything({
-            peerHost: peerHost,
-            onProgress: function(msg) {
-              if (statusText) statusText.textContent = msg;
-            }
-          });
-
-          if (res && res.success) {
-            alert(`✅ Cross-Node Fleet Sync Complete!\n${res.summary}`);
-            if (statusText) statusText.textContent = '✓ Mac & Linux 100% In Sync';
-          } else {
-            alert(`⚠️ Fleet sync notice:\n${res?.error || 'Check network connection'}`);
+      if (action === 'cross_node') {
+        if (statusText) statusText.textContent = `⏳ Syncing ${hostLabel} with peer (${peerHost}:8080)...`;
+        const res = await LunoDeployEngine.syncEverything({
+          peerHost: peerHost,
+          onProgress: function(msg) {
+            if (statusText) statusText.textContent = msg;
           }
-          return;
-        }
+        });
 
-        const res = await LunoDeployEngine.fleetSync(action, { host: targetHost });
         if (res && res.success) {
-          alert(`✅ ${actionLabel} Complete for ${res.totalRepos || 0} repositories on ${hostLabel}!`);
-          if (statusText) statusText.textContent = `✓ ${actionLabel} Succeeded (${new Date().toLocaleTimeString()})`;
+          alert(`✅ Fleet Sync Complete!\n${res.summary}`);
+          if (statusText) statusText.textContent = '✓ Repositories in sync with peer & GitHub Pages';
         } else {
-          alert(`❌ ${actionLabel} Error:\n${res?.error || 'Failed'}`);
+          alert(`⚠️ Fleet sync notice:\n${res?.error || 'Check network connection'}`);
         }
-  }
+        return;
+      }
+
+      const res = await LunoDeployEngine.fleetSync(action, { host: targetHost });
+      if (res && res.success) {
+        alert(`✅ ${actionLabel} Complete for ${res.totalRepos || 0} repositories on ${hostLabel}!`);
+        if (statusText) statusText.textContent = `✓ ${actionLabel} Succeeded (${new Date().toLocaleTimeString()})`;
+      } else {
+        alert(`❌ ${actionLabel} Error:\n${res?.error || 'Failed'}`);
+      }
+    }
 }
 
 globalThis.HomeHandoffComponent = HomeHandoffComponent;

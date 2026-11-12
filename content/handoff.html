@@ -14,13 +14,13 @@
     <br><br>
     This dossier acts as the <strong>Master Opus Router</strong> across all four quadrants of Rob Brown's life's work:
     <br>
-    • <strong>Quadrant I: Inventions &amp; Technical Moat (<code>CadPlan</code>, <code>accudraw</code>, <code>accuCad</code>):</strong> 30-year proven spatial CAD constraint engine, SmartLine chaining, and expired US Patent #5,754,182.
+    • <strong>Quadrant I: Inventions &amp; Technical Moat (<code>CadPlan</code>, <code>accudraw</code>, <code>accuCad</code>):</strong> 30-year proven spatial CAD constraint engine, SmartLine chaining, on-curve splines, and expired US Patent #5,754,182.
     <br>
     • <strong>Quadrant II: Personal Narrative &amp; Economic Reality (<code>situation</code>, <code>ValuationOfAccudraw</code>):</strong> The documented contrast between creating an estimated $5.0B–$6.5B in corporate value versus living on family assistance, food stamps, and custody separation from his daughter.
     <br>
-    • <strong>Quadrant III: Post-Labor Macro-Economics (<code>EconomicsOfAutomation</code>, <code>JobsAndAI</code>):</strong> A first-principles economic framework for surviving automation through the Robot Dividend.
+    • <strong>Quadrant III: Post-Labor Macro-Economics (<code>EconomicsOfAutomation</code>, <code>JobsAndAI</code>):</strong> A first-principles economic framework for surviving automation through the Robot Dividend, capital saturation, and labor phase-out.
     <br>
-    • <strong>Quadrant IV: Fleet &amp; Operational Cockpit (<code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>):</strong> The live multi-node computational environment on Port 8080 connecting Mac (10.0.0.226) and Linux (10.0.0.245).
+    • <strong>Quadrant IV: Fleet &amp; Operational Cockpit (<code>HomeSetup</code>, <code>Luno</code>, <code>Library</code>):</strong> The live multi-node computational environment on Port 8080 connecting Mac (10.0.0.226) and Linux (10.0.0.245) with zero-token clipboard container execution.
     </p>
 
     <p data-block="p_handoff_intro_2">
@@ -33,7 +33,7 @@
       <ul>
         <li><strong>Always Update the Document:</strong> Never just output answers in chat. Reflect all new paths, runner scripts, and setup details into HomeSetup files.</li>
         <li><strong>Maintain Zero-Leak Security:</strong> Never place plaintext passwords or tokens into the document or prompts.</li>
-        <li><strong>Respect the Host Environment:</strong> The current host is the Linux box running Node.js on port 8080 with Luno Workspace.</li>
+        <li><strong>Respect the Host Environment:</strong> Standardize on Port 8080 across Ubuntu and Mac with zero legacy port 3000 conflicts.</li>
         <li><strong>Use Surgical Containers:</strong> Default to <code>&lt;script data-file="..." data-method="..." data-action="patch"&gt;</code> for class edits.</li>
       </ul>
     </aside>
@@ -43,24 +43,23 @@
     <h2 class="section-title">Immediate Next Engineering Priorities</h2>
 
     <p data-block="p_handoff_tasks_1">
-    The multi-machine fleet is now organized under a <strong>Unified Git &amp; Fleet Deck</strong>. It separates your workflow cleanly into two clear layers:
+    The multi-machine fleet is organized under a <strong>Unified Git &amp; Fleet Deck</strong>:
     <br><br>
-    1. <strong>Current Project Checkpoint (Single Target):</strong> Displays the live status of the project you are editing (e.g. <code>HomeSetup</code>), showing exactly which files are modified. When modified, you tap <strong>"📸 Checkpoint &amp; Deploy"</strong> to commit and publish directly to its GitHub Pages site.
+    1. <strong>Current Project Checkpoint (Single Target):</strong> Displays the live status of the project you are editing (e.g. <code>HomeSetup</code>), showing exactly which files are modified. When modified, tap <strong>"📸 Checkpoint &amp; Deploy"</strong> to commit and publish directly to its GitHub Pages site.
     <br><br>
-    2. <strong>Fleet-Wide Multi-Machine Sync (All 44 Repos):</strong> When sitting down at either your Mac or Linux laptop, tap <strong>"⬇️ Catch Up Fleet"</strong> to pull all updates with automatic local snapshot safety. When finishing work, tap <strong>"🚀 Sync Fleet to Peer"</strong> to push all repos to GitHub and command your other laptop to pull over Port 8080.
+    2. <strong>Fleet-Wide Multi-Machine Sync (All 44 Repos):</strong> When sitting down at either your Mac or Linux laptop, tap <strong>"⬇️ Catch Up Fleet"</strong> to pull all updates with automatic local snapshot safety. When finishing work, tap <strong>"🚀 Sync Fleet to Peer"</strong> to push all repos to GitHub and signal your peer over Port 8080.
     </p>
 
-<aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
-<span class="sidebar-kicker">Handoff Checklist</span>
-<strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
-<ul>
-<li><strong>[Done]</strong> Replaced competing sync/checkpoint cards with one unified Git &amp; Fleet Deck.</li>
-<li><strong>[Done]</strong> Real-time project status: shows exact modified files when dirty, or confirmed clean with Pages.</li>
-<li><strong>[Done]</strong> Eliminated luno.json timestamp dirtying: configuration stays static and unpolluted.</li>
-<li><strong>[Done]</strong> Verified cross-wire execution: Mac pushes 39 repos live, Linux peer responds at 10.0.0.245:8080.</li>
-<li><strong>[Ready for Test]</strong> In-situ Note-to-Edit loop: attach a directive on any paragraph to verify auto-resolution!</li>
-</ul>
-</aside>
-
-</section>
+    <aside data-block="sidebar_next_thread_checklist" data-type="sidebar">
+      <span class="sidebar-kicker">Handoff Checklist</span>
+      <strong class="sidebar-title">Actionable Next-Thread Checklist</strong>
+      <ul>
+        <li><strong>[Done]</strong> Cleaned up template duplicate sections in <code>content/dictation.html</code> and aligned <code>content/handoff.html</code>.</li>
+        <li><strong>[Done]</strong> Added automated public HTTPS fallback in <code>LunoServer.handleGitPull</code> so Linux pulls never fail even without SSH keys.</li>
+        <li><strong>[Done]</strong> Ensured <code>.nojekyll</code> is written automatically on every project before GitHub Pages push.</li>
+        <li><strong>[Done]</strong> Probed local host and peer node (10.0.0.245) via live server runner telemetry.</li>
+        <li><strong>[Ready for Test]</strong> Tap "📸 Checkpoint &amp; Deploy" to verify seamless GitHub Pages publishing!</li>
+      </ul>
+    </aside>
+  </section>
 </article>
