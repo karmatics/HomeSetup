@@ -88,12 +88,12 @@ class HomeHandoffContent {
 
   static p_handoff_portal_1() {
       const pUrl = typeof HomeHandoffComponent !== 'undefined' ? HomeHandoffComponent.resolveAppUrl('Portal') : '../Portal/index.html';
+      const qUrl = typeof HomeHandoffComponent !== 'undefined' ? HomeHandoffComponent.resolveAppUrl('QuoraToys') : '../QuoraToys/index.html';
       const aUrl = typeof HomeHandoffComponent !== 'undefined' ? HomeHandoffComponent.resolveAppUrl('accuCad') : '../accuCad/index.html';
-      const dUrl = typeof HomeHandoffComponent !== 'undefined' ? HomeHandoffComponent.resolveAppUrl('DrawingApp') : '../DrawingApp/index.html';
       const eUrl = typeof HomeHandoffComponent !== 'undefined' ? HomeHandoffComponent.resolveAppUrl('EconomicsOfAutomation') : '../EconomicsOfAutomation/index.html';
       return [
         `**The Public Front Page ([Portal](${pUrl})):** While \`Opus\` serves as the internal 4-quadrant developer router and \`HomeSetup\` documents the fleet, **[Portal](${pUrl})** is the welcoming, visitor-ready front page application for the entire ecosystem.`,
-        `It promotes two public Tip-of-the-Spear initiatives—the **[AccuCAD 3D Studio](${aUrl})** / **[DrawingApp](${dUrl})** software showcase and the accessible **[Economics of Automation](${eUrl})** visual essay—alongside Luno, HomeSetup, Financial Valuation, and Family Stability, with live \`summaries.json\` generation and AI export keys.`
+        `It promotes two public Tip-of-the-Spear initiatives—the **[Kinetic Curve & Image Markup Studio](${qUrl})** (modern Pen-tool replacement with broad Aardvark-like reach) and the accessible **[Economics of Automation](${eUrl})** visual essay—alongside **[AccuCAD 3D Studio](${aUrl})**, Luno, HomeSetup, Financial Valuation, and Family Stability, with live \`summaries.json\` generation and AI export keys.`
       ];
     }
   static sidebar_portal_fork_spec() {
