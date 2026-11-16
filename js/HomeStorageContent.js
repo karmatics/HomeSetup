@@ -86,26 +86,25 @@ class HomeStorageContent {
   }
 
   static p_store_catalog_1() {
-    return [
-      "**Verified Workspace Synchronization (Ubuntu vs. Mac):**",
-      "Our live cross-wire probe verified that all 44 project repositories on Linux are now initialized with Git on branch `main` and wired to their authoritative GitHub remotes (`git@github.com:karmatics/<repo>.git`, with `teacup` tracking `Lunocracy/teacup.git`).",
-      "`Library/KeyCommandHandler.js` was synchronized directly from the Mac over HTTP GET, bringing Linux to the complete 600-line implementation.",
-      "Both Linux and Mac now hold matching, Git-configured working repositories across all 44 projects, ready for continuous synchronization and 1-tap deployment to GitHub Pages."
-    ];
-  }
+      return [
+        "**Verified Workspace Synchronization (Mac Mini vs. Ubuntu):**",
+        "Our live fleet sync verified over 50 project repositories initialized with Git on branch `main` and wired to their authoritative GitHub remotes (`git@github.com:karmatics/<repo>.git`, with `teacup` tracking `Lunocracy/teacup.git`).",
+        "`Library/` shared modules (`DocumentReader.js`, `CadPlanItemNotes.js`, `CadPlanDocumentEditor.js`, `CadPlanAardvark.js`, `SupabaseCommentsAdapter.js`) are synchronized across both machines and deployed to GitHub Pages for zero-404 live viewing."
+      ];
+    }
+
   static sidebar_git_repo_table() {
-    return [
-      "Verified Multi-Node Repository Matrix:\n" +
-      "• Mac Mini (`/Users/rob/source/LunoProjects`):\n" +
-      "   - 36 Repositories on branch `main` -> `git@github.com:karmatics/<repo>.git`\n" +
-      "   - ScreenFlow v10.5.2 video recording suite active\n" +
-      "• Ubuntu Laptop (`/root/source/LunoProjects`):\n" +
-      "   - `HomeSetup`: Initialized with Git, remote wired to `git@github.com:karmatics/HomeSetup.git`\n" +
-      "   - `Library` & `Luno`: Configured with matching karmatics GitHub remotes\n" +
-      "   - SSH Identity: Key pair configured in `/root/.ssh/id_ed25519`\n" +
-      "   - State Report: Live synchronization telemetry saved to `HomeSetup/state/recon_report.json`"
-    ];
-  }
+      return [
+        "Verified Multi-Node Repository Matrix:\n" +
+        "• Mac Mini (`/Users/rob/source/LunoProjects`):\n" +
+        "   - 50+ Repositories on branch `main` -> `git@github.com:karmatics/<repo>.git`\n" +
+        "   - ScreenFlow v10.5.2 video recording suite active\n" +
+        "• Ubuntu Laptop (`/home/rob/source/LunoProjects`):\n" +
+        "   - Matching `HomeSetup`, `Opus`, `Library`, `Luno`, `QuoraToys`, and CAD repositories\n" +
+        "   - HTTPS public pull fallback + SSH push ready\n" +
+        "   - State Reports: Saved to `HomeSetup/state/fleet_sync_report.json` & `thread_handoff_ready.json`"
+      ];
+    }
 }
 
 globalThis.HomeStorageContent = HomeStorageContent;

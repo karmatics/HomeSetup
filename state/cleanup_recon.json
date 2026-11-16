@@ -1,0 +1,4145 @@
+{
+  "timestamp": "2026-11-15T22:33:15.734Z",
+  "webRoot": "/Users/rob/source/LunoProjects",
+  "totalAppProjects": 60,
+  "largeFiles": [
+    {
+      "project": "QuoraToys",
+      "file": "imported_drawing_app/DrawingApp.js",
+      "lines": 3632,
+      "kb": 121
+    },
+    {
+      "project": "Library",
+      "file": "DocumentReader.js",
+      "lines": 3463,
+      "kb": 142
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/QuoraAnnotationComponent.js",
+      "lines": 2623,
+      "kb": 114
+    },
+    {
+      "project": "Luno",
+      "file": "core/LunoServer.js",
+      "lines": 2058,
+      "kb": 83
+    },
+    {
+      "project": "Library",
+      "file": "CadPlanItemNotes.js",
+      "lines": 1817,
+      "kb": 79
+    },
+    {
+      "project": "Library",
+      "file": "SvgAnimationFun.js",
+      "lines": 1648,
+      "kb": 44
+    },
+    {
+      "project": "QuoraToys",
+      "file": "extension/features/AardvarkActions.js",
+      "lines": 1633,
+      "kb": 49
+    },
+    {
+      "project": "Library",
+      "file": "DictationWidget.js",
+      "lines": 1585,
+      "kb": 48
+    },
+    {
+      "project": "JobsAndAI",
+      "file": "js/ValuationPage.js",
+      "lines": 1491,
+      "kb": 50
+    },
+    {
+      "project": "situation",
+      "file": "js/ValuationPage.js",
+      "lines": 1490,
+      "kb": 50
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/QuoraCleanStudioDialog.js",
+      "lines": 1476,
+      "kb": 66
+    },
+    {
+      "project": "accuCad",
+      "file": "js/ui/ViewControls.js",
+      "lines": 1444,
+      "kb": 50
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/QuoraToys.js",
+      "lines": 1223,
+      "kb": 45
+    },
+    {
+      "project": "EconomicsOfAutomation",
+      "file": "js/TaxChartComponent.js",
+      "lines": 1199,
+      "kb": 42
+    },
+    {
+      "project": "JobsAndAI",
+      "file": "js/JobsAndAI.js",
+      "lines": 1116,
+      "kb": 36
+    },
+    {
+      "project": "Luno",
+      "file": "core/LunoClassPatcher.js",
+      "lines": 1051,
+      "kb": 41
+    },
+    {
+      "project": "Luno",
+      "file": "browser/DiskBrowser.js",
+      "lines": 1041,
+      "kb": 48
+    },
+    {
+      "project": "situation",
+      "file": "js/SituationApp.js",
+      "lines": 1028,
+      "kb": 46
+    },
+    {
+      "project": "CadPlan",
+      "file": "js/CadStudioDemoComponent.js",
+      "lines": 996,
+      "kb": 39
+    },
+    {
+      "project": "Library",
+      "file": "SliderControl.js",
+      "lines": 984,
+      "kb": 31
+    },
+    {
+      "project": "QuoraToys",
+      "file": "extension/features/Aardvark.js",
+      "lines": 969,
+      "kb": 26
+    },
+    {
+      "project": "accuCad",
+      "file": "js/TentativePointHandler.js",
+      "lines": 941,
+      "kb": 30
+    },
+    {
+      "project": "Luno",
+      "file": "app/ClientAppUI.js",
+      "lines": 932,
+      "kb": 38
+    },
+    {
+      "project": "CadPlan",
+      "file": "js/CadCraftIntegrationContent.js",
+      "lines": 930,
+      "kb": 64
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/QuoraGestureMachine.js",
+      "lines": 930,
+      "kb": 42
+    },
+    {
+      "project": "Library",
+      "file": "SimplePanel.js",
+      "lines": 925,
+      "kb": 28
+    },
+    {
+      "project": "Luno",
+      "file": "app/LunoFileSystem.js",
+      "lines": 898,
+      "kb": 35
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/StudioSvgRenderer.js",
+      "lines": 898,
+      "kb": 43
+    },
+    {
+      "project": "Library",
+      "file": "GlowPiano.js",
+      "lines": 860,
+      "kb": 29
+    },
+    {
+      "project": "QuoraToys",
+      "file": "extension/utils/DialogBox.js",
+      "lines": 860,
+      "kb": 27
+    },
+    {
+      "project": "QuoraToys",
+      "file": "js/StudioGeometry.js",
+      "lines": 859,
+      "kb": 34
+    },
+    {
+      "project": "Library",
+      "file": "UITools.js",
+      "lines": 850,
+      "kb": 29
+    },
+    {
+      "project": "Library",
+      "file": "SpinnerWidget.js",
+      "lines": 828,
+      "kb": 24
+    },
+    {
+      "project": "Library",
+      "file": "CadPlanAardvark.js",
+      "lines": 819,
+      "kb": 29
+    },
+    {
+      "project": "QuoraToys",
+      "file": "extension/features/AardvarkRadialMenu.js",
+      "lines": 805,
+      "kb": 23
+    }
+  ],
+  "focusProjects": [
+    {
+      "name": "CadPlan",
+      "fileCount": 97,
+      "totalKB": 1172,
+      "totalLines": 23407,
+      "hasLunoJson": true,
+      "hasContentHtml": true,
+      "files": [
+        {
+          "rel": "js/CadStudioDemoComponent.js",
+          "size": 40210,
+          "lines": 996,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadCraftIntegrationContent.js",
+          "size": 65229,
+          "lines": 930,
+          "ext": ".js"
+        },
+        {
+          "rel": "cadplan.html",
+          "size": 33397,
+          "lines": 774,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/ecosystem.html",
+          "size": 49506,
+          "lines": 691,
+          "ext": ".html"
+        },
+        {
+          "rel": "src/CadPlan.js",
+          "size": 18599,
+          "lines": 626,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SvgSmartLineLab.js",
+          "size": 22083,
+          "lines": 598,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadITwinParityContent.js",
+          "size": 42064,
+          "lines": 583,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPromptBundlerDialog.js",
+          "size": 30768,
+          "lines": 561,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadSmartKeyinLab.js",
+          "size": 20524,
+          "lines": 517,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanMetaContent.js",
+          "size": 41963,
+          "lines": 506,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/cadcraft.html",
+          "size": 40355,
+          "lines": 474,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/CadIsolatedCompass3DComponent.js",
+          "size": 21773,
+          "lines": 472,
+          "ext": ".js"
+        },
+        {
+          "rel": "CadPlan.js",
+          "size": 21366,
+          "lines": 470,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/Cad2Dto3DRoundTripGraphic.js",
+          "size": 18059,
+          "lines": 444,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadTouchP2PGraphicComponent.js",
+          "size": 17325,
+          "lines": 435,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDrawNumberStreamLab.js",
+          "size": 16630,
+          "lines": 432,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadNearestIntersectionLab.js",
+          "size": 17867,
+          "lines": 423,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/itwin.html",
+          "size": 37214,
+          "lines": 408,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/CompassAnatomyComponent.js",
+          "size": 15623,
+          "lines": 391,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CompassSkinAddons.js",
+          "size": 13517,
+          "lines": 391,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/TentativeSnappingLab.js",
+          "size": 14726,
+          "lines": 368,
+          "ext": ".js"
+        },
+        {
+          "rel": "basic3d.css",
+          "size": 9877,
+          "lines": 363,
+          "ext": ".css"
+        },
+        {
+          "rel": "js/CadCoordinateConverterLab.js",
+          "size": 13201,
+          "lines": 347,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadTangentArcSwingLab.js",
+          "size": 14063,
+          "lines": 346,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CurveDrawerLabComponent.js",
+          "size": 13090,
+          "lines": 344,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/KeyCommandInteractiveLab.js",
+          "size": 13936,
+          "lines": 343,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/meta.html",
+          "size": 36943,
+          "lines": 337,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/AccuDrawDemoComponent.js",
+          "size": 11976,
+          "lines": 316,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadSurfaceNormalLab.js",
+          "size": 11867,
+          "lines": 307,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadCodeViewerComponent.js",
+          "size": 11673,
+          "lines": 306,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SquircleArc.js",
+          "size": 9509,
+          "lines": 298,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadChoreographyEngine.js",
+          "size": 11823,
+          "lines": 284,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadAgentTelemetryLab.js",
+          "size": 12129,
+          "lines": 278,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadEcosystemGraphicComponent.js",
+          "size": 12506,
+          "lines": 276,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadModelStudioComponent.js",
+          "size": 10536,
+          "lines": 265,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CurveDemoComponent.js",
+          "size": 8634,
+          "lines": 233,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadArchitectureDecisionsContent.js",
+          "size": 16689,
+          "lines": 225,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadVisionInterviewContent.js",
+          "size": 16568,
+          "lines": 223,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SquircleCompassSvg.js",
+          "size": 8308,
+          "lines": 220,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadGeneticMutationLab.js",
+          "size": 9490,
+          "lines": 212,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadMasterShowcaseComponent.js",
+          "size": 11742,
+          "lines": 211,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadVideoRegistry.js",
+          "size": 8000,
+          "lines": 209,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadAnimatedSvgCompassLab.js",
+          "size": 9450,
+          "lines": 208,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CompassSkinDemos.js",
+          "size": 7665,
+          "lines": 208,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/accucad.html",
+          "size": 18812,
+          "lines": 203,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/AccuCadAuditContent.js",
+          "size": 15823,
+          "lines": 202,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadArchitectureGraphicComponent.js",
+          "size": 8413,
+          "lines": 195,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDrawCompassSvg.js",
+          "size": 8459,
+          "lines": 191,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanContentConverter.js",
+          "size": 8305,
+          "lines": 186,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanNotesManager.js",
+          "size": 5764,
+          "lines": 172,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPluginHookSpecGraphic.js",
+          "size": 9972,
+          "lines": 164,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadOriginsGraphicComponent.js",
+          "size": 6989,
+          "lines": 161,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadRuntimeMatrixGraphic.js",
+          "size": 6749,
+          "lines": 154,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDrawPhilosophyContent.js",
+          "size": 10487,
+          "lines": 150,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/UpdateControlPoints.js",
+          "size": 4623,
+          "lines": 150,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/interview.html",
+          "size": 15305,
+          "lines": 149,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/CadDynamicDimensionHudLab.js",
+          "size": 5609,
+          "lines": 145,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadChoreographyDemoComponent.js",
+          "size": 5508,
+          "lines": 141,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadVisionHeroGraphic.js",
+          "size": 8221,
+          "lines": 141,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadTouchPairingDialog.js",
+          "size": 4806,
+          "lines": 136,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadAudienceMigrationGraphic.js",
+          "size": 9950,
+          "lines": 130,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadLunoEcosystemContent.js",
+          "size": 8643,
+          "lines": 126,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadCurveDrawerContent.js",
+          "size": 7415,
+          "lines": 120,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadErgonomicFreedomGraphic.js",
+          "size": 7836,
+          "lines": 118,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/curve/UpdateControlPoints.js",
+          "size": 3912,
+          "lines": 117,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadOriginsContent.js",
+          "size": 9188,
+          "lines": 116,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanRoadmapContent.js",
+          "size": 7127,
+          "lines": 115,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDrawAnalysisContent.js",
+          "size": 7774,
+          "lines": 108,
+          "ext": ".js"
+        },
+        {
+          "rel": "runner.mjs",
+          "size": 4243,
+          "lines": 108,
+          "ext": ".mjs"
+        },
+        {
+          "rel": "js/curve/CurveDraw.js",
+          "size": 3227,
+          "lines": 107,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/architecture.html",
+          "size": 10062,
+          "lines": 106,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/curve/Curve.js",
+          "size": 3370,
+          "lines": 106,
+          "ext": ".js"
+        },
+        {
+          "rel": "ModelLoader.js",
+          "size": 3294,
+          "lines": 103,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/philosophy.html",
+          "size": 8599,
+          "lines": 101,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/CadTouchP2PContent.js",
+          "size": 4997,
+          "lines": 100,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CommunityOracle.js",
+          "size": 3356,
+          "lines": 100,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 2942,
+          "lines": 96,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/CadInteractiveDemoContent.js",
+          "size": 5656,
+          "lines": 94,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/curvedrawer.html",
+          "size": 7262,
+          "lines": 91,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/CurveTouchContent.js",
+          "size": 6737,
+          "lines": 90,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/KeyCommandEngineContent.js",
+          "size": 4784,
+          "lines": 74,
+          "ext": ".js"
+        },
+        {
+          "rel": "src/ModelLoader.js",
+          "size": 2326,
+          "lines": 74,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanVisionContent.js",
+          "size": 4159,
+          "lines": 73,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/origins.html",
+          "size": 7707,
+          "lines": 72,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/touchp2p.html",
+          "size": 4565,
+          "lines": 64,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/demos.html",
+          "size": 5324,
+          "lines": 61,
+          "ext": ".html"
+        },
+        {
+          "rel": "Simple3dShapes.js",
+          "size": 1475,
+          "lines": 49,
+          "ext": ".js"
+        },
+        {
+          "rel": "src/Simple3dShapes.js",
+          "size": 1474,
+          "lines": 49,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/shortcuts.html",
+          "size": 4557,
+          "lines": 47,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/curve/BezierVertex.js",
+          "size": 1637,
+          "lines": 47,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/BezierVertex.js",
+          "size": 1290,
+          "lines": 44,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1353,
+          "lines": 38,
+          "ext": ".html"
+        },
+        {
+          "rel": "css/basic3d.css",
+          "size": 442,
+          "lines": 27,
+          "ext": ".css"
+        },
+        {
+          "rel": "js/CadVideoClipComponent.js",
+          "size": 975,
+          "lines": 26,
+          "ext": ".js"
+        },
+        {
+          "rel": "config.json",
+          "size": 198,
+          "lines": 10,
+          "ext": ".json"
+        },
+        {
+          "rel": "capabilities.json",
+          "size": 99,
+          "lines": 6,
+          "ext": ".json"
+        },
+        {
+          "rel": "state/status.json",
+          "size": 74,
+          "lines": 5,
+          "ext": ".json"
+        }
+      ]
+    },
+    {
+      "name": "EconomicsOfAutomation",
+      "fileCount": 47,
+      "totalKB": 10151,
+      "totalLines": 5785,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/TaxChartComponent.js",
+          "size": 42512,
+          "lines": 1199,
+          "ext": ".js"
+        },
+        {
+          "rel": "css/robotDividend.css",
+          "size": 18014,
+          "lines": 862,
+          "ext": ".css"
+        },
+        {
+          "rel": "js/DoomerDebateComponent.js",
+          "size": 30274,
+          "lines": 707,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ParadigmsComparisonComponent.js",
+          "size": 17669,
+          "lines": 462,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/EconomicsOfAutomation.js",
+          "size": 12780,
+          "lines": 330,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ArticleContent.js",
+          "size": 16435,
+          "lines": 304,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/KineticContent.js",
+          "size": 15679,
+          "lines": 279,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ObjectionsContent.js",
+          "size": 23893,
+          "lines": 243,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/DoomerContent.js",
+          "size": 14632,
+          "lines": 204,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ParadigmsContent.js",
+          "size": 13570,
+          "lines": 200,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/EarthContent.js",
+          "size": 14343,
+          "lines": 163,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ColonyContent.js",
+          "size": 10822,
+          "lines": 160,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/GameTheoryContent.js",
+          "size": 15942,
+          "lines": 152,
+          "ext": ".js"
+        },
+        {
+          "rel": "ClaudeMasterPrompt.md",
+          "size": 10763,
+          "lines": 86,
+          "ext": ".md"
+        },
+        {
+          "rel": "colony.html",
+          "size": 10150,
+          "lines": 77,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/RulesContent.js",
+          "size": 8052,
+          "lines": 76,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AiRulesContent.js",
+          "size": 4319,
+          "lines": 68,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1988,
+          "lines": 56,
+          "ext": ".html"
+        },
+        {
+          "rel": "luno.json",
+          "size": 1196,
+          "lines": 44,
+          "ext": ".json"
+        },
+        {
+          "rel": "makeThumbs.js",
+          "size": 1332,
+          "lines": 40,
+          "ext": ".js"
+        },
+        {
+          "rel": "rules.html",
+          "size": 2896,
+          "lines": 38,
+          "ext": ".html"
+        },
+        {
+          "rel": "gametheory.html",
+          "size": 3760,
+          "lines": 18,
+          "ext": ".html"
+        },
+        {
+          "rel": "earth.html",
+          "size": 2066,
+          "lines": 11,
+          "ext": ".html"
+        },
+        {
+          "rel": "objections.html",
+          "size": 1459,
+          "lines": 6,
+          "ext": ".html"
+        },
+        {
+          "rel": "images/35bab356-c49e-4a50-a51d-e86de804b1a0.jpg",
+          "size": 189759,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/83baa523-cee3-4e85-9683-a2f0ef007583.jpg",
+          "size": 152402,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/dinner.jpeg",
+          "size": 840802,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/f1be334a-8d92-4b7a-9e4d-e944844ede64.jpg",
+          "size": 165624,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/market.jpeg",
+          "size": 923250,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/musicandart.jpeg",
+          "size": 843093,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/robotandcarpenter.jpeg",
+          "size": 851504,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/robotsarrive.jpeg",
+          "size": 905541,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/sawmill.jpeg",
+          "size": 867643,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/dinner.jpeg",
+          "size": 78911,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/market.jpeg",
+          "size": 81938,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/musicandart.jpeg",
+          "size": 75148,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/robotandcarpenter.jpeg",
+          "size": 84152,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/robotsarrive.jpeg",
+          "size": 86328,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/sawmill.jpeg",
+          "size": 79045,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/transition.jpeg",
+          "size": 84375,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/treehouses.jpeg",
+          "size": 81817,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/vehicle.jpeg",
+          "size": 73851,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/thumbs/whimiscalhouse.jpeg",
+          "size": 92574,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/transition.jpeg",
+          "size": 959391,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/treehouses.jpeg",
+          "size": 780366,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/vehicle.jpeg",
+          "size": 864275,
+          "lines": 0,
+          "ext": ".jpeg"
+        },
+        {
+          "rel": "images/whimsicalhouse.jpeg",
+          "size": 938268,
+          "lines": 0,
+          "ext": ".jpeg"
+        }
+      ]
+    },
+    {
+      "name": "HomeSetup",
+      "fileCount": 37,
+      "totalKB": 304,
+      "totalLines": 5808,
+      "hasLunoJson": true,
+      "hasContentHtml": true,
+      "files": [
+        {
+          "rel": "state/fleet_sync_report.json",
+          "size": 26328,
+          "lines": 877,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/HomeHandoffComponent.js",
+          "size": 30387,
+          "lines": 624,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeDictationDocsData.js",
+          "size": 65690,
+          "lines": 500,
+          "ext": ".js"
+        },
+        {
+          "rel": "HomeSetup.js",
+          "size": 18202,
+          "lines": 412,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeDictationStudioComponent.js",
+          "size": 21813,
+          "lines": 391,
+          "ext": ".js"
+        },
+        {
+          "rel": "basic3d.css",
+          "size": 9879,
+          "lines": 363,
+          "ext": ".css"
+        },
+        {
+          "rel": "state/recon_report.json",
+          "size": 9928,
+          "lines": 280,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/CadPromptBundlerDialog.js",
+          "size": 12508,
+          "lines": 276,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeDictationContent.js",
+          "size": 12251,
+          "lines": 197,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadPlanNotesManager.js",
+          "size": 5770,
+          "lines": 172,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/dictation.html",
+          "size": 11975,
+          "lines": 161,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/HomeFleetVisualizer.js",
+          "size": 6831,
+          "lines": 142,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeNetworkContent.js",
+          "size": 6757,
+          "lines": 121,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeStorageContent.js",
+          "size": 5254,
+          "lines": 111,
+          "ext": ".js"
+        },
+        {
+          "rel": "runner.mjs",
+          "size": 4243,
+          "lines": 108,
+          "ext": ".mjs"
+        },
+        {
+          "rel": "js/HomeTopologyContent.js",
+          "size": 7237,
+          "lines": 107,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeOrchestrationContent.js",
+          "size": 4798,
+          "lines": 91,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/storage.html",
+          "size": 6000,
+          "lines": 90,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/HomeSecretsContent.js",
+          "size": 4052,
+          "lines": 85,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 2433,
+          "lines": 85,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/HomeHandoffContent.js",
+          "size": 5356,
+          "lines": 81,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HomeNodesContent.js",
+          "size": 4024,
+          "lines": 81,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/network.html",
+          "size": 5234,
+          "lines": 71,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/handoff.html",
+          "size": 5699,
+          "lines": 65,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/secrets.html",
+          "size": 4088,
+          "lines": 61,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/orchestration.html",
+          "size": 4301,
+          "lines": 58,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/nodes.html",
+          "size": 3217,
+          "lines": 52,
+          "ext": ".html"
+        },
+        {
+          "rel": "index.html",
+          "size": 1357,
+          "lines": 38,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/topology.html",
+          "size": 3291,
+          "lines": 35,
+          "ext": ".html"
+        },
+        {
+          "rel": "state/mac_to_linux_sync.json",
+          "size": 599,
+          "lines": 26,
+          "ext": ".json"
+        },
+        {
+          "rel": "state/thread_handoff_ready.json",
+          "size": 473,
+          "lines": 17,
+          "ext": ".json"
+        },
+        {
+          "rel": "config.json",
+          "size": 198,
+          "lines": 10,
+          "ext": ".json"
+        },
+        {
+          "rel": "state/keycommand_diff.json",
+          "size": 230,
+          "lines": 9,
+          "ext": ".json"
+        },
+        {
+          "rel": "capabilities.json",
+          "size": 99,
+          "lines": 6,
+          "ext": ".json"
+        },
+        {
+          "rel": "state/status.json",
+          "size": 74,
+          "lines": 5,
+          "ext": ".json"
+        },
+        {
+          "rel": "fleet-git.sh",
+          "size": 1104,
+          "lines": 0,
+          "ext": ".sh"
+        },
+        {
+          "rel": "state/linux_github_key.pub",
+          "size": 94,
+          "lines": 0,
+          "ext": ".pub"
+        }
+      ]
+    },
+    {
+      "name": "JobsAndAI",
+      "fileCount": 33,
+      "totalKB": 41658,
+      "totalLines": 5467,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/ValuationPage.js",
+          "size": 51248,
+          "lines": 1491,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/JobsAndAI.js",
+          "size": 37014,
+          "lines": 1116,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ElderAdvocacyPage.js",
+          "size": 30161,
+          "lines": 602,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SnareDrumAnimation.js",
+          "size": 17857,
+          "lines": 464,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/GraphicsVideoPage.js",
+          "size": 14557,
+          "lines": 333,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ValueEmberLogo.js",
+          "size": 9059,
+          "lines": 260,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CaretakerBiasPage.js",
+          "size": 13530,
+          "lines": 223,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ThesisPage.js",
+          "size": 12853,
+          "lines": 209,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OverviewPage.js",
+          "size": 12515,
+          "lines": 205,
+          "ext": ".js"
+        },
+        {
+          "rel": "server.js",
+          "size": 4469,
+          "lines": 152,
+          "ext": ".js"
+        },
+        {
+          "rel": "DEPLOYMENT_GUIDE.md",
+          "size": 4527,
+          "lines": 135,
+          "ext": ".md"
+        },
+        {
+          "rel": "js/CurrentWorkPage.js",
+          "size": 6313,
+          "lines": 104,
+          "ext": ".js"
+        },
+        {
+          "rel": "deploy.js",
+          "size": 2030,
+          "lines": 70,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1347,
+          "lines": 37,
+          "ext": ".html"
+        },
+        {
+          "rel": "luno.json",
+          "size": 785,
+          "lines": 32,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/QuoraPolarization.js",
+          "size": 150,
+          "lines": 13,
+          "ext": ".js"
+        },
+        {
+          "rel": "package.json",
+          "size": 194,
+          "lines": 9,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/AiPerspectivePage.js",
+          "size": 300,
+          "lines": 8,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDrawValuation.js",
+          "size": 140,
+          "lines": 3,
+          "ext": ".js"
+        },
+        {
+          "rel": "LunoPatchLog.html",
+          "size": 0,
+          "lines": 1,
+          "ext": ".html"
+        },
+        {
+          "rel": "images/carMossy.png",
+          "size": 8390405,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/carOriginal.webp",
+          "size": 7887710,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/carStreetArt.png",
+          "size": 7987222,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/carrotAnalogy.png",
+          "size": 1017929,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/compareDallE_1.webp",
+          "size": 6931004,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/compareDallE_2.webp",
+          "size": 1559882,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/housePhotoAndIllustration.webp",
+          "size": 1853224,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/k_california.png",
+          "size": 319293,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_kory.png",
+          "size": 227089,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_owesYou.png",
+          "size": 446318,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_qanon.png",
+          "size": 520454,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/lifePreserver.png",
+          "size": 680494,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/starWarsDeAging.webp",
+          "size": 4617254,
+          "lines": 0,
+          "ext": ".webp"
+        }
+      ]
+    },
+    {
+      "name": "Library",
+      "fileCount": 61,
+      "totalKB": 1002,
+      "totalLines": 27194,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "DocumentReader.js",
+          "size": 145652,
+          "lines": 3463,
+          "ext": ".js"
+        },
+        {
+          "rel": "CadPlanItemNotes.js",
+          "size": 81333,
+          "lines": 1817,
+          "ext": ".js"
+        },
+        {
+          "rel": "SvgAnimationFun.js",
+          "size": 44934,
+          "lines": 1648,
+          "ext": ".js"
+        },
+        {
+          "rel": "DictationWidget.js",
+          "size": 48663,
+          "lines": 1585,
+          "ext": ".js"
+        },
+        {
+          "rel": "SliderControl.js",
+          "size": 31883,
+          "lines": 984,
+          "ext": ".js"
+        },
+        {
+          "rel": "SimplePanel.js",
+          "size": 28428,
+          "lines": 925,
+          "ext": ".js"
+        },
+        {
+          "rel": "GlowPiano.js",
+          "size": 30011,
+          "lines": 860,
+          "ext": ".js"
+        },
+        {
+          "rel": "UITools.js",
+          "size": 29228,
+          "lines": 850,
+          "ext": ".js"
+        },
+        {
+          "rel": "SpinnerWidget.js",
+          "size": 24635,
+          "lines": 828,
+          "ext": ".js"
+        },
+        {
+          "rel": "CadPlanAardvark.js",
+          "size": 29628,
+          "lines": 819,
+          "ext": ".js"
+        },
+        {
+          "rel": "VideoPlayer.js",
+          "size": 27587,
+          "lines": 786,
+          "ext": ".js"
+        },
+        {
+          "rel": "VideoShowcase.js",
+          "size": 21415,
+          "lines": 696,
+          "ext": ".js"
+        },
+        {
+          "rel": "LatticeSurface.js",
+          "size": 32296,
+          "lines": 669,
+          "ext": ".js"
+        },
+        {
+          "rel": "ColorPicker.js",
+          "size": 20554,
+          "lines": 662,
+          "ext": ".js"
+        },
+        {
+          "rel": "KeyCommandHandler.js",
+          "size": 19211,
+          "lines": 616,
+          "ext": ".js"
+        },
+        {
+          "rel": "DictationDocs.js",
+          "size": 70892,
+          "lines": 590,
+          "ext": ".js"
+        },
+        {
+          "rel": "MidiMapper.js",
+          "size": 16794,
+          "lines": 545,
+          "ext": ".js"
+        },
+        {
+          "rel": "RadialMenu.js",
+          "size": 16287,
+          "lines": 527,
+          "ext": ".js"
+        },
+        {
+          "rel": "DictationLattice.js",
+          "size": 21290,
+          "lines": 501,
+          "ext": ".js"
+        },
+        {
+          "rel": "CodeMirrorWidget.js",
+          "size": 18582,
+          "lines": 492,
+          "ext": ".js"
+        },
+        {
+          "rel": "ThreeJSLoader.js",
+          "size": 15880,
+          "lines": 488,
+          "ext": ".js"
+        },
+        {
+          "rel": "TriangleCP.js",
+          "size": 14668,
+          "lines": 487,
+          "ext": ".js"
+        },
+        {
+          "rel": "GeometryUtils3d.js",
+          "size": 16569,
+          "lines": 469,
+          "ext": ".js"
+        },
+        {
+          "rel": "CadPlanDocumentEditor.js",
+          "size": 17793,
+          "lines": 419,
+          "ext": ".js"
+        },
+        {
+          "rel": "GlowingTooltip.js",
+          "size": 12124,
+          "lines": 364,
+          "ext": ".js"
+        },
+        {
+          "rel": "GraphicPiano.js",
+          "size": 11423,
+          "lines": 350,
+          "ext": ".js"
+        },
+        {
+          "rel": "LunoLoader.js",
+          "size": 11937,
+          "lines": 319,
+          "ext": ".js"
+        },
+        {
+          "rel": "HueRingCP.js",
+          "size": 8800,
+          "lines": 304,
+          "ext": ".js"
+        },
+        {
+          "rel": "P2PConnector.js",
+          "size": 9632,
+          "lines": 282,
+          "ext": ".js"
+        },
+        {
+          "rel": "sound_engines/InstrumentSounds.js",
+          "size": 9775,
+          "lines": 269,
+          "ext": ".js"
+        },
+        {
+          "rel": "SidePanel.js",
+          "size": 7644,
+          "lines": 235,
+          "ext": ".js"
+        },
+        {
+          "rel": "sound_engines/WafPlayer.js",
+          "size": 8503,
+          "lines": 229,
+          "ext": ".js"
+        },
+        {
+          "rel": "TentativePopup.js",
+          "size": 5622,
+          "lines": 208,
+          "ext": ".js"
+        },
+        {
+          "rel": "WindowMessenger.js",
+          "size": 5499,
+          "lines": 204,
+          "ext": ".js"
+        },
+        {
+          "rel": "CompactMenu.js",
+          "size": 6052,
+          "lines": 197,
+          "ext": ".js"
+        },
+        {
+          "rel": "CrossWindowMessenger.js",
+          "size": 5637,
+          "lines": 196,
+          "ext": ".js"
+        },
+        {
+          "rel": "sound_engines/PianoSamplePlayer.js",
+          "size": 6478,
+          "lines": 188,
+          "ext": ".js"
+        },
+        {
+          "rel": "DictationPolicy.js",
+          "size": 6836,
+          "lines": 172,
+          "ext": ".js"
+        },
+        {
+          "rel": "SupabaseCommentsAdapter.js",
+          "size": 6299,
+          "lines": 172,
+          "ext": ".js"
+        },
+        {
+          "rel": "DropdownMenu.js",
+          "size": 4175,
+          "lines": 158,
+          "ext": ".js"
+        },
+        {
+          "rel": "PopupBox.js",
+          "size": 3878,
+          "lines": 157,
+          "ext": ".js"
+        },
+        {
+          "rel": "sound_engines/TinySynth.js",
+          "size": 5181,
+          "lines": 153,
+          "ext": ".js"
+        },
+        {
+          "rel": "SmartElementPositioner.js",
+          "size": 5068,
+          "lines": 151,
+          "ext": ".js"
+        },
+        {
+          "rel": "DictationEngineAdapter.js",
+          "size": 4347,
+          "lines": 115,
+          "ext": ".js"
+        },
+        {
+          "rel": "MidiInputHandler.js",
+          "size": 3148,
+          "lines": 111,
+          "ext": ".js"
+        },
+        {
+          "rel": "QRCodeGenerator.js",
+          "size": 3389,
+          "lines": 103,
+          "ext": ".js"
+        },
+        {
+          "rel": "CommunityOracle.js",
+          "size": 3333,
+          "lines": 100,
+          "ext": ".js"
+        },
+        {
+          "rel": "CadPlanDataRegistry.js",
+          "size": 3592,
+          "lines": 97,
+          "ext": ".js"
+        },
+        {
+          "rel": "SplitButton.js",
+          "size": 2175,
+          "lines": 94,
+          "ext": ".js"
+        },
+        {
+          "rel": "KeystrokeHandler.js",
+          "size": 2346,
+          "lines": 77,
+          "ext": ".js"
+        },
+        {
+          "rel": "ColorUtils.js",
+          "size": 2382,
+          "lines": 74,
+          "ext": ".js"
+        },
+        {
+          "rel": "DomBasics.js",
+          "size": 2987,
+          "lines": 74,
+          "ext": ".js"
+        },
+        {
+          "rel": "sound_engines/WafLoader.js",
+          "size": 2579,
+          "lines": 73,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 5002,
+          "lines": 67,
+          "ext": ".html"
+        },
+        {
+          "rel": "AppColorUtils.js",
+          "size": 1521,
+          "lines": 52,
+          "ext": ".js"
+        },
+        {
+          "rel": "DeferredThreeInit.js",
+          "size": 1747,
+          "lines": 51,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 777,
+          "lines": 30,
+          "ext": ".json"
+        },
+        {
+          "rel": "CapsuleBootstrapper.js",
+          "size": 601,
+          "lines": 18,
+          "ext": ".js"
+        },
+        {
+          "rel": "UuidUtils.js",
+          "size": 369,
+          "lines": 14,
+          "ext": ".js"
+        },
+        {
+          "rel": "ModuleBoot.js",
+          "size": 88,
+          "lines": 10,
+          "ext": ".js"
+        },
+        {
+          "rel": "lunologo.png",
+          "size": 20910,
+          "lines": 0,
+          "ext": ".png"
+        }
+      ]
+    },
+    {
+      "name": "Luno",
+      "fileCount": 72,
+      "totalKB": 861,
+      "totalLines": 19470,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "core/LunoServer.js",
+          "size": 85487,
+          "lines": 2058,
+          "ext": ".js"
+        },
+        {
+          "rel": "core/LunoClassPatcher.js",
+          "size": 41911,
+          "lines": 1051,
+          "ext": ".js"
+        },
+        {
+          "rel": "browser/DiskBrowser.js",
+          "size": 49034,
+          "lines": 1041,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/ClientAppUI.js",
+          "size": 39389,
+          "lines": 932,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoFileSystem.js",
+          "size": 35855,
+          "lines": 898,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoPayloadParser.js",
+          "size": 30645,
+          "lines": 765,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoProjectTemplates.js",
+          "size": 36029,
+          "lines": 716,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoThemeEngine.js",
+          "size": 41528,
+          "lines": 663,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoDeployEngine.js",
+          "size": 21857,
+          "lines": 509,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoCssChunks.js",
+          "size": 19509,
+          "lines": 464,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/ClientApp.js",
+          "size": 21345,
+          "lines": 455,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoCheckpointView.js",
+          "size": 21704,
+          "lines": 447,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoSpaDock.js",
+          "size": 20148,
+          "lines": 445,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoApiClient.js",
+          "size": 18949,
+          "lines": 415,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/DiffApprovalModal.js",
+          "size": 17649,
+          "lines": 383,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoManifestDecisionEngine.js",
+          "size": 15486,
+          "lines": 366,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/OutboxQueue.js",
+          "size": 13743,
+          "lines": 365,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoSpaHeaderNav.js",
+          "size": 13942,
+          "lines": 360,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoAnimationEngine.js",
+          "size": 13285,
+          "lines": 354,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoTimelineDialog.js",
+          "size": 18718,
+          "lines": 349,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/LunoMetricsAnalyzer.js",
+          "size": 16006,
+          "lines": 341,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/OutboxPromptBox.js",
+          "size": 14146,
+          "lines": 331,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/ClientAppPaster.js",
+          "size": 16066,
+          "lines": 327,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoPromptInstructions.js",
+          "size": 15866,
+          "lines": 320,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoZipExporter.js",
+          "size": 13085,
+          "lines": 313,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/OutboxWidgetRenderer.js",
+          "size": 16256,
+          "lines": 310,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoPlaybackLogger.js",
+          "size": 10920,
+          "lines": 267,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/OutboxOptionsModal.js",
+          "size": 11203,
+          "lines": 248,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/CodeDiffer.js",
+          "size": 8532,
+          "lines": 232,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoGuideEngine.js",
+          "size": 11223,
+          "lines": 228,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/LunoDocs.js",
+          "size": 12755,
+          "lines": 224,
+          "ext": ".js"
+        },
+        {
+          "rel": "core/LunoContextExtractor.js",
+          "size": 8187,
+          "lines": 215,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoUIComponents.js",
+          "size": 10169,
+          "lines": 204,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoPatchConsolidator.js",
+          "size": 8680,
+          "lines": 190,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/InboxActionTimer.js",
+          "size": 7403,
+          "lines": 179,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/LunoWorkspaceHandoff.md",
+          "size": 9068,
+          "lines": 155,
+          "ext": ".md"
+        },
+        {
+          "rel": "app/LunoHistoryManager.js",
+          "size": 5534,
+          "lines": 153,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/AiStudioRelayDocs.js",
+          "size": 7057,
+          "lines": 146,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/LunoDocsWidgets.js",
+          "size": 7466,
+          "lines": 144,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoLinePatcher.js",
+          "size": 5441,
+          "lines": 141,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/SvgCountdownClock.js",
+          "size": 4348,
+          "lines": 131,
+          "ext": ".js"
+        },
+        {
+          "rel": "CompassApp/src/CompassApp.js",
+          "size": 4101,
+          "lines": 125,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoSettings.js",
+          "size": 3962,
+          "lines": 125,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoRuntimeStringifier.js",
+          "size": 5382,
+          "lines": 111,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoLinearParser.js",
+          "size": 4574,
+          "lines": 110,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoPrototypeMigrator.js",
+          "size": 4383,
+          "lines": 105,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 2728,
+          "lines": 97,
+          "ext": ".json"
+        },
+        {
+          "rel": "app/OutboxClearBanner.js",
+          "size": 4090,
+          "lines": 95,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoStateStore.js",
+          "size": 2839,
+          "lines": 92,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/MicroApprovalBadge.js",
+          "size": 3867,
+          "lines": 88,
+          "ext": ".js"
+        },
+        {
+          "rel": "launcher.js",
+          "size": 2547,
+          "lines": 76,
+          "ext": ".js"
+        },
+        {
+          "rel": "diag.js",
+          "size": 2255,
+          "lines": 67,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoSelfCheck.js",
+          "size": 2042,
+          "lines": 62,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoRunner.js",
+          "size": 1969,
+          "lines": 55,
+          "ext": ".js"
+        },
+        {
+          "rel": "KeyCommandApp/src/KeyCommandApp.js",
+          "size": 2179,
+          "lines": 53,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/OrphanHeaderStitcher.js",
+          "size": 1397,
+          "lines": 50,
+          "ext": ".js"
+        },
+        {
+          "rel": "server.js",
+          "size": 1635,
+          "lines": 50,
+          "ext": ".js"
+        },
+        {
+          "rel": "app/LunoHelperHooks.js",
+          "size": 1470,
+          "lines": 45,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1498,
+          "lines": 39,
+          "ext": ".html"
+        },
+        {
+          "rel": "docs/LunoModularizationProposal.md",
+          "size": 2264,
+          "lines": 38,
+          "ext": ".md"
+        },
+        {
+          "rel": "CompassApp/luno.json",
+          "size": 643,
+          "lines": 27,
+          "ext": ".json"
+        },
+        {
+          "rel": "CompassApp/index.html",
+          "size": 1139,
+          "lines": 24,
+          "ext": ".html"
+        },
+        {
+          "rel": "KeyCommandApp/index.html",
+          "size": 1147,
+          "lines": 24,
+          "ext": ".html"
+        },
+        {
+          "rel": "package-lock.json",
+          "size": 543,
+          "lines": 24,
+          "ext": ".json"
+        },
+        {
+          "rel": "KeyCommandApp/luno.json",
+          "size": 425,
+          "lines": 20,
+          "ext": ".json"
+        },
+        {
+          "rel": "app/LunoContainerParser.js",
+          "size": 808,
+          "lines": 20,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs/LunoRuntimeStringifier.js",
+          "size": 176,
+          "lines": 6,
+          "ext": ".js"
+        },
+        {
+          "rel": "package.json",
+          "size": 75,
+          "lines": 6,
+          "ext": ".json"
+        },
+        {
+          "rel": "LunoPatchLog.html",
+          "size": 0,
+          "lines": 1,
+          "ext": ".html"
+        },
+        {
+          "rel": "fleet-git.sh",
+          "size": 3574,
+          "lines": 0,
+          "ext": ".sh"
+        },
+        {
+          "rel": "lunologo.png",
+          "size": 20910,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "scripts/fleet-git.sh",
+          "size": 1104,
+          "lines": 0,
+          "ext": ".sh"
+        }
+      ]
+    },
+    {
+      "name": "Opus",
+      "fileCount": 21,
+      "totalKB": 153,
+      "totalLines": 2801,
+      "hasLunoJson": true,
+      "hasContentHtml": true,
+      "files": [
+        {
+          "rel": "js/OpusRouterComponent.js",
+          "size": 37504,
+          "lines": 784,
+          "ext": ".js"
+        },
+        {
+          "rel": "Opus.js",
+          "size": 13697,
+          "lines": 307,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusConvergenceStepperLab.js",
+          "size": 13016,
+          "lines": 290,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusGrandStrategyContent.js",
+          "size": 16108,
+          "lines": 202,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusEconomicImpactComponent.js",
+          "size": 17318,
+          "lines": 200,
+          "ext": ".js"
+        },
+        {
+          "rel": "opus.css",
+          "size": 3377,
+          "lines": 162,
+          "ext": ".css"
+        },
+        {
+          "rel": "content/q1_cad.html",
+          "size": 11027,
+          "lines": 138,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/q4_cockpit.html",
+          "size": 8974,
+          "lines": 105,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/OpusVerificationContent.js",
+          "size": 5679,
+          "lines": 86,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 2288,
+          "lines": 84,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/OpusOverviewContent.js",
+          "size": 3624,
+          "lines": 60,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusQ2NarrativeContent.js",
+          "size": 3486,
+          "lines": 52,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusQ1CadContent.js",
+          "size": 2622,
+          "lines": 46,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OpusQ4CockpitContent.js",
+          "size": 2369,
+          "lines": 45,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/strategy.html",
+          "size": 2369,
+          "lines": 44,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/OpusQ3EconomicsContent.js",
+          "size": 2452,
+          "lines": 44,
+          "ext": ".js"
+        },
+        {
+          "rel": "content/overview.html",
+          "size": 3631,
+          "lines": 43,
+          "ext": ".html"
+        },
+        {
+          "rel": "index.html",
+          "size": 1364,
+          "lines": 38,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/q2_narrative.html",
+          "size": 3307,
+          "lines": 36,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/q3_economics.html",
+          "size": 2416,
+          "lines": 30,
+          "ext": ".html"
+        },
+        {
+          "rel": "content/verification.html",
+          "size": 176,
+          "lines": 5,
+          "ext": ".html"
+        }
+      ]
+    },
+    {
+      "name": "QuoraToys",
+      "fileCount": 81,
+      "totalKB": 1284,
+      "totalLines": 33769,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "imported_drawing_app/DrawingApp.js",
+          "size": 123705,
+          "lines": 3632,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraAnnotationComponent.js",
+          "size": 117022,
+          "lines": 2623,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/AardvarkActions.js",
+          "size": 49919,
+          "lines": 1633,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraCleanStudioDialog.js",
+          "size": 67100,
+          "lines": 1476,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraToys.js",
+          "size": 45743,
+          "lines": 1223,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/Aardvark.js",
+          "size": 26582,
+          "lines": 969,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraGestureMachine.js",
+          "size": 42555,
+          "lines": 930,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/StudioSvgRenderer.js",
+          "size": 44178,
+          "lines": 898,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/utils/DialogBox.js",
+          "size": 28012,
+          "lines": 860,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/StudioGeometry.js",
+          "size": 34378,
+          "lines": 859,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/AardvarkRadialMenu.js",
+          "size": 23413,
+          "lines": 805,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/AardvarkOverlay.js",
+          "size": 23936,
+          "lines": 800,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/css/quoraToys.css",
+          "size": 15433,
+          "lines": 781,
+          "ext": ".css"
+        },
+        {
+          "rel": "js/QuoraImageManager.js",
+          "size": 31909,
+          "lines": 781,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraKnotManager.js",
+          "size": 34563,
+          "lines": 763,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/StudioEngine.js",
+          "size": 27876,
+          "lines": 748,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/dictation.js",
+          "size": 23937,
+          "lines": 725,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/CurveDraw.js",
+          "size": 23341,
+          "lines": 718,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraTextManager.js",
+          "size": 29931,
+          "lines": 695,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraControlPanel.js",
+          "size": 28792,
+          "lines": 631,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraToysContent.js",
+          "size": 42069,
+          "lines": 623,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/AardvarkStyleEditor.js",
+          "size": 18551,
+          "lines": 615,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/MidiMapper.js",
+          "size": 16762,
+          "lines": 540,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/TriangleCP.js",
+          "size": 14668,
+          "lines": 487,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/TriangleCP.js",
+          "size": 14668,
+          "lines": 487,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/Geometry.js",
+          "size": 13497,
+          "lines": 430,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/Geometry.js",
+          "size": 13497,
+          "lines": 430,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraInSituHUD.js",
+          "size": 20870,
+          "lines": 426,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/CurveFitter.js",
+          "size": 10534,
+          "lines": 407,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraToysApp.js",
+          "size": 16918,
+          "lines": 388,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraStrokeManager.js",
+          "size": 15240,
+          "lines": 361,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_4c52ebc.js",
+          "size": 12774,
+          "lines": 316,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/HueRingCP.js",
+          "size": 8800,
+          "lines": 304,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HueRingCP.js",
+          "size": 8800,
+          "lines": 304,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_0d1b5ba.js",
+          "size": 14668,
+          "lines": 286,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CurveFitter.js",
+          "size": 9645,
+          "lines": 285,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraCurveAnalyzer.js",
+          "size": 9627,
+          "lines": 257,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/Curve.js",
+          "size": 8559,
+          "lines": 254,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/Curve.js",
+          "size": 8559,
+          "lines": 254,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/utils/KeystrokeHandler.js",
+          "size": 7127,
+          "lines": 251,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/DrawingTool.js",
+          "size": 8631,
+          "lines": 238,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraLogger.js",
+          "size": 8016,
+          "lines": 227,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraStudioComponent.js",
+          "size": 7869,
+          "lines": 202,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/UpdateControlPoints.js",
+          "size": 8625,
+          "lines": 200,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_6870b41.js",
+          "size": 7266,
+          "lines": 186,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/background.js",
+          "size": 4608,
+          "lines": 150,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraBookmarkletComponent.js",
+          "size": 6751,
+          "lines": 150,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/dictation.html",
+          "size": 3340,
+          "lines": 142,
+          "ext": ".html"
+        },
+        {
+          "rel": "css/basicsWithDialogBox.css",
+          "size": 3323,
+          "lines": 131,
+          "ext": ".css"
+        },
+        {
+          "rel": "js/QuoraExportManager.js",
+          "size": 5238,
+          "lines": 129,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/utils/WindowMessenger.js",
+          "size": 3501,
+          "lines": 125,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_b0b292e.js",
+          "size": 5561,
+          "lines": 109,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_cb74979.js",
+          "size": 5561,
+          "lines": 109,
+          "ext": ".js"
+        },
+        {
+          "rel": "recovered_content/QuoraToysContent_from_Linux_10.0.0.245.js",
+          "size": 5561,
+          "lines": 109,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/AardvarkDictation.js",
+          "size": 3392,
+          "lines": 105,
+          "ext": ".js"
+        },
+        {
+          "rel": "imported_drawing_app/UpdateControlPoints.js",
+          "size": 2710,
+          "lines": 94,
+          "ext": ".js"
+        },
+        {
+          "rel": "drawingapp_scan_report.json",
+          "size": 2344,
+          "lines": 91,
+          "ext": ".json"
+        },
+        {
+          "rel": "imported_drawing_app/GeometryUtils.js",
+          "size": 2485,
+          "lines": 88,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/GeometryUtils.js",
+          "size": 2485,
+          "lines": 88,
+          "ext": ".js"
+        },
+        {
+          "rel": "documentation.html",
+          "size": 6928,
+          "lines": 86,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/QuoraArchiverComponent.js",
+          "size": 4087,
+          "lines": 86,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraExtensionComponent.js",
+          "size": 4284,
+          "lines": 85,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/utils/makeElement.js",
+          "size": 2868,
+          "lines": 73,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/QuoraPaintManager.js",
+          "size": 3045,
+          "lines": 69,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AppColorUtils.js",
+          "size": 2107,
+          "lines": 66,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 1617,
+          "lines": 60,
+          "ext": ".json"
+        },
+        {
+          "rel": "extension/manifest.json",
+          "size": 1042,
+          "lines": 49,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/BezierVertex.js",
+          "size": 1425,
+          "lines": 48,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/popup.html",
+          "size": 1873,
+          "lines": 43,
+          "ext": ".html"
+        },
+        {
+          "rel": "imported_drawing_app/BezierVertex.js",
+          "size": 1002,
+          "lines": 39,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1248,
+          "lines": 37,
+          "ext": ".html"
+        },
+        {
+          "rel": "index_legacy_recursi.html",
+          "size": 1216,
+          "lines": 32,
+          "ext": ".html"
+        },
+        {
+          "rel": "imported_drawing_app/files.json",
+          "size": 634,
+          "lines": 29,
+          "ext": ".json"
+        },
+        {
+          "rel": "extension/utils/applyCss.js",
+          "size": 855,
+          "lines": 24,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/popup.js",
+          "size": 580,
+          "lines": 13,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/features/QuoraToysInSitu.js",
+          "size": 122,
+          "lines": 2,
+          "ext": ".js"
+        },
+        {
+          "rel": "extension/hand.svg",
+          "size": 11462,
+          "lines": 0,
+          "ext": ".svg"
+        },
+        {
+          "rel": "extension/images/icon128.png",
+          "size": 29954,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "extension/images/icon16.png",
+          "size": 1021,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "extension/images/icon48.png",
+          "size": 5612,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "git_archaeology_report.txt",
+          "size": 6064,
+          "lines": 0,
+          "ext": ".txt"
+        }
+      ]
+    },
+    {
+      "name": "ValuationOfAccudraw",
+      "fileCount": 5,
+      "totalKB": 38,
+      "totalLines": 712,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/ValuationOfAccudraw.js",
+          "size": 34845,
+          "lines": 601,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1219,
+          "lines": 37,
+          "ext": ".html"
+        },
+        {
+          "rel": "index_legacy_recursi.html",
+          "size": 1276,
+          "lines": 32,
+          "ext": ".html"
+        },
+        {
+          "rel": "luno.json",
+          "size": 738,
+          "lines": 30,
+          "ext": ".json"
+        },
+        {
+          "rel": "css/basicsWithDialogBox.css",
+          "size": 343,
+          "lines": 12,
+          "ext": ".css"
+        }
+      ]
+    },
+    {
+      "name": "accuCad",
+      "fileCount": 60,
+      "totalKB": 539,
+      "totalLines": 16706,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/ui/ViewControls.js",
+          "size": 51705,
+          "lines": 1444,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/TentativePointHandler.js",
+          "size": 31079,
+          "lines": 941,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AccuDraw.js",
+          "size": 23712,
+          "lines": 800,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/accudraw/AccuDrawLogic.js",
+          "size": 24468,
+          "lines": 767,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/EventHandlers.js",
+          "size": 26890,
+          "lines": 738,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ElementOperations.js",
+          "size": 23575,
+          "lines": 707,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/RotateElementCommand.js",
+          "size": 23024,
+          "lines": 663,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SmartDrawKeys.js",
+          "size": 22983,
+          "lines": 660,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CadStorageManager.js",
+          "size": 21815,
+          "lines": 639,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/ScaleElementCommand.js",
+          "size": 19038,
+          "lines": 569,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/AccuDrawDiagnostics.js",
+          "size": 16360,
+          "lines": 514,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/Main.js",
+          "size": 16012,
+          "lines": 480,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/BaseController.js",
+          "size": 13541,
+          "lines": 454,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CameraOrbitAnimator.js",
+          "size": 12973,
+          "lines": 389,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/AccuDrawUi.js",
+          "size": 12770,
+          "lines": 388,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawPathCommand.js",
+          "size": 12149,
+          "lines": 372,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ArcSquircleCalc.js",
+          "size": 11279,
+          "lines": 352,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/MoveElementCommand.js",
+          "size": 10769,
+          "lines": 343,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CapsuleGeometryCreator.js",
+          "size": 10116,
+          "lines": 308,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/accudraw/CompassDrawBridge.js",
+          "size": 10140,
+          "lines": 301,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawCapsuleCommand.js",
+          "size": 7870,
+          "lines": 289,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawCurveCommand.js",
+          "size": 7695,
+          "lines": 252,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawArcCommand.js",
+          "size": 6855,
+          "lines": 243,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/TransformView.js",
+          "size": 8907,
+          "lines": 237,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/GeometryUtils3D.js",
+          "size": 6291,
+          "lines": 236,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawRectangleCommand.js",
+          "size": 7208,
+          "lines": 233,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/RoundingUtils3D.js",
+          "size": 6513,
+          "lines": 213,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/Squircle3D.js",
+          "size": 6440,
+          "lines": 202,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/AccuDrawInput.js",
+          "size": 6205,
+          "lines": 192,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DrawCircleCommand.js",
+          "size": 4747,
+          "lines": 182,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ViewManipulator.js",
+          "size": 5187,
+          "lines": 156,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/AccuDrawDialog.js",
+          "size": 3852,
+          "lines": 154,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/AccuDrawTestHarness.js",
+          "size": 3313,
+          "lines": 139,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/RotaryEncoders.js",
+          "size": 3295,
+          "lines": 132,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/GeneratePoint.js",
+          "size": 4000,
+          "lines": 130,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/UpdateControlPoints.js",
+          "size": 4199,
+          "lines": 129,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/elements/RectangleElement.js",
+          "size": 4168,
+          "lines": 128,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ModelLoader.js",
+          "size": 3678,
+          "lines": 127,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 4173,
+          "lines": 115,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/elements/PathElement.js",
+          "size": 3045,
+          "lines": 102,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/docs/AccuCadArchitectureDoc.js",
+          "size": 6160,
+          "lines": 100,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/docs/AccuDrawEngineDoc.js",
+          "size": 6096,
+          "lines": 100,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/docs/DrawingToolsDoc.js",
+          "size": 5343,
+          "lines": 93,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/elements/CurveElement.js",
+          "size": 2919,
+          "lines": 93,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/BezierSquircleCalc.js",
+          "size": 2446,
+          "lines": 87,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ControllerSetup.js",
+          "size": 2225,
+          "lines": 75,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/elements/CapsuleElement.js",
+          "size": 1876,
+          "lines": 75,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/docs/P2PNetworkingDoc.js",
+          "size": 4115,
+          "lines": 73,
+          "ext": ".js"
+        },
+        {
+          "rel": "docs.html",
+          "size": 3001,
+          "lines": 69,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/commands/BaseDrawCommand.js",
+          "size": 2054,
+          "lines": 67,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/commands/DeleteElementCommand.js",
+          "size": 1876,
+          "lines": 66,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/elements/ArcElement.js",
+          "size": 1867,
+          "lines": 66,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SvgLoader.js",
+          "size": 1922,
+          "lines": 64,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/FileUtilities.js",
+          "size": 1819,
+          "lines": 62,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/BezierVertex.js",
+          "size": 1290,
+          "lines": 44,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ui/ViewControlsManager.js",
+          "size": 971,
+          "lines": 42,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/HighlightUtilities.js",
+          "size": 1301,
+          "lines": 39,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/elements/CadElement.js",
+          "size": 692,
+          "lines": 32,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1053,
+          "lines": 24,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/DebugConfig.js",
+          "size": 475,
+          "lines": 15,
+          "ext": ".js"
+        }
+      ]
+    },
+    {
+      "name": "accudraw",
+      "fileCount": 48,
+      "totalKB": 86532,
+      "totalLines": 2572,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/AccuDrawArchiveApp.js",
+          "size": 44076,
+          "lines": 763,
+          "ext": ".js"
+        },
+        {
+          "rel": "accudraw3d_page1.html",
+          "size": 11335,
+          "lines": 335,
+          "ext": ".html"
+        },
+        {
+          "rel": "accudraw3d_page3.html",
+          "size": 11391,
+          "lines": 329,
+          "ext": ".html"
+        },
+        {
+          "rel": "accudraw3d_page2.html",
+          "size": 12493,
+          "lines": 328,
+          "ext": ".html"
+        },
+        {
+          "rel": "accudraw_page1.html",
+          "size": 11341,
+          "lines": 290,
+          "ext": ".html"
+        },
+        {
+          "rel": "accudraw_page2.html",
+          "size": 9294,
+          "lines": 238,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/AccuDrawData.js",
+          "size": 11814,
+          "lines": 181,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1770,
+          "lines": 56,
+          "ext": ".html"
+        },
+        {
+          "rel": "luno.json",
+          "size": 1349,
+          "lines": 52,
+          "ext": ".json"
+        },
+        {
+          "rel": "PXL_20260615_022419565.jpg",
+          "size": 3984665,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "accudraw3d1.jpg",
+          "size": 1534813,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "accudraw3d2.jpg",
+          "size": 2007401,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "accudraw3d3.jpg",
+          "size": 2864759,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "accudreamer.png",
+          "size": 3615554,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "altcad.jpg",
+          "size": 1181951,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "articleByMePage2.jpg",
+          "size": 1770308,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "autocadforum.jpg",
+          "size": 4026228,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "bentleyorbust.jpg",
+          "size": 3939706,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "bestgadget.jpg",
+          "size": 1866537,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "cadalyst.jpg",
+          "size": 4060620,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "cgw.jpg",
+          "size": 5309555,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "circle.jpg",
+          "size": 1269208,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "closeupcadalyst.jpg",
+          "size": 3891254,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "deja-better-than.jpg",
+          "size": 1670411,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "deja-placetostart.jpg",
+          "size": 1180436,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "dejaamazing.jpg",
+          "size": 2126139,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "dejaimportant.jpg",
+          "size": 893253,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "email-bangup.jpg",
+          "size": 1211911,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "figure3_accudraw_block.jpg",
+          "size": 64783,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "goingawaydrawing.jpg",
+          "size": 3262367,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/3d_in_title.png",
+          "size": 300880,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/figure1_accudraw_settings.jpg",
+          "size": 118052,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/figure3_accudraw_block.jpg",
+          "size": 64783,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/figure4_accudraw_shortcuts.jpg",
+          "size": 75746,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/figure4_shortcuts_box.jpg",
+          "size": 167259,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/figure5_new_shortcut.jpg",
+          "size": 157793,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/title_3d_graphic.jpg",
+          "size": 76201,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "images/title_3d_graphic.png",
+          "size": 300880,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "learneverything.jpg",
+          "size": 4254250,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "mmarticlepage1.jpg",
+          "size": 1855415,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "mmarticlepage2.jpg",
+          "size": 2102912,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "mmarticlepage_2.jpg",
+          "size": 1734652,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "patentstuff.jpg",
+          "size": 4781584,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "pointgenerator.jpg",
+          "size": 5158992,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "primadonna.jpg",
+          "size": 3247042,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "robsreply.jpg",
+          "size": 3713500,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "sam.jpg",
+          "size": 4175356,
+          "lines": 0,
+          "ext": ".jpg"
+        },
+        {
+          "rel": "shouldbe.jpg",
+          "size": 4476650,
+          "lines": 0,
+          "ext": ".jpg"
+        }
+      ]
+    },
+    {
+      "name": "situation",
+      "fileCount": 32,
+      "totalKB": 41655,
+      "totalLines": 5166,
+      "hasLunoJson": true,
+      "hasContentHtml": false,
+      "files": [
+        {
+          "rel": "js/ValuationPage.js",
+          "size": 51653,
+          "lines": 1490,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SituationApp.js",
+          "size": 46952,
+          "lines": 1028,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ElderAdvocacyPage.js",
+          "size": 30230,
+          "lines": 603,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/SnareDrumAnimation.js",
+          "size": 17857,
+          "lines": 464,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/AiPerspectivePage.js",
+          "size": 11266,
+          "lines": 273,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/ValueEmberLogo.js",
+          "size": 9059,
+          "lines": 260,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/CaretakerBiasPage.js",
+          "size": 13937,
+          "lines": 222,
+          "ext": ".js"
+        },
+        {
+          "rel": "js/OverviewPage.js",
+          "size": 10306,
+          "lines": 153,
+          "ext": ".js"
+        },
+        {
+          "rel": "server.js",
+          "size": 4469,
+          "lines": 152,
+          "ext": ".js"
+        },
+        {
+          "rel": "DEPLOYMENT_GUIDE.md",
+          "size": 4527,
+          "lines": 135,
+          "ext": ".md"
+        },
+        {
+          "rel": "js/CurrentWorkPage.js",
+          "size": 6403,
+          "lines": 103,
+          "ext": ".js"
+        },
+        {
+          "rel": "luno.json",
+          "size": 2040,
+          "lines": 76,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/CourtFilingPage.js",
+          "size": 4200,
+          "lines": 74,
+          "ext": ".js"
+        },
+        {
+          "rel": "deploy.js",
+          "size": 2030,
+          "lines": 70,
+          "ext": ".js"
+        },
+        {
+          "rel": "index.html",
+          "size": 1217,
+          "lines": 37,
+          "ext": ".html"
+        },
+        {
+          "rel": "js/QuoraPolarization.js",
+          "size": 150,
+          "lines": 13,
+          "ext": ".js"
+        },
+        {
+          "rel": "package.json",
+          "size": 194,
+          "lines": 9,
+          "ext": ".json"
+        },
+        {
+          "rel": "js/AccuDrawValuation.js",
+          "size": 143,
+          "lines": 3,
+          "ext": ".js"
+        },
+        {
+          "rel": "LunoPatchLog.html",
+          "size": 0,
+          "lines": 1,
+          "ext": ".html"
+        },
+        {
+          "rel": "images/carMossy.png",
+          "size": 8390405,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/carOriginal.webp",
+          "size": 7887710,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/carStreetArt.png",
+          "size": 7987222,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/carrotAnalogy.png",
+          "size": 1017929,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/compareDallE_1.webp",
+          "size": 6931004,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/compareDallE_2.webp",
+          "size": 1559882,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/housePhotoAndIllustration.webp",
+          "size": 1853224,
+          "lines": 0,
+          "ext": ".webp"
+        },
+        {
+          "rel": "images/k_california.png",
+          "size": 319293,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_kory.png",
+          "size": 227089,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_owesYou.png",
+          "size": 446318,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/k_qanon.png",
+          "size": 520454,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/lifePreserver.png",
+          "size": 680494,
+          "lines": 0,
+          "ext": ".png"
+        },
+        {
+          "rel": "images/starWarsDeAging.webp",
+          "size": 4617254,
+          "lines": 0,
+          "ext": ".webp"
+        }
+      ]
+    }
+  ],
+  "otherProjects": [
+    {
+      "name": "AardvarkExtension",
+      "files": 57,
+      "kb": 739
+    },
+    {
+      "name": "AardvarkPlaylist",
+      "files": 61,
+      "kb": 845
+    },
+    {
+      "name": "AlphabetGame",
+      "files": 18,
+      "kb": 5329
+    },
+    {
+      "name": "Basic3D",
+      "files": 14,
+      "kb": 51
+    },
+    {
+      "name": "BasicsWithDialogBox",
+      "files": 5,
+      "kb": 13
+    },
+    {
+      "name": "BookmarkletWorkshop",
+      "files": 14,
+      "kb": 100
+    },
+    {
+      "name": "BulbAndButton",
+      "files": 5,
+      "kb": 50
+    },
+    {
+      "name": "Bunny",
+      "files": 5,
+      "kb": 19
+    },
+    {
+      "name": "Bunny3d",
+      "files": 14,
+      "kb": 65
+    },
+    {
+      "name": "Calculator",
+      "files": 8,
+      "kb": 37
+    },
+    {
+      "name": "Comments",
+      "files": 162,
+      "kb": 1698
+    },
+    {
+      "name": "Community",
+      "files": 4,
+      "kb": 8
+    },
+    {
+      "name": "DictationExperiment",
+      "files": 4,
+      "kb": 12
+    },
+    {
+      "name": "DictationLab",
+      "files": 3,
+      "kb": 6
+    },
+    {
+      "name": "DrawingApp",
+      "files": 16,
+      "kb": 232
+    },
+    {
+      "name": "Es6Converter",
+      "files": 3,
+      "kb": 25
+    },
+    {
+      "name": "FallingWater",
+      "files": 14,
+      "kb": 66
+    },
+    {
+      "name": "FindTheDifferenceCheater",
+      "files": 5,
+      "kb": 87
+    },
+    {
+      "name": "FourDFun",
+      "files": 14,
+      "kb": 108
+    },
+    {
+      "name": "FunInFourD",
+      "files": 14,
+      "kb": 79
+    },
+    {
+      "name": "GameTheoryStory",
+      "files": 5,
+      "kb": 78
+    },
+    {
+      "name": "House",
+      "files": 16,
+      "kb": 86
+    },
+    {
+      "name": "House1",
+      "files": 14,
+      "kb": 44
+    },
+    {
+      "name": "House2",
+      "files": 14,
+      "kb": 48
+    },
+    {
+      "name": "House3",
+      "files": 14,
+      "kb": 51
+    },
+    {
+      "name": "House4",
+      "files": 14,
+      "kb": 56
+    },
+    {
+      "name": "Hypercube",
+      "files": 14,
+      "kb": 64
+    },
+    {
+      "name": "LegoDetective",
+      "files": 19,
+      "kb": 128
+    },
+    {
+      "name": "LunoParser",
+      "files": 10,
+      "kb": 178
+    },
+    {
+      "name": "MathStorm",
+      "files": 12,
+      "kb": 78
+    },
+    {
+      "name": "Penrose",
+      "files": 4,
+      "kb": 15
+    },
+    {
+      "name": "PleasureAndPain",
+      "files": 9,
+      "kb": 88
+    },
+    {
+      "name": "RunOnServerTools",
+      "files": 6,
+      "kb": 47
+    },
+    {
+      "name": "SvgStudio",
+      "files": 3,
+      "kb": 38
+    },
+    {
+      "name": "TaxChart",
+      "files": 6,
+      "kb": 103
+    },
+    {
+      "name": "TouchController",
+      "files": 11,
+      "kb": 85
+    },
+    {
+      "name": "TriBlob",
+      "files": 6,
+      "kb": 59
+    },
+    {
+      "name": "Trippy",
+      "files": 15,
+      "kb": 77
+    },
+    {
+      "name": "Truck",
+      "files": 14,
+      "kb": 94
+    },
+    {
+      "name": "Voting",
+      "files": 14,
+      "kb": 153
+    },
+    {
+      "name": "_quarantine_commentsdocs",
+      "files": 217,
+      "kb": 2267
+    },
+    {
+      "name": "aardvarkBookmarklet",
+      "files": 5,
+      "kb": 309
+    },
+    {
+      "name": "guessTheNoteGame",
+      "files": 20,
+      "kb": 186
+    },
+    {
+      "name": "junk",
+      "files": 7,
+      "kb": 31
+    },
+    {
+      "name": "pianorolls",
+      "files": 1117,
+      "kb": 10587
+    },
+    {
+      "name": "squircle",
+      "files": 8,
+      "kb": 48
+    },
+    {
+      "name": "teacup",
+      "files": 4,
+      "kb": 36
+    },
+    {
+      "name": "vibes",
+      "files": 163,
+      "kb": 2386
+    }
+  ]
+}

@@ -36,52 +36,41 @@ class HomeTopologyContent {
     }
 
   static p_topo_intro_1() {
-      return [
-        "This document records the exact physical and network architecture of my home workstation fleet. The machines are not identical clones—each has distinct physical constraints, battery health, and specialized software dependencies.",
-        "The setup currently centers around four physical compute points plus two mobile phones: the new **Ubuntu Linux laptop** (working in the bedroom, powerful, clean install), the **Mac workstation** (living room, connected to the big dual monitors, long-time primary host with all GitHub remotes), the **Windows laptop** (dead battery, tethered 24/7 to the HP charger hub), and **two smartphones** (where Luno was originally developed, serving as primary dictation and review decks)."
-      ];
-    }
-
+    return [
+      "This document records the exact physical and network architecture of my home workstation fleet. The machines are not identical clones—each has distinct physical constraints, battery health, and specialized software dependencies.",
+      "The setup currently centers around four physical compute points plus two mobile phones: the **Ubuntu Linux laptop** (portable workhorse and live demo rig), the **Mac Mini workstation** (living room, connected to the big dual monitors, holding ScreenFlow and primary Git pushes), the **Windows laptop** (dead battery, tethered 24/7 to the HP charger hub), and **two smartphones** (where Luno was originally developed, serving as primary dictation and review decks)."
+    ];
+  }
   static p_topo_intro_2() {
-      return [
-        "Our system audit on the Ubuntu laptop confirmed the local repository layout at `/root/source/LunoProjects/`. The initial USB transfer successfully brought over the Git histories and GitHub remotes for over 35 projects (such as `CadPlan`, `accuCad`, `Comments`, and `TouchController`, all wired to `git@github.com:karmatics/...`).",
-        "Only this newly forked `HomeSetup` workspace is currently unversioned (`hasGit: false`).",
-        "Crucially, the Mac in the living room is actively running its own instance of Luno on **port 8080**. This eliminates the need for manual SSH authentication: the Linux Luno server can communicate directly with the Mac's Luno server over LAN HTTP, creating a native peer-to-peer Luno federation."
-      ];
-    }
+        return [
+          "Our fleet synchronization audit confirms the local repository layout on both primary development hosts: `/Users/rob/source/LunoProjects/` on the Mac Mini (`mac-mini-rob.local`) and `/home/rob/source/LunoProjects/` on the Ubuntu Linux laptop (`10.0.0.245:8080`). Over 50 projects—including `HomeSetup`, `Opus`, `CadPlan`, `accuCad`, `QuoraToys`, `situation`, `Library`, and `Luno`—are Git-initialized on branch `main`, wired to `karmatics` GitHub remotes, and deployed with `.nojekyll` active on GitHub Pages.",
+          "Both machines run Luno `v3.8.0` on **Port 8080**, enabling zero-password HTTP peer discovery and live synchronization across the local Wi-Fi mesh without manual SSH."
+        ];
+      }
+
   static sidebar_fleet_roles() {
-      return [
-        "Physical Fleet Breakdown:\n" +
-        "• 1. Ubuntu Laptop (The New Workhorse):\n" +
-        "   - Origin: Old work laptop, wiped clean of Windows; fresh Ubuntu install 2 days ago.\n" +
-        "   - Health & Mobility: Great battery life; portable. Currently used in bedroom, ideal for traveling and live demos.\n" +
-        "   - Future Plan: Strong candidate to move to living room big monitors as primary workstation.\n" +
-        "• 2. Mac Workstation (Living Room):\n" +
-        "   - Current Role: Primary desktop connected to the big monitors for years. Holds all original `.git` repos.\n" +
-        "   - The Anchor: Sole dependency is ScreenFlow for video editing; almost all other work can run on Ubuntu.\n" +
-        "• 3. Windows Laptop (Deskbound):\n" +
-        "   - Condition: Dead battery (cannot hold charge, dies immediately if unplugged).\n" +
-        "   - Power Supply: Shares the large HP dock/hub charger from the Linux laptop; permanently tethered.\n" +
-        "• 4. Two Phones (Phone 1 & Phone 2):\n" +
-        "   - Origin: Luno was conceived and developed first on a phone!\n" +
-        "   - Role: Couch/bed review, one-handed navigation, speech-to-text dictation notes away from desk."
-      ];
-    }
+    return [
+      "Physical Fleet Breakdown:\n" +
+      "• 1. Ubuntu Laptop (Portable Workhorse & Demo Rig): Old work laptop wiped clean of Windows with Ubuntu installed; great battery life, ideal for traveling and live offline demos, and a strong candidate to drive the living room big monitors.\n" +
+      "• 2. Mac Mini Workstation (Living Room): Primary Apple Silicon host wired to the big monitors; sole legacy dependency is ScreenFlow for video editing; holds primary Git pushes.\n" +
+      "• 3. Windows Laptop (Deskbound): Dead battery (dies immediately if unplugged); shares the large HP hub/dock charger from the Linux laptop; permanently tethered.\n" +
+      "• 4. Two Phones (Phone 1 & Phone 2): Luno was conceived and developed first on a phone; used for couch/bed review, one-handed navigation, and voice dictation notes."
+    ];
+  }
 
   static p_topo_linux_1() {
-      return [
-        "**Ubuntu Laptop (Bedroom Workhorse & Demo Rig):** This machine is an old corporate laptop gifted to me. I wiped Windows completely and installed fresh Ubuntu a couple days ago. It is fast, clean, and has a healthy battery. I am currently using it in the bedroom, but it is powerful enough to take over the living room setup with the big monitors.",
-        "Crucially, because it is portable and runs a complete local Luno web server, this is the machine I can unplug and take anywhere to give live, offline demos of Luno and our spatial software tools."
-      ];
-    }
+    return [
+      "**Ubuntu Laptop (Portable Workhorse & Demo Rig):** This machine is an old corporate laptop gifted to me, wiped clean of Windows and running Ubuntu. It is fast, clean, and has a healthy battery.",
+      "Crucially, because it is portable and runs a complete local Luno web server (`v3.8.0` on Port 8080), this is the machine I can unplug and take anywhere to give live, offline demos of Luno and our spatial software tools."
+    ];
+  }
 
   static p_topo_mac_1() {
-      return [
-        "**Mac Workstation (Living Room Big Monitors):** The Mac has been my primary development machine for years. It is currently wired to the big desktop monitors out in the living room. It holds all original Git repositories and deployment keys for our GitHub Pages sites.",
-        "My goal is to transition daily coding to Ubuntu. The single major application holding me to the Mac is **ScreenFlow** for screencasting and video production. Aside from ScreenFlow, my entire toolchain (Luno, Three.js, WebGL, Node.js, and documentation) runs cleanly on Linux."
-      ];
-    }
-
+    return [
+      "**Mac Mini Workstation (Living Room Big Monitors):** The Mac Mini (`mac-mini-rob.local`) is wired to the big desktop monitors in the living room and holds synchronized GitHub deployment keys for our GitHub Pages sites.",
+      "The single major application holding me to macOS is **ScreenFlow** for screencasting and video production. Aside from ScreenFlow, my entire toolchain (Luno, Three.js, WebGL, Node.js, and living documentation) runs identically on both Mac and Linux."
+    ];
+  }
   static p_topo_win_1() {
       return [
         "**Windows Laptop (Tethered Rig):** This machine was my only laptop before getting the Ubuntu machine, but its battery is completely shot—it must remain plugged in 24/7 to avoid immediate shutdown. It relies on the large HP hub/dock charger from the Linux laptop (the only compatible charger I have). It stays parked on the desk for Windows-only tasks and legacy checks."

@@ -43,13 +43,13 @@ class HomeNetworkContent {
     }
 
   static p_net_mesh_1() {
-    return [
-      "All devices communicate through native Luno services standardized exclusively on **Port 8080** over local LAN and authenticated Git protocols:",
-      "1. **Mac Workstation (Port 8080):** Confirmed running Luno on Apple Silicon at `/Users/rob/source/LunoProjects/`. Both `HomeSetup` and all sibling projects are served live over HTTP, allowing zero-latency peer synchronization via `POST /api/save`.",
-      "2. **Ubuntu Host (Port 8080):** Hosts the portable Luno development server (`/root/source/LunoProjects/Luno/server.js`), background task runner queue, and matching workspace files.",
-      "3. **Dynamic LAN Subnet Discovery:** Machines do not assume static IP addresses. If a machine's IP rotates under router DHCP, Luno's subnet discovery scans the local `/24` subnet on Port 8080 to locate active peer nodes automatically."
-    ];
-  }
+      return [
+        "All devices communicate through native Luno services standardized exclusively on **Port 8080** over local LAN and authenticated Git protocols:",
+        "1. **Mac Workstation (10.0.0.226:8080):** Running Luno `v3.8.0` on Apple Silicon (`mac-mini-rob.local`) at `/Users/rob/source/LunoProjects/`. All sibling projects are served live over HTTP, allowing zero-latency peer synchronization via `POST /api/save`.",
+        "2. **Ubuntu Host (10.0.0.245:8080):** Hosts the portable Luno development server (`/home/rob/source/LunoProjects/Luno/server.js`), background task runner queue, and synchronized Git workspace files.",
+        "3. **Dynamic LAN Subnet Discovery:** Machines do not assume static IP addresses. If a machine's IP rotates under router DHCP, Luno's subnet discovery scans the local `/24` subnet on Port 8080 to locate active peer nodes automatically."
+      ];
+    }
   static p_net_mesh_2() {
     return [
       "Because every machine has a known LAN hostname or static IP reservation on your local router, automation scripts can ping, check service availability, or push data buffers between endpoints deterministically."
@@ -57,15 +57,15 @@ class HomeNetworkContent {
   }
 
   static sidebar_network_ports() {
-    return [
-      "Local Fleet Network Port Directory:\n" +
-      "• Port 8080: Universal Luno Workspace Standard (Ubuntu Laptop & Mac Workstation)\n" +
-      "• Dynamic IP Discovery: Scans active local subnet (e.g. 10.0.0.1-254) on Port 8080\n" +
-      "• Port 3001: WebRTC P2P Signaling Server (signal-server.js)\n" +
-      "• Linux SSH Public Key Path: `/root/.ssh/id_ed25519.pub`\n" +
-      "• GitHub Remote Protocol: `git@github.com:karmatics/<repo>.git`"
-    ];
-  }
+      return [
+        "Local Fleet Network Port Directory:\n" +
+        "• Port 8080: Universal Luno Workspace Standard (Ubuntu Laptop & Mac Workstation)\n" +
+        "• Dynamic IP Discovery: Scans active local subnet (10.0.0.1-254) on Port 8080\n" +
+        "• Port 3001: WebRTC P2P Signaling Server (signal-server.js)\n" +
+        "• SSH Key Auth: Ed25519 key pair configured for karmatics GitHub\n" +
+        "• GitHub Remote Protocol: `git@github.com:karmatics/<repo>.git` (with HTTPS pull fallback)"
+      ];
+    }
   static p_net_ssh_1() {
     return [
       "**Key-Based SSH Connectivity:** Between the Linux host, Mac, and Windows machine, passwordless public-key authentication is configured using Ed25519 or RSA keys. This allows Node.js runner scripts on the Linux box to execute remote commands seamlessly—such as telling the Mac to run a build or telling Windows to verify an executable—without manual password prompts."
@@ -89,12 +89,12 @@ class HomeNetworkContent {
 
   static p_net_recon_1() {
     return [
-      "**The Active Mac Reconnaissance Protocol:** To bridge the repository and Git gap between the Linux laptop and the Mac workstation, we executed a bidirectional cross-wire audit.",
-      "The live scan verified:",
+      "**The Active Mac Reconnaissance Protocol:** To bridge the repository and Git gap between the Linux laptop and the Mac workstation, we execute bidirectional cross-wire fleet audits over Port 8080.",
+      "The live fleet audit verifies:",
       "1. **Mac Workstation Online & Synced:** Reached at `10.0.0.226:8080` running Luno v3.8.0 on Darwin ARM64 (`mac-mini-rob.local`).",
-      "2. **44 Projects Cataloged & Parity Verified:** All 44 projects on Linux are now Git-initialized and wired to match the Mac repositories.",
-      "3. **KeyCommandHandler.js Synchronized:** Local copy updated from Mac's 600-line version.",
-      "4. **HomeSetup Replicated to Mac:** 82 files replicated directly to Mac over LAN HTTP (`POST /api/save?project=HomeSetup`), with Git tracking `git@github.com:karmatics/HomeSetup.git`."
+      "2. **50+ Git Repositories & 60 Workspace Projects Verified:** Active projects on Linux and Mac are Git-initialized on branch `main` and wired to `karmatics` GitHub remotes.",
+      "3. **Shared Library Parity:** `DocumentReader.js`, `CadPlanItemNotes.js`, `CadPlanDocumentEditor.js`, `CadPlanAardvark.js`, and `SupabaseCommentsAdapter.js` stay synchronized across peers.",
+      "4. **GitHub Pages Ready:** `.nojekyll` is ensured automatically across repositories before deployment."
     ];
   }
   static p_net_recon_2() {
@@ -106,16 +106,15 @@ class HomeNetworkContent {
     }
 
   static sidebar_recon_checklist() {
-    return [
-      "Live Cross-Machine Recon Checklist:\n" +
-      "• 1. Host Address: 10.0.0.226 on Port 8080 (Luno v3.8.0 Peer verified)\n" +
-      "• 2. Remote Script Execution: Confirmed operational via POST /api/save\n" +
-      "• 3. Mac Profile: User `rob`, Darwin ARM64, ScreenFlow installed\n" +
-      "• 4. Linux Profile: Ubuntu Host (10.0.0.245:8080), Linux 7.0.0, Node.js\n" +
-      "• 5. HomeSetup Git: Initialized on Linux, remote set to git@github.com:karmatics/HomeSetup.git\n" +
-      "• 6. State Persistence: Full parity matrix saved to HomeSetup/state/recon_report.json"
-    ];
-  }
+      return [
+        "Live Cross-Machine Recon Checklist:\n" +
+        "• 1. Mac Mini Host: `mac-mini-rob.local` / 10.0.0.226 on Port 8080 (Luno v3.8.0)\n" +
+        "• 2. Linux Peer: `10.0.0.245` on Port 8080 (`/home/rob/source/LunoProjects/Luno`, v3.8.0)\n" +
+        "• 3. Remote Script Execution: Confirmed operational via POST /api/save\n" +
+        "• 4. GitHub Pages: `HomeSetup`, `Opus`, `Luno`, `Library`, and sibling sites live with `.nojekyll`\n" +
+        "• 5. State Persistence: Full parity matrix saved to `HomeSetup/state/fleet_sync_report.json`"
+      ];
+    }
 }
 
 globalThis.HomeNetworkContent = HomeNetworkContent;

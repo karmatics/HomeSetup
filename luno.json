@@ -1,6 +1,6 @@
 {
   "name": "HomeSetup",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Personal Infrastructure Topology: Linux Host, Mac, Windows Workstation, Mobile Nodes, Portable Shared Storage, Luno Cross-Machine Orchestration, and Thread Continuity Ledger",
   "type": "luno-web-app",
   "mainClass": "HomeSetup",
@@ -22,7 +22,10 @@
     "js/HomeDictationContent.js",
     "js/HomeDictationDocsData.js",
     "js/HomeDictationStudioComponent.js",
-    "HomeSetup.js"
+    "js/CadPromptBundlerDialog.js",
+    "js/CadPlanNotesManager.js",
+    "HomeSetup.js",
+    "js/HomeSummaries.js"
   ],
   "library": [
     "DomBasics.js",
@@ -30,7 +33,12 @@
     "ThreeJSLoader.js",
     "DocumentReader.js",
     "DictationWidget.js",
-    "SidePanel.js"
+    "SidePanel.js",
+    "SupabaseCommentsAdapter.js",
+    "CadPlanDataRegistry.js",
+    "CadPlanItemNotes.js",
+    "CadPlanDocumentEditor.js",
+    "CadPlanAardvark.js"
   ],
   "styles": [
     "basic3d.css"
@@ -39,7 +47,7 @@
     "handoff-lean": [
       "js/HomeHandoffComponent.js",
       "js/HomeHandoffContent.js",
-      "content/handoff.html",
+      "js/HomeSummaries.js",
       "luno.json"
     ],
     "fleet-infrastructure": [
@@ -52,7 +60,6 @@
       "js/HomeDictationContent.js",
       "js/HomeDictationDocsData.js",
       "js/HomeDictationStudioComponent.js",
-      "content/dictation.html",
       "luno.json"
     ],
     "full-dossier": [
@@ -69,14 +76,14 @@
       "js/HomeDictationContent.js",
       "js/HomeDictationDocsData.js",
       "js/HomeDictationStudioComponent.js",
-      "content/dictation.html",
+      "js/HomeSummaries.js",
+      "js/CadPromptBundlerDialog.js",
+      "js/CadPlanNotesManager.js",
+      "luno.json"
+    ],
+    "summaries-only": [
+      "js/HomeSummaries.js",
       "luno.json"
     ]
-  },
-  "processedCountSinceCheckpoint": 3,
-  "changedMethods": {
-    "Luno/core/LunoServer.js": "2026-11-09T05:03:13.578Z",
-    "Luno/app/ClientApp.js": "2026-11-09T05:03:13.578Z",
-    "Luno/app/LunoApiClient.js": "2026-11-09T05:03:13.578Z"
   }
 }
