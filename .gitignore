@@ -5,3 +5,5 @@ temp/
 queue/running/
 queue/done/
 queue/failed/
+state/peers.json
+state/linux_diag_report.json
